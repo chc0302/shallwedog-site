@@ -3,9 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' https://cdn.jsdelivr.net; font-src https://cdn.jsdelivr.net; img-src 'self' data:; manifest-src 'self'; base-uri 'none'; form-action 'none'; object-src 'none'; upgrade-insecure-requests">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<script src="/assets/js/frame.js"></script>
 <title>개인정보처리방침 — Shall We Dog?</title>
 <meta name="description" content="Shall We Dog? 개인정보처리방침. 어떤 정보를, 왜, 얼마 동안 처리하는지 알려드려요.">
 <link rel="canonical" href="https://shallwedog.com/privacy/">
+<link rel="alternate" hreflang="ko" href="https://shallwedog.com/privacy/">
+<link rel="alternate" hreflang="en" href="https://shallwedog.com/en/privacy/">
+<link rel="alternate" hreflang="x-default" href="https://shallwedog.com/en/privacy/">
 <meta name="theme-color" content="#F8ECD7" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#1E1611" media="(prefers-color-scheme: dark)">
 <meta property="og:type" content="website">
@@ -42,7 +48,7 @@
   <li>구글·애플로 로그인하면 게임 데이터를 클라우드에 백업해요. 백업은 무료예요.</li>
   <li>커스텀 강아지 주문 사진은 마지막 전달 후 14일이 지나면 자동으로 지워요.</li>
   <li>개인정보를 팔지 않아요. 우리가 먼저 데이터를 지우는 일도 없어요.</li>
-  <li>앱 <span class="menu-path">설정 &gt; 계정 삭제</span>나 메일로 언제든 지울 수 있어요.</li>
+  <li>앱 <span class="menu-path">설정 &gt; 계정 삭제 요청</span>이나 메일로 언제든 지울 수 있어요.</li>
 </ul>
 </div>
 
@@ -53,13 +59,13 @@
 <tr><td data-label="언제">게스트로 이용</td><td data-label="항목">서버로 보내지 않아요. 게임 데이터는 기기에 저장해요. (아래 자동 수집 정보는 예외)</td><td data-label="목적">—</td></tr>
 <tr><td data-label="언제">구글·애플 로그인</td><td data-label="항목">계정 식별값, 이메일 주소(애플 ‘이메일 가리기’를 쓰면 대신 주어지는 주소)</td><td data-label="목적">본인 확인, 클라우드 백업, 구매한 것과 커스텀 강아지 다시 받기</td></tr>
 <tr><td data-label="언제">클라우드 백업 (로그인한 경우)</td><td data-label="항목">게임 진행 데이터(만든 강아지 설정, 기록, 발바닥, 꾸미기 등)</td><td data-label="목적">기기를 바꿔도 이어서 하기</td></tr>
-<tr><td data-label="언제">커스텀 강아지 주문</td><td data-label="항목">강아지 사진 2장(얼굴 정면, 서 있는 몸), 견종(믹스는 2개, ‘잘 모름’ 가능), 체형, 지금 털 상태, 특징, 자유롭게 쓴 한 줄, 강아지 이름, 주문번호, 만 14세 이상 확인과 동의 기록</td><td data-label="목적">커스텀 강아지 제작·전달·재수정, 문의 응대</td></tr>
+<tr><td data-label="언제">커스텀 강아지 주문</td><td data-label="항목">강아지 사진 2장(얼굴 정면, 서 있는 몸), 견종(믹스는 2개, ‘잘 모름’ 가능), 체형, 지금 털 상태, 특징, 자유롭게 쓴 한 줄(60자 이내), 강아지 이름, 주문번호, 상품과 거래 번호, 기기 종류·앱 버전·앱 언어, 만 14세 이상 확인과 동의 기록, (선택) 사진 1년 보관 동의 여부와 철회 시각. 다시 고쳐 달라고 할 때는 고칠 곳과 메모(100자 이내), 사진을 다시 보낼 때는 새 사진 2장</td><td data-label="목적">커스텀 강아지 제작·전달·재수정, 문의 응대</td></tr>
 <tr><td data-label="언제">결제</td><td data-label="항목">앱 사용자 ID, 상품, 거래 번호, 결제 일시. 카드번호 등 결제 수단 정보는 애플·구글이 처리하며 우리는 받지 않아요.</td><td data-label="목적">결제 확인, 환불 처리, 법에 따른 보관</td></tr>
-<tr><td data-label="언제">앱 알림</td><td data-label="항목">알림용 기기 토큰, 알림 동의 여부와 시간</td><td data-label="목적">커스텀 완성 알림, 동의한 알림 보내기</td></tr>
+<tr><td data-label="언제">앱 알림</td><td data-label="항목">알림용 기기 토큰, 앱 언어, 알림 동의 여부와 시간</td><td data-label="목적">커스텀 완성 알림, 동의한 알림 보내기</td></tr>
 <tr><td data-label="언제">앱을 쓰는 동안 자동으로</td><td data-label="항목">기기 모델, 운영체제·앱 버전, 앱 이용 기록, 오류 기록, 광고 식별자(안드로이드 광고 ID. 아이폰 광고 식별자는 쓰지 않아요)</td><td data-label="목적">광고 보여 주기, 이용 통계, 오류 고치기</td></tr>
 <tr><td data-label="언제">메일 문의</td><td data-label="항목">이메일 주소, 문의 내용</td><td data-label="목적">답변</td></tr>
 </tbody></table></div>
-<p>앱은 사진을 올리기 전에 사진 속 위치정보를 지워요. 사람 얼굴이 나오지 않게 찍어 주세요. 생년월일, 전화번호, 주소는 받지 않아요.</p>
+<p>사진 보관함 권한은 주문할 사진을 고르거나 게임 스크린샷을 저장할 때만 물어요. 앱은 사진을 올리기 전에 사진 속 위치정보를 지워요. 사람 얼굴이 나오지 않게 찍어 주세요. 생년월일, 전화번호, 주소는 받지 않아요.</p>
 
 <h2 id="a2">제2조 보유 기간</h2>
 <div class="tbl"><table>
@@ -70,7 +76,7 @@
 <tr><td data-label="정보">완성된 커스텀 강아지 파일, 주문 기록, 제작 기록(만든 기준 이미지·게임 화면·검수 기록. 원본 사진·강아지 이름·자유 한 줄 원문은 빼요)</td><td data-label="보유 기간">계정을 삭제할 때까지 (다시 받기와 품질 관리를 위해)</td></tr>
 <tr><td data-label="정보">결제 기록(계약·청약철회, 대금 결제)</td><td data-label="보유 기간">5년 (「전자상거래 등에서의 소비자보호에 관한 법률」). 계정을 삭제하면 계정과의 연결을 끊고 보관해요.</td></tr>
 <tr><td data-label="정보">소비자 불만·분쟁 처리 기록, 메일 문의</td><td data-label="보유 기간">3년 (같은 법)</td></tr>
-<tr><td data-label="정보">사고 대비 백업 (주문·계정 정보. 사진은 빼요)</td><td data-label="보유 기간">만든 날부터 30일이 지나면 자동 삭제. 운영자 작업용 컴퓨터(한국) 안 백업과 Google Firestore 예약 백업, 두 곳에 둬요. 계정을 삭제해도 백업에는 최대 30일 남았다가 지워져요.</td></tr>
+<tr><td data-label="정보">사고 대비 백업 (주문·계정 정보. 사진은 빼요)</td><td data-label="보유 기간">운영자 작업용 컴퓨터(한국) 안 백업은 30일, Google Firestore 예약 백업(서울)은 7일이 지나면 자동 삭제. 계정을 삭제해도 백업에는 최대 30일 남았다가 지워져요.</td></tr>
 <tr><td data-label="정보">오류 기록</td><td data-label="보유 기간">90일</td></tr>
 <tr><td data-label="정보">이용 통계</td><td data-label="보유 기간">14개월</td></tr>
 </tbody></table></div>
@@ -91,11 +97,11 @@
 <div class="tbl"><table>
 <thead><tr><th>회사 (나라)</th><th>하는 일</th><th>보내는 정보</th><th>보유 기간</th><th>연락처</th></tr></thead>
 <tbody>
-<tr><td data-label="회사 (나라)">Google LLC (미국)<br><span class="muted">Firebase</span></td><td data-label="하는 일">로그인, 데이터 저장, 앱 알림, 이용 통계, 오류 보고</td><td data-label="보내는 정보">로그인 정보, 클라우드 백업, 주문서·사진·완성 파일, 주문·계정 정보 백업, 알림 토큰, 이용·오류 기록. 주문서와 그 백업은 서울, 로그인 정보·사진·파일은 미국에 저장돼요.</td><td data-label="보유 기간">제2조 기간과 같아요</td><td data-label="연락처">웹 양식 <a href="https://support.google.com/policies?p=privpol_privts">support.google.com/policies</a></td></tr>
+<tr><td data-label="회사 (나라)">Google LLC (미국)<br><span class="muted">Firebase</span></td><td data-label="하는 일">로그인, 데이터 저장, 앱 알림, 이용 통계, 오류 보고</td><td data-label="보내는 정보">로그인 정보, 클라우드 백업, 주문서·사진·완성 파일, 주문·계정 정보 백업, 알림 토큰과 알림 문구(강아지 이름이 들어가요), 이용·오류 기록. 주문서와 그 백업은 서울, 로그인 정보·사진·파일은 미국에 저장돼요.</td><td data-label="보유 기간">제2조 기간과 같아요</td><td data-label="연락처">웹 양식 <a href="https://support.google.com/policies?p=privpol_privts">support.google.com/policies</a></td></tr>
 <tr><td data-label="회사 (나라)">OpenAI OpCo, LLC (미국)</td><td data-label="하는 일">이미지 처리 (사진을 바탕으로 기준 그림 만들기)</td><td data-label="보내는 정보">강아지 사진 2장, 견종·체형·털 상태·특징, 운영자가 정리한 설명 한 줄. 강아지 이름·이메일은 보내지 않아요.</td><td data-label="보유 기간">처리가 끝나면 바로 삭제를 요청해요. 회사 정책상 남용을 막으려고 최대 30일 보관한 뒤 지우며, 학습에 쓰지 않아요.</td><td data-label="연락처">privacy@openai.com</td></tr>
 <tr><td data-label="회사 (나라)">Meshy LLC (미국)</td><td data-label="하는 일">3D 모델 제작</td><td data-label="보내는 정보">위에서 만든 기준 그림만. 원본 사진은 보내지 않아요.</td><td data-label="보유 기간">결과를 받으면 바로 삭제를 요청해요. 다만 Meshy 약관에 따라 Meshy가 받은 그림과 결과물을 자기 서비스를 개선하고 학습시키는 데 쓸 수 있어요.</td><td data-label="연락처">support@meshy.ai<br>111 West Evelyn Ave, Suite 304, Sunnyvale, CA 94086, USA</td></tr>
-<tr><td data-label="회사 (나라)">Anthropic, PBC (미국)</td><td data-label="하는 일">이미지 처리 (사진 확인, 털 상태 확인, 설명 문장 다듬기, 결과 비교)</td><td data-label="보내는 정보">강아지 사진 2장, 견종·체형·털 상태, 자유 한 줄(메일 주소·전화번호는 가려요), 완성 게임 화면. 강아지 이름·연락처는 보내지 않아요.</td><td data-label="보유 기간">30일 안에 지워지며 학습에 쓰지 않아요. (회사 정책 위반으로 걸러진 경우는 더 오래 보관될 수 있어요)</td><td data-label="연락처">privacy@anthropic.com<br>548 Market St, PMB 90375, San Francisco, CA 94104, USA</td></tr>
-<tr><td data-label="회사 (나라)">Telegram Messenger Inc. (아랍에미리트)<br><span class="muted">공식 안내상 운영 팀이 두바이에 있어요</span></td><td data-label="하는 일">검수용 사진 전송 (운영자 본인의 메신저)</td><td data-label="보내는 정보">강아지 사진 2장, 완성 게임 화면, 주문 요약, 자유 한 줄(메일 주소·전화번호는 가려요). 강아지 이름·이메일은 보내지 않아요.</td><td data-label="보유 기간">운영자가 판정하면 바로 지워요.</td><td data-label="연락처">앱 안 문의, EU 대리인 EDPO <a href="https://edpo.com/telegram-gdpr-data-request/">웹 양식</a></td></tr>
+<tr><td data-label="회사 (나라)">Anthropic, PBC (미국)</td><td data-label="하는 일">이미지 처리 (사진 확인, 털 상태 확인, 설명 문장 다듬기, 결과 비교)</td><td data-label="보내는 정보">강아지 사진 2장, 견종·체형·털 상태, 자유 한 줄과 다시 고쳐 달라는 메모(메일 주소·전화번호는 가려요), 완성 게임 화면. 강아지 이름·연락처는 보내지 않아요.</td><td data-label="보유 기간">30일 안에 지워지며 학습에 쓰지 않아요. (회사 정책 위반으로 걸러진 경우는 더 오래 보관될 수 있어요)</td><td data-label="연락처">privacy@anthropic.com<br>548 Market St, PMB 90375, San Francisco, CA 94104, USA</td></tr>
+<tr><td data-label="회사 (나라)">Telegram Messenger Inc. (영국령 버진아일랜드·아랍에미리트 등)<br><span class="muted">설립 나라는 공식 방침에 적혀 있지 않아요. 그룹사가 영국령 버진아일랜드와 두바이에 있어요</span></td><td data-label="하는 일">검수용 사진 전송 (운영자 본인의 메신저)</td><td data-label="보내는 정보">강아지 사진 2장, 완성 게임 화면, 주문 요약, 자유 한 줄과 다시 고쳐 달라는 메모(메일 주소·전화번호는 가려요). 강아지 이름·이메일은 보내지 않아요.</td><td data-label="보유 기간">운영자가 판정하면 바로 지워요.</td><td data-label="연락처">앱 안 문의, EU 대리인 EDPO <a href="https://edpo.com/telegram-gdpr-data-request/">웹 양식</a></td></tr>
 <tr><td data-label="회사 (나라)">RevenueCat, Inc. (미국)</td><td data-label="하는 일">결제 관리</td><td data-label="보내는 정보">앱 사용자 ID, 상품, 거래 번호</td><td data-label="보유 기간">제2조 결제 기록 기간과 같아요</td><td data-label="연락처">compliance@revenuecat.com<br>1032 East Brandon Blvd #3003, Brandon, FL 33511, USA</td></tr>
 <tr><td data-label="회사 (나라)">Zoho Corporation Pte. Ltd. (싱가포르, 저장은 미국)</td><td data-label="하는 일">문의 메일</td><td data-label="보내는 정보">이메일 주소, 문의 내용</td><td data-label="보유 기간">3년</td><td data-label="연락처">privacy@zohocorp.com</td></tr>
 </tbody></table></div>
@@ -109,13 +115,13 @@
 <h2 id="a7">제7조 이용자의 권리와 행사 방법</h2>
 <ul>
   <li>언제든 내 개인정보를 보거나, 고치거나, 지우거나, 처리를 멈추라고 요청하고 동의를 철회할 수 있어요.</li>
-  <li>앱 <span class="menu-path">설정 &gt; 계정 삭제</span>를 누르면 서버 데이터(계정 정보, 클라우드 백업, 커스텀 다시 받기, 주문·제작 기록)를 지워요. 사고 대비 백업 속 사본은 최대 30일 뒤 지워져요. 기기 안 데이터는 남으며, 앱을 삭제하면 함께 지워져요. 자세한 순서는 <a href="/delete/">계정·데이터 삭제</a> 안내를 봐 주세요.</li>
+  <li>앱 <span class="menu-path">설정 &gt; 계정 삭제 요청</span>을 누르면 서버 데이터(계정 정보, 클라우드 백업, 커스텀 다시 받기, 주문·제작 기록)를 지워요. 사고 대비 백업 속 사본은 최대 30일 뒤 지워져요. 기기 안 데이터는 남으며, 앱을 삭제하면 함께 지워져요. 자세한 순서는 <a href="/delete/">계정·데이터 삭제</a> 안내를 봐 주세요.</li>
   <li>그 밖의 요청은 <a href="mailto:hello@shallwedog.com">hello@shallwedog.com</a>으로 보내 주세요. 본인 확인 뒤 10일 안에 결과를 알려드려요. 법정대리인이나 위임받은 분도 요청할 수 있어요.</li>
   <li>법에 따라 보관해야 하는 정보는 그 기간 동안 지울 수 없어요.</li>
 </ul>
 
 <h2 id="a8">제8조 광고와 자동 수집 도구</h2>
-<p>무료로 이용할 수 있게 Google LLC의 AdMob으로 광고를 보여 줘요. 이때 Google이 기기 정보와 앱 이용 정보를 써서 광고를 보여 주고 광고 효과를 재요.</p>
+<p>무료로 이용할 수 있게 Google LLC의 AdMob으로 광고를 보여 줘요. 이때 Google이 기기 정보, 앱 이용 정보, IP 주소로 짐작한 대략적인 위치를 써서 광고를 보여 주고 광고 효과를 재요.</p>
 <ul>
   <li>아이폰: ‘앱이 추적하도록 허용’을 묻지 않고, 다른 앱·누리집 정보와 합친 맞춤 광고를 하지 않아요. 일반 광고만 보여요.</li>
   <li>유럽연합·영국: 처음 광고를 보여 주기 전에 Google이 인증한 동의 창을 띄워요. 동의하지 않으면 개인정보를 덜 쓰는 제한된 광고만 보여요. 앱 <span class="menu-path">설정</span>에서 언제든 다시 고를 수 있어요.</li>
@@ -164,12 +170,19 @@
       <a href="/privacy/">개인정보처리방침</a>
       <a href="/terms/">이용약관</a>
       <a href="/delete/">계정·데이터 삭제</a>
+      <a href="/support/">고객센터</a>
+    </nav>
+    <nav class="row langs" aria-label="Language">
+      <a href="/" lang="ko" hreflang="ko" aria-current="true">한국어</a>
+      <a href="/en/" lang="en" hreflang="en">English</a>
+      <a href="/ja/" lang="ja" hreflang="ja">日本語</a>
+      <a href="/es/" lang="es" hreflang="es">Español</a>
     </nav>
     <p class="biz">
       <span>상호 케이퍼프랩(K-Puff Lab)</span>
-      <span>대표 조현창</span>
+      <span data-en="Hyunchang Cho">대표 조현창</span>
       <span>사업자등록번호 609-49-03292</span>
-      <span>주소 서울특별시 강남구 개포로30길 20</span>
+      <span data-en="20 Gaepo-ro 30-gil, Gangnam-gu, Seoul, Republic of Korea">주소 서울특별시 강남구 개포로30길 20</span>
       <span>전화 010-4854-9943</span>
       <span>문의 <a class="mail" href="mailto:hello@shallwedog.com">hello@shallwedog.com</a></span>
     </p>

@@ -3,9 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' https://cdn.jsdelivr.net; font-src https://cdn.jsdelivr.net; img-src 'self' data:; manifest-src 'self'; base-uri 'none'; form-action 'none'; object-src 'none'; upgrade-insecure-requests">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<script src="/assets/js/frame.js"></script>
 <title>Privacy Policy — Shall We Dog?</title>
 <meta name="description" content="Shall We Dog? Privacy Policy (reference translation of the Korean original).">
 <link rel="canonical" href="https://shallwedog.com/en/privacy/">
+<link rel="alternate" hreflang="ko" href="https://shallwedog.com/privacy/">
+<link rel="alternate" hreflang="en" href="https://shallwedog.com/en/privacy/">
+<link rel="alternate" hreflang="x-default" href="https://shallwedog.com/en/privacy/">
 <meta name="theme-color" content="#F8ECD7" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#1E1611" media="(prefers-color-scheme: dark)">
 <meta property="og:type" content="website">
@@ -43,7 +49,7 @@
   <li>If you sign in with Google or Apple, we back up your game data to the cloud for free.</li>
   <li>Photos sent for a custom dog order are deleted automatically 14 days after the last delivery.</li>
   <li>We do not sell personal information, and we never delete your data on our own initiative.</li>
-  <li>You can delete your data at any time in <span class="menu-path">Settings &gt; Delete account</span> or by email.</li>
+  <li>You can delete your data at any time in <span class="menu-path">Settings &gt; Request account deletion</span> or by email.</li>
 </ul>
 </div>
 
@@ -54,13 +60,13 @@
 <tr><td data-label="When">Playing as a guest</td><td data-label="Information">Nothing is sent to our servers. Game data is stored on your device (except the automatically collected information below).</td><td data-label="Purpose">—</td></tr>
 <tr><td data-label="When">Google or Apple sign-in</td><td data-label="Information">Account identifier, email address (or the relay address if you use Apple’s Hide My Email)</td><td data-label="Purpose">Identifying you, cloud backup, restoring purchases and custom dogs</td></tr>
 <tr><td data-label="When">Cloud backup (signed-in users)</td><td data-label="Information">Game progress (your dog’s settings, records, paws, decorations, etc.)</td><td data-label="Purpose">Continuing on a new device</td></tr>
-<tr><td data-label="When">Custom dog order</td><td data-label="Information">Two photos of your dog (face from the front, whole body standing), breed (two for mixed breeds, or “not sure”), body type, current coat, features, one free-text line, dog’s name, order number, confirmation that you are 14 or older, consent records</td><td data-label="Purpose">Making, delivering and revising your custom dog; answering questions</td></tr>
+<tr><td data-label="When">Custom dog order</td><td data-label="Information">Two photos of your dog (face from the front, whole body standing), breed (two for mixed breeds, or “not sure”), body type, current coat, features, one free-text line (up to 60 characters), dog’s name, order number, product and transaction number, device type, app version and app language, confirmation that you are 14 or older, consent records, (optional) whether you agreed to one-year photo retention and when you withdrew it. If you ask for a revision: what to fix and a note (up to 100 characters); if you resend photos: the two new photos</td><td data-label="Purpose">Making, delivering and revising your custom dog; answering questions</td></tr>
 <tr><td data-label="When">Payments</td><td data-label="Information">App user ID, product, transaction number, date. Card and other payment details are handled by Apple or Google; we never receive them.</td><td data-label="Purpose">Confirming payments, refunds, legally required records</td></tr>
-<tr><td data-label="When">Notifications</td><td data-label="Information">Device notification token, your notification choices and times</td><td data-label="Purpose">Custom dog ready notices; notifications you agreed to</td></tr>
+<tr><td data-label="When">Notifications</td><td data-label="Information">Device notification token, app language, your notification choices and times</td><td data-label="Purpose">Custom dog ready notices; notifications you agreed to</td></tr>
 <tr><td data-label="When">Automatically, while you use the app</td><td data-label="Information">Device model, OS and app version, in-app activity, crash logs, advertising ID (Android advertising ID only; we do not use the iPhone advertising identifier)</td><td data-label="Purpose">Showing ads, usage statistics, fixing errors</td></tr>
 <tr><td data-label="When">Email enquiries</td><td data-label="Information">Email address, message</td><td data-label="Purpose">Replying</td></tr>
 </tbody></table></div>
-<p>The app removes location data from photos before uploading them. Please take photos without people’s faces. We do not collect your date of birth, phone number or address.</p>
+<p>We ask for photo library access only when you pick photos for an order or save a game screenshot. The app removes location data from photos before uploading them. Please take photos without people’s faces. We do not collect your date of birth, phone number or address.</p>
 
 <h2 id="a2">2. How long we keep it</h2>
 <div class="tbl"><table>
@@ -71,7 +77,7 @@
 <tr><td data-label="Information">Finished custom dog files, order records, production records (reference images we made, game screenshots, review records — without your original photos, dog’s name or free-text line)</td><td data-label="Retention">Until you delete your account (for re-downloads and quality control)</td></tr>
 <tr><td data-label="Information">Payment records (contracts and withdrawals, payments)</td><td data-label="Retention">5 years (Korean E-Commerce Consumer Protection Act). When you delete your account, we unlink them from it.</td></tr>
 <tr><td data-label="Information">Complaint and dispute records, email enquiries</td><td data-label="Retention">3 years (same Act)</td></tr>
-<tr><td data-label="Information">Backups for recovery (order and account information, without photos)</td><td data-label="Retention">Deleted automatically 30 days after they are made. Kept in two places: on the operator’s work computer (Korea) and in Google Firestore scheduled backups. If you delete your account, copies stay in backups for up to 30 days and are then deleted.</td></tr>
+<tr><td data-label="Information">Backups for recovery (order and account information, without photos)</td><td data-label="Retention">Backups on the operator’s work computer (Korea) are deleted automatically after 30 days, and Google Firestore scheduled backups (Seoul) after 7 days. If you delete your account, copies stay in backups for up to 30 days and are then deleted.</td></tr>
 <tr><td data-label="Information">Crash logs</td><td data-label="Retention">90 days</td></tr>
 <tr><td data-label="Information">Usage statistics</td><td data-label="Retention">14 months</td></tr>
 </tbody></table></div>
@@ -92,11 +98,11 @@
 <div class="tbl"><table>
 <thead><tr><th>Company (country)</th><th>Work</th><th>Information sent</th><th>Retention</th><th>Contact</th></tr></thead>
 <tbody>
-<tr><td data-label="Company (country)">Google LLC (USA)<br><span class="muted">Firebase</span></td><td data-label="Work">Sign-in, data storage, notifications, usage statistics, crash reports</td><td data-label="Information sent">Sign-in information, cloud backup, order forms, photos and finished files, backups of order and account information, notification tokens, usage and crash logs. Order forms and their backups are stored in Seoul; sign-in data, photos and files in the USA.</td><td data-label="Retention">As in Section 2</td><td data-label="Contact">Web form <a href="https://support.google.com/policies?p=privpol_privts">support.google.com/policies</a></td></tr>
+<tr><td data-label="Company (country)">Google LLC (USA)<br><span class="muted">Firebase</span></td><td data-label="Work">Sign-in, data storage, notifications, usage statistics, crash reports</td><td data-label="Information sent">Sign-in information, cloud backup, order forms, photos and finished files, backups of order and account information, notification tokens and notification text (which includes the dog’s name), usage and crash logs. Order forms and their backups are stored in Seoul; sign-in data, photos and files in the USA.</td><td data-label="Retention">As in Section 2</td><td data-label="Contact">Web form <a href="https://support.google.com/policies?p=privpol_privts">support.google.com/policies</a></td></tr>
 <tr><td data-label="Company (country)">OpenAI OpCo, LLC (USA)</td><td data-label="Work">Image processing (creating a reference picture from the photos)</td><td data-label="Information sent">Two dog photos, breed, body type, coat, features, a one-line description written by the operator. No dog name or email.</td><td data-label="Retention">We request deletion as soon as processing ends. Under its policy the company keeps data up to 30 days for abuse monitoring, then deletes it, and does not use it for training.</td><td data-label="Contact">privacy@openai.com</td></tr>
 <tr><td data-label="Company (country)">Meshy LLC (USA)</td><td data-label="Work">3D model creation</td><td data-label="Information sent">Only the reference picture made above. Your original photos are not sent.</td><td data-label="Retention">We request deletion as soon as we receive the result. Under Meshy’s terms, however, Meshy may use the picture and the result to improve and train its services.</td><td data-label="Contact">support@meshy.ai<br>111 West Evelyn Ave, Suite 304, Sunnyvale, CA 94086, USA</td></tr>
-<tr><td data-label="Company (country)">Anthropic, PBC (USA)</td><td data-label="Work">Image processing (checking photos and coat, polishing descriptions, comparing results)</td><td data-label="Information sent">Two dog photos, breed, body type, coat, the free-text line (emails and phone numbers masked), finished game screenshots. No dog name or contact details.</td><td data-label="Retention">Deleted within 30 days and not used for training (kept longer if flagged for a policy violation).</td><td data-label="Contact">privacy@anthropic.com<br>548 Market St, PMB 90375, San Francisco, CA 94104, USA</td></tr>
-<tr><td data-label="Company (country)">Telegram Messenger Inc. (United Arab Emirates)<br><span class="muted">Its team is based in Dubai, according to Telegram</span></td><td data-label="Work">Sending review photos (to the operator’s own messenger)</td><td data-label="Information sent">Two dog photos, finished game screenshots, order summary, the free-text line (emails and phone numbers masked). No dog name or email.</td><td data-label="Retention">Deleted as soon as the operator decides.</td><td data-label="Contact">In-app support; EU representative EDPO <a href="https://edpo.com/telegram-gdpr-data-request/">web form</a></td></tr>
+<tr><td data-label="Company (country)">Anthropic, PBC (USA)</td><td data-label="Work">Image processing (checking photos and coat, polishing descriptions, comparing results)</td><td data-label="Information sent">Two dog photos, breed, body type, coat, the free-text line and any revision note (emails and phone numbers masked), finished game screenshots. No dog name or contact details.</td><td data-label="Retention">Deleted within 30 days and not used for training (kept longer if flagged for a policy violation).</td><td data-label="Contact">privacy@anthropic.com<br>548 Market St, PMB 90375, San Francisco, CA 94104, USA</td></tr>
+<tr><td data-label="Company (country)">Telegram Messenger Inc. (British Virgin Islands, United Arab Emirates, etc.)<br><span class="muted">Its policy does not state where it is incorporated; group companies are in the British Virgin Islands and Dubai</span></td><td data-label="Work">Sending review photos (to the operator’s own messenger)</td><td data-label="Information sent">Two dog photos, finished game screenshots, order summary, the free-text line and any revision note (emails and phone numbers masked). No dog name or email.</td><td data-label="Retention">Deleted as soon as the operator decides.</td><td data-label="Contact">In-app support; EU representative EDPO <a href="https://edpo.com/telegram-gdpr-data-request/">web form</a></td></tr>
 <tr><td data-label="Company (country)">RevenueCat, Inc. (USA)</td><td data-label="Work">Purchase management</td><td data-label="Information sent">App user ID, product, transaction number</td><td data-label="Retention">As for payment records in Section 2</td><td data-label="Contact">compliance@revenuecat.com<br>1032 East Brandon Blvd #3003, Brandon, FL 33511, USA</td></tr>
 <tr><td data-label="Company (country)">Zoho Corporation Pte. Ltd. (Singapore; stored in the USA)</td><td data-label="Work">Contact email</td><td data-label="Information sent">Email address, message</td><td data-label="Retention">3 years</td><td data-label="Contact">privacy@zohocorp.com</td></tr>
 </tbody></table></div>
@@ -110,13 +116,13 @@
 <h2 id="a7">7. Your rights</h2>
 <ul>
   <li>You can ask to see, correct, delete or stop the processing of your information, and withdraw consent, at any time.</li>
-  <li>Tapping <span class="menu-path">Settings &gt; Delete account</span> deletes your server data (account information, cloud backup, custom dog re-downloads, order and production records); copies in backups for recovery are deleted after up to 30 days. Data on your device remains and is removed when you delete the app. See <a href="/en/delete/">Account &amp; data deletion</a>.</li>
+  <li>Tapping <span class="menu-path">Settings &gt; Request account deletion</span> deletes your server data (account information, cloud backup, custom dog re-downloads, order and production records); copies in backups for recovery are deleted after up to 30 days. Data on your device remains and is removed when you delete the app. See <a href="/en/delete/">Account &amp; data deletion</a>.</li>
   <li>For other requests, email <a href="mailto:hello@shallwedog.com">hello@shallwedog.com</a>. After confirming your identity we reply within 10 days. A legal guardian or authorised representative may also make requests.</li>
   <li>Information we must keep by law cannot be deleted during that period.</li>
 </ul>
 
 <h2 id="a8">8. Advertising and analytics</h2>
-<p>To keep the game free, we show ads through Google LLC’s AdMob. Google uses device and in-app activity information to show ads and measure them.</p>
+<p>To keep the game free, we show ads through Google LLC’s AdMob. Google uses device information, in-app activity and an approximate location inferred from your IP address to show ads and measure them.</p>
 <ul>
   <li>iPhone: we do not ask for permission to track, and we do not show personalised ads that combine information from other apps or websites. Only non-personalised ads are shown.</li>
   <li>EU and UK: before showing ads, we display a Google-certified consent message. If you do not consent, only limited ads that use less personal information are shown. You can change your choice in <span class="menu-path">Settings</span> at any time.</li>
@@ -142,7 +148,7 @@
 
 <h2 id="a11">11. Privacy officer and contact</h2>
 <div class="box">
-<p>Privacy officer: <span lang="ko">조현창</span> (Owner)</p>
+<p>Privacy officer: Hyunchang Cho (Owner)</p>
 <p>Email: <a href="mailto:hello@shallwedog.com">hello@shallwedog.com</a> · Phone: +82 10-4854-9943</p>
 <p class="muted">We reply to enquiries within 3 business days.</p>
 </div>
@@ -165,10 +171,17 @@
       <a href="/en/privacy/">Privacy Policy</a>
       <a href="/en/terms/">Terms of Service</a>
       <a href="/en/delete/">Account &amp; data deletion</a>
+      <a href="/en/support/">Help</a>
+    </nav>
+    <nav class="row langs" aria-label="Language">
+      <a href="/" lang="ko" hreflang="ko">한국어</a>
+      <a href="/en/" lang="en" hreflang="en" aria-current="true">English</a>
+      <a href="/ja/" lang="ja" hreflang="ja">日本語</a>
+      <a href="/es/" lang="es" hreflang="es">Español</a>
     </nav>
     <p class="biz">
       <span>Business name K-Puff Lab</span>
-      <span>Owner <span lang="ko">조현창</span></span>
+      <span>Owner Hyunchang Cho</span>
       <span>Business registration no. 609-49-03292</span>
       <span>Address 20 Gaepo-ro 30-gil, Gangnam-gu, Seoul, Republic of Korea</span>
       <span>Phone +82 10-4854-9943</span>

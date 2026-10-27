@@ -1,7 +1,7 @@
 # 구글 Play Console 답안지 (10/29 등록용, 10/27 탭 3)
 
 화면을 보면서 위에서부터 그대로 고르면 돼요. '이유' 칸의 조항은 공개된 처리방침(https://shallwedog.com/privacy/)이에요.
-⚑ = 출시 빌드에 그 기능이 실제로 들어갈 때만 해당해요. 지금 앱 코드에는 **로그인 · 클라우드 백업 · 진짜 커스텀 주문이 아직 없고**(개발 빌드에서만 가짜로 동작), AdMob은 시험 ID예요(10/27 코드 확인). 빠지면 ⚑ 줄을 '아니요'로 바꿔요.
+⚑ = 출시 빌드에 그 기능이 실제로 들어갈 때만 해당해요. 로그인은 10/27 밤에 **구글 · 애플 버튼 대신 안드로이드 = 구글 플레이 게임즈 자동 로그인**으로 바뀌었어요(코드는 있지만 플레이 게임즈 플러그인 · Firebase 설정 파일이 아직 없어 조용히 꺼져 있음). **클라우드 백업은 없어요**(게임 데이터는 폰에만). 진짜 커스텀 주문은 아직 개발 빌드에서만 가짜로 동작하고, AdMob은 시험 ID예요(10/27 코드 확인). 빠지면 ⚑ 줄을 '아니요'로 바꿔요.
 [미확인] = 공식 도움말에 화면 글이 그대로 나오지 않아 실제 화면과 조금 다를 수 있어요.
 
 ---
@@ -26,11 +26,11 @@
 ### 2-2. 앱 액세스
 - 고를 답: **모든 기능을 특별한 액세스 권한 없이 사용할 수 있음**
 - 이유:
-  - 게스트로 모든 게임 기능을 쓸 수 있어요.
-  - 로그인은 아무 구글 계정으로나 되는 선택 기능이에요.
+  - 로그인 버튼이 없어요. 앱을 켤 때 구글 플레이 게임즈로 조용히 자동 로그인하고, 안 되거나 거절해도 모든 게임 기능을 쓸 수 있어요.
+  - 커스텀 주문만 로그인이 필요하고, 아무 구글 계정의 플레이 게임즈로 돼요.
   - 커스텀은 결제가 필요한 상품이라 '제한'에 해당하지 않아요.
 - 커스텀 결제를 심사관이 해 봐야 한다는 요청이 오면 '일부 기능이 제한됨'으로 바꾸고 아래를 붙여요(10/27 6차 다시 씀).
-  > Guest mode gives access to all game features without signing in. Shop: the Shop button on the home screen (tabs: Style, Paws, Custom, Full version). Custom dog (paid, made to order, with a human check step) requires Google sign-in (any Google account, 14+) and an in-app purchase; license testers are not charged. Orders placed with a test purchase are also actually made and delivered to the app (up to 5 test orders per 24 hours). Delivery is usually within 24 hours, at most 7 days; during the review period our team checks orders between 7:00 and 24:00 Korea time (UTC+9). Photos needed: one clear front photo of the dog's face and one of the whole body standing. If a photo is not of a dog, the order shows "Please send new photos". Limit: 3 custom orders per account per day.
+  > There is no sign-in button. The app signs in silently with Google Play Games when it opens; if that does not happen or is declined, all game features still work without signing in. Shop: the Shop button on the home screen (tabs: Style, Paws, Custom, Full version). Custom dog (paid, made to order, with a human check step) requires Google Play Games sign-in (any Google account; the app asks the user to confirm they are 14+ when ordering) and an in-app purchase; license testers are not charged. Orders placed with a test purchase are also actually made and delivered to the app (up to 5 test orders per 24 hours). Delivery is usually within 24 hours, at most 7 days; during the review period our team checks orders between 7:00 and 24:00 Korea time (UTC+9). Photos needed: one clear front photo of the dog's face and one of the whole body standing. If a photo is not of a dog, the order shows "Please send new photos". Limit: 3 custom orders per account per day.
 - 사용자가 할 일: **설정 > 라이선스 테스트**에 시험용 지메일을 넣어요(시험 결제용).
 
 ### 2-3. 광고
@@ -86,7 +86,7 @@
 | 필수 사용자 데이터 유형을 수집하거나 공유하나요? | **예** | |
 | 수집하는 모든 사용자 데이터가 전송 중에 암호화되나요? | **예** | HTTPS(처리방침 10조) |
 | 사용자가 데이터 삭제를 요청할 수 있나요? | **삭제를 요청할 수 있는 방법을 제공함** | 처리방침 7조 |
-| 계정 만들기 방법 ⚑ | **OAuth** (구글 · 애플 로그인) | 처리방침 1조 |
+| 계정 만들기 방법 ⚑ | **OAuth** (구글 플레이 게임즈 자동 로그인) [미확인: 화면에 '기타'가 더 맞아 보이면 '기타 > Google Play 게임즈'] | 처리방침 1조 |
 | 계정 삭제 URL | `https://shallwedog.com/delete/` | 앱 안 [설정 > 계정 삭제 요청]도 있어야 해요 |
 | 독립 보안 검토 배지 | 체크 안 함 | 받은 적 없음 |
 
@@ -97,19 +97,21 @@
 ### 3-2. 데이터 유형별 (수집 = 예인 것만, '일시적 처리' = 모두 **아니요**)
 | 유형 | 수집 | 공유 | 필수/선택 | 목적 | 처리방침 |
 |---|---|---|---|---|---|
-| 개인 정보 > 이메일 주소 ⚑ | 예 | 아니요 | 선택 (로그인한 사람만) | 앱 기능, 계정 관리 | 1조 로그인 |
-| 개인 정보 > 사용자 ID | 예 | 아니요 | **필수** (결제 관리 RevenueCat ID는 모든 이용자에게 만들어져요) | 앱 기능, 계정 관리, 사기 방지 · 보안 · 규정 준수 | 1조 로그인 · 결제 |
+| 개인 정보 > 이름 (플레이 게임즈 닉네임) ⚑ | 예 | 아니요 | 선택 (로그인된 사람만) | 앱 기능, 계정 관리 | 1조 자동 로그인 |
+| 개인 정보 > 사용자 ID (플레이 게임즈 플레이어 ID · 계정 ID · 결제 ID) | 예 | 아니요 | **필수** (결제 관리 RevenueCat ID는 모든 이용자에게 만들어져요) | 앱 기능, 계정 관리, 사기 방지 · 보안 · 규정 준수 | 1조 자동 로그인 · 결제 |
 | 금융 정보 > 구매 기록 | 예 | 아니요 | 선택 | 앱 기능 | 1조 결제 |
 | 사진 및 동영상 > 사진 ⚑ | 예 | 아니요 | 선택 (커스텀 주문만) | 앱 기능 | 1조 커스텀 · 5조 |
 | 앱 활동 > 앱 상호작용 | 예 | **예** (AdMob) | 필수 | 분석, 광고 또는 마케팅 | 1조 자동 · 8조 |
-| 앱 활동 > 기타 사용자 생성 콘텐츠 (강아지 이름 · 주문서 · 자유 한 줄 · 고칠 메모 · 클라우드 백업) | 예 | 아니요 | 선택 | 앱 기능 | 1조 |
+| 앱 활동 > 기타 사용자 생성 콘텐츠 (강아지 이름 · 주문서 · 자유 한 줄 · 고칠 메모) ⚑ | 예 | 아니요 | 선택 (커스텀 주문만) | 앱 기능 | 1조 커스텀 |
 | 앱 정보 및 성능 > 비정상 종료 로그 | 예 | **예** (AdMob) | 필수 | 분석 | 1조 자동 |
 | 앱 정보 및 성능 > 진단 | 예 | **예** (AdMob) | 필수 | 분석 | 1조 자동 |
 | 기기 또는 기타 ID (광고 ID · 알림 토큰) | 예 | **예** (AdMob) | 필수 | 광고 또는 마케팅, 분석, 앱 기능 | 1조 알림 · 자동 |
 | 위치 > 대략적인 위치 (AdMob이 IP로 추정) | 예 | **예** (AdMob) | 필수 | 광고 또는 마케팅 | 8조 |
 
-- 수집 안 함: 이름(사람) · 주소 · 전화 · 정밀 위치 · 연락처 · 메시지 · 오디오 · 파일 · 캘린더 · 건강 · 웹 기록 · 설치된 앱.
+- 수집 안 함: 이메일 주소(10/27 밤 구글 · 애플 로그인을 빼서) · 실명 · 주소 · 전화 · 정밀 위치 · 연락처 · 메시지 · 오디오 · 파일 · 캘린더 · 건강 · 웹 기록 · 설치된 앱.
 - 사진을 14일 보관하므로 '일시적으로만 처리'에는 체크하지 않아요.
+- '이름' 줄은 Firebase 로그인 기록에 플레이 게임즈 닉네임이 함께 저장될 때만 '예'예요. 탭 4가 Firebase 콘솔 Authentication에서 닉네임 칸이 비어 있으면 '아니요'로 바꿔요.
+- 게임 진행 데이터(강아지 · 기록 · 발바닥 · 꾸미기)는 폰에만 있어서 적지 않아요(클라우드 백업 없음).
 - AdMob 항목은 구글 공식 'AdMob 데이터 공개' 안내를 따랐어요: https://developers.google.com/admob/android/privacy/play-data-disclosure
 
 ## 4. 스토어 등록정보

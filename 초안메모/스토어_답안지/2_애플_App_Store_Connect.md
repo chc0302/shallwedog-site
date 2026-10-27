@@ -1,6 +1,6 @@
 # 애플 App Store Connect 답안지 (10/29 등록 · 11/9 심사 제출용, 10/27 탭 3)
 
-⚑ = 출시 빌드에 그 기능이 실제로 들어갈 때만 해당해요(로그인 · 클라우드 백업 · 커스텀 주문은 아직 코드에 없음, 10/27 확인).
+⚑ = 출시 빌드에 그 기능이 실제로 들어갈 때만 해당해요. 10/27 밤부터 로그인 = **아이폰 게임센터 자동 로그인**(구글 · 애플 버튼 없음), **클라우드 백업 없음**(게임 데이터는 폰에만). 진짜 커스텀 주문은 아직 개발 빌드에서만 동작해요(10/27 코드 확인).
 [미확인] = 공식 도움말에 화면 글이 그대로 나오지 않아요.
 
 ---
@@ -47,19 +47,18 @@
 
 | 데이터 유형 | 사용자와 연결 | 추적 | 목적 | 처리방침 |
 |---|---|---|---|---|
-| 연락처 정보 > 이메일 주소 ⚑ | 예 | 아니요 | 앱 기능 | 1조 로그인 |
-| 식별자 > 사용자 ID | 예 | 아니요 | 앱 기능 | 1조 로그인 · 결제 |
+| 식별자 > 사용자 ID (게임센터 플레이어 ID · 게임 닉네임 · 계정 ID · 결제 ID) | 예 | 아니요 | 앱 기능 | 1조 자동 로그인 · 결제 |
 | 식별자 > 기기 ID | 아니요 | 아니요 | 제3자 광고, 분석 | 1조 자동 · 8조 |
 | 구입 항목 > 구입 내역 | 예 | 아니요 | 앱 기능 | 1조 결제 |
 | 사용자 콘텐츠 > 사진 또는 비디오 ⚑ | 예 | 아니요 | 앱 기능 | 1조 커스텀 |
-| 사용자 콘텐츠 > 게임 플레이 콘텐츠 (클라우드 백업) ⚑ | 예 | 아니요 | 앱 기능 | 1조 클라우드 백업 |
 | 사용자 콘텐츠 > 기타 사용자 콘텐츠 (주문서 · 강아지 이름 · 자유 한 줄 · 고칠 메모) ⚑ | 예 | 아니요 | 앱 기능 | 1조 커스텀 |
 | 사용 데이터 > 제품 상호작용 | 아니요 | 아니요 | 분석, 제3자 광고 | 1조 자동 |
 | 사용 데이터 > 광고 데이터 | 아니요 | 아니요 | 제3자 광고 | 8조 |
 | 위치 > 대략적인 위치 (AdMob이 IP로 추정) | 아니요 | 아니요 | 제3자 광고 | 8조 |
 | 진단 > 충돌 데이터 · 성능 데이터 | 아니요 | 아니요 | 앱 기능, 분석 | 1조 자동 |
 
-- 수집 안 함: 이름 · 전화 · 주소 · 결제 정보(애플이 처리) · 정밀 위치 · 연락처 · 건강 · 검색 · 방문 기록 · 민감 정보 · 신체 · 주변 환경.
+- 수집 안 함: 이메일 주소(10/27 밤 로그인 방식이 바뀌어 받지 않음) · 게임 플레이 콘텐츠(클라우드 백업 없음) · 이름 · 전화 · 주소 · 결제 정보(애플이 처리) · 정밀 위치 · 연락처 · 건강 · 검색 · 방문 기록 · 민감 정보 · 신체 · 주변 환경.
+- 게임센터 닉네임은 애플 정의상 '사용자 ID'(화면 이름 · 핸들)에 들어가요. 애플이 게임센터 안에서 쓰는 정보는 우리가 받는 게 아니라 적지 않아요.
 
 ## 3. 수출 규정 (암호화)
 - "앱이 암호화를 사용하나요?" → **예, 단 면제 대상(표준 HTTPS · 운영체제 암호화만)**
@@ -78,7 +77,7 @@
 ## 5. 앱 심사 정보 (버전 페이지 맨 아래)
 | 칸 | 넣을 것 |
 |---|---|
-| 로그인 필요 | **체크 안 함** (게스트로 전부 가능) |
+| 로그인 필요 | **체크 안 함** (로그인 버튼이 없고, 게임센터 로그인이 없어도 게임 전부 가능) |
 | 연락처 | 이름 · 이메일 hello@shallwedog.com · 전화(+82 형식) — 사용자가 직접 입력 |
 | 메모 (4000바이트 이내) | 아래 초안 |
 
@@ -86,12 +85,12 @@
 ```
 Thank you for reviewing Shall We Dog?
 
-GUEST MODE: No sign-in is needed to review the game. All game features (dog creation, walks, home, training, agility, mini games, styling, screenshots) are available as a guest. Game data is stored on the device.
+SIGN-IN: There is no sign-in button and no account to create. When the app opens, it signs in silently with Game Center. If Game Center is not signed in or the prompt is declined, nothing is blocked: all game features (dog creation, walks, home, training, agility, mini games, styling, screenshots) work, and game data is stored on the device.
 
 IN-APP PURCHASES: Tap the Shop button on the home screen (also in the walk menu). Tabs: Style, Paws (consumable currency), Custom (Custom dog, consumable) and Full version (non-consumable).
 
 CUSTOM DOG (paid, made to order):
-- Sign in with Apple (14+, required only for this product), buy Custom in the Shop, check the required consents, then upload two photos of a real dog (face from the front, whole body) and fill in a short order form.
+- Requires Game Center sign-in (only for this product) and a 14+ confirmation when ordering. If the sign-in sheet does not appear, sign in at Settings > Game Center (any Apple Account), then return to the app. Buy Custom in the Shop, check the required consents, then upload two photos of a real dog (face from the front, whole body) and fill in a short order form.
 - Before payment, the user must check a required consent that names each outside processing company (OpenAI, Anthropic, Meshy; overseas), with a link to Section 5 of our privacy policy. See the attached screenshot.
 - This is a made-to-order product with a human check step. Orders placed with a sandbox (test) purchase are also actually made and delivered to the app, so you can see the finished dog. Up to 5 sandbox orders are accepted per 24 hours.
 - Delivery time: usually within 24 hours, at most 7 days. During the review period, our team checks orders between 7:00 and 24:00 Korea time (UTC+9). The order screen shows the estimated date. The app shows "We're checking your payment" until the store confirms the purchase, then "We're making it", then "It's here".
@@ -99,7 +98,7 @@ CUSTOM DOG (paid, made to order):
 - Limits: up to 3 custom orders per account per day; photos under 5 MB.
 - Photos are deleted 14 days after the last delivery unless the user opts in to one-year retention. The finished dog is digital content used only inside the app, sold via in-app purchase.
 
-ACCOUNT DELETION: Settings > Request account deletion (also https://shallwedog.com/delete/).
+ACCOUNT DELETION: Settings > "Request data deletion" in the small line at the bottom (also https://shallwedog.com/delete/). Restore purchases is in the same line.
 
 ADS: Rewarded ads only (Google AdMob). We do not use the App Tracking Transparency prompt and do not track users; iPhone users receive non-personalized ads.
 
@@ -110,7 +109,8 @@ Contact: hello@shallwedog.com
 - 위 Custom 단락은 탭 4 `Docs/서버/심사_대응.md`(10/27)에 맞췄어요: 시험 결제도 실제 제작 · 24시간 시험 결제 5건 · 심사 기간 검수 7~24시 · 보통 24시간 안(최대 7일) · 개 사진 아니면 '사진을 다시 보내 주세요' · 두 번째도 안 되면 멈추고 연락.
 - 상태 글('We're checking your payment' 등)은 탭 1 앱 글과 같아야 해요. 지금 앱에는 이 줄이 없어요. 제안은 `../b1_문구_제안_1027.md`에 있어요.
 - 'Shop' 위치는 앱 코드 기준이에요(첫 화면 · 산책 메뉴의 상점 버튼, 탭 4개).
-- **구매 복원 버튼을 코드에서 찾지 못했어요.** 정식판처럼 비소모품을 팔면 애플이 '구매 복원'을 요구해요. 탭 1이 확인해 주세요.
+- 구매 복원 버튼은 10/27 밤 코드에 들어왔어요(설정 맨 아래 작은 줄, `AppUiController.Account.cs`). 스토어 키가 없는 출시 빌드에서는 안 보이니, 출시 빌드에서 보이는지 탭 1이 확인해 주세요.
+- 로그인이 구글 · 애플 버튼에서 게임센터로 바뀌어 'Sign in with Apple을 함께 넣으라'는 지침 4.8은 해당하지 않아요(게임센터는 애플 자체 로그인). 계정 삭제(5.1.1(v))는 위 메모의 경로로 그대로 있어요.
 - 커스텀 상품의 '앱 내 구입 심사 메모'(상품마다 따로 쓰는 칸)는 탭 4 `상품_등록표.md` B-5 예시를 쓰되, 위 Custom 단락을 줄여 넣어요.
 
 - 1차 심사에서 5.1.2(i)로 걸리면 동의 줄을 'AI'를 넣은 대비 문장으로 바꿔요(`../동의문구_사업자정보.md` 3절). 메모의 'outside processing companies'도 'outside AI image-processing companies'로 바꿔요(이 메모에서 두 곳 — 첫 줄 · Custom 단락).

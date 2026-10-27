@@ -129,6 +129,7 @@ def home(lang):
         assert n >= 1, ('첫 화면에 없음', ko)
         main = pat_text.sub(lambda m: '>' + m.group(1) + new + m.group(2) + '<', main)
         main = pat_attr.sub(lambda m: f'{m.group(1)}="{new}"', main)
+    main = sitekit.set_quick(main, lang)
     n = main.count('href="/support/#custom"'); assert n == 1, n
     main = main.replace('href="/support/#custom"', f'href="/{lang}/support/#custom"')
     title, desc = HOME_META[lang]

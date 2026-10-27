@@ -12,7 +12,7 @@ OG_LOCALE = {'ko': 'ko_KR', 'en': 'en_US', 'ja': 'ja_JP', 'es': 'es_ES'}
 
 def biz():
     s = open(os.path.join(ROOT, 'index.html'), encoding='utf-8').read()
-    block = re.search(r'<p class="biz">(.*?)</p>', s, re.S).group(1)
+    block = re.search(r'<p class="biz"[^>]*>(.*?)</p>', s, re.S).group(1)
     out = {}
     for label, key in (('상호', 'name'), ('대표', 'owner'), ('사업자등록번호', 'reg'), ('주소', 'addr'), ('전화', 'tel')):
         m = re.search(r'<span( data-en="([^"]*)")?>' + label + r' ([^<]+)</span>', block)
@@ -32,11 +32,33 @@ DOCS = {
     'ja': ('ご案内', [('/en/privacy/', 'プライバシーポリシー（英語）'), ('/en/terms/', '利用規約（英語）'), ('/ja/delete/', 'アカウント・データの削除'), ('/ja/support/', 'サポート')]),
     'es': ('Documentos', [('/en/privacy/', 'Política de privacidad (en inglés)'), ('/en/terms/', 'Términos (en inglés)'), ('/es/delete/', 'Borrar cuenta y datos'), ('/es/support/', 'Ayuda')]),
 }
+# 첫 화면 맨 위 줄: 앱 설정 맨 아래 '약관 · 개인정보처리방침 · 사업자 정보 · 고객센터: shallwedog.com'을 누르면 오는 곳 (앱 말과 같은 이름)
+QUICK = {
+    'ko': ('바로 가기', [('/terms/', '약관'), ('/privacy/', '개인정보처리방침'), ('#biz', '사업자 정보'), ('/support/', '고객센터'), ('/delete/', '데이터 삭제 요청')]),
+    'en': ('Quick links', [('/en/terms/', 'Terms'), ('/en/privacy/', 'Privacy Policy'), ('#biz', 'Business info'), ('/en/support/', 'Help'), ('/en/delete/', 'Request data deletion')]),
+    'ja': ('すぐに見る', [('/en/terms/', '利用規約（英語）'), ('/en/privacy/', 'プライバシーポリシー（英語）'), ('#biz', '事業者情報'), ('/ja/support/', 'サポート'), ('/ja/delete/', 'データ削除のリクエスト')]),
+    'es': ('Enlaces rápidos', [('/en/terms/', 'Términos (en inglés)'), ('/en/privacy/', 'Privacidad (en inglés)'), ('#biz', 'Datos de la empresa'), ('/es/support/', 'Ayuda'), ('/es/delete/', 'Solicitar borrado de datos')]),
+}
+
+
+def quick(lang):
+    aria, links = QUICK[lang]
+    return (f'<nav class="wrap quick" aria-label="{aria}">\n'
+            + '\n'.join(f'  <a href="{h}">{t}</a>' for h, t in links) + '\n</nav>')
+
+
+def set_quick(main, lang):
+    """첫 화면 본문 맨 앞에 바로 가기 줄 (있으면 바꿔 끼움)"""
+    main = re.sub(r'<nav class="wrap quick".*?</nav>\n', '', main, flags=re.S)
+    assert main.count('<main id="main">\n') == 1
+    return main.replace('<main id="main">\n', '<main id="main">\n' + quick(lang) + '\n', 1)
+
+
 LABELS = {
-    'ko': ('상호', '대표', '사업자등록번호', '주소', '전화', '문의'),
-    'en': ('Business name', 'Owner', 'Business registration no.', 'Address', 'Phone', 'Contact'),
-    'ja': ('商号', '代表', '事業者登録番号', '住所', '電話', 'お問い合わせ'),
-    'es': ('Nombre comercial', 'Titular', 'N.º de registro empresarial', 'Dirección', 'Teléfono', 'Contacto'),
+    'ko': ('상호', '대표', '사업자등록번호', '주소', '전화', '문의', '사업자 정보'),
+    'en': ('Business name', 'Owner', 'Business registration no.', 'Address', 'Phone', 'Contact', 'Business info'),
+    'ja': ('商号', '代表', '事業者登録番号', '住所', '電話', 'お問い合わせ', '事業者情報'),
+    'es': ('Nombre comercial', 'Titular', 'N.º de registro empresarial', 'Dirección', 'Teléfono', 'Contacto', 'Datos de la empresa'),
 }
 
 
@@ -61,7 +83,7 @@ def footer(lang):
     return ('<footer class="foot">\n  <div class="wrap">\n'
             f'    <nav class="row" aria-label="{aria}">\n{nav}\n    </nav>\n'
             f'    <nav class="row langs" aria-label="Language">\n{langs}\n    </nav>\n'
-            '    <p class="biz">\n' + '\n'.join('      ' + x for x in spans) + '\n    </p>\n'
+            '    <p class="biz" id="biz">\n' + f'      <strong class="biz-title">{L[6]}</strong>\n' + '\n'.join('      ' + x for x in spans) + '\n    </p>\n'
             '    <p class="copy">© 2026 Shall We Dog?</p>\n  </div>\n</footer>')
 
 

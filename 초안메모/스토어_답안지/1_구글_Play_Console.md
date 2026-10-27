@@ -87,7 +87,7 @@
 | 수집하는 모든 사용자 데이터가 전송 중에 암호화되나요? | **예** | HTTPS(처리방침 10조) |
 | 사용자가 데이터 삭제를 요청할 수 있나요? | **삭제를 요청할 수 있는 방법을 제공함** | 처리방침 7조 |
 | 계정 만들기 방법 ⚑ | **OAuth** (구글 · 애플 로그인) | 처리방침 1조 |
-| 계정 삭제 URL | `https://shallwedog.com/delete/` | 앱 안 [설정 > 계정 삭제]도 있어야 해요 |
+| 계정 삭제 URL | `https://shallwedog.com/delete/` | 앱 안 [설정 > 계정 삭제 요청]도 있어야 해요 |
 | 독립 보안 검토 배지 | 체크 안 함 | 받은 적 없음 |
 
 - '공유' = 제3자에게 넘겨 그 회사가 자기 목적으로 씀.
@@ -115,6 +115,7 @@
 ## 4. 스토어 등록정보
 - 설명 글은 `4_스토어_설명글_최종.md`에 있어요.
 - 웹사이트: `https://shallwedog.com`
+- 고객 지원(문의 안내를 적는 칸이 나오면): `https://shallwedog.com/support/`. 언어별 등록정보에서는 영어 `/en/support/` · 일본어 `/ja/support/` · 스페인어 `/es/support/`를 써요.
   - app-ads.txt를 찾는 기준이에요.
 - 이메일: hello@shallwedog.com
 - 개인정보처리방침: https://shallwedog.com/privacy/

@@ -1,10 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://shallwedog.com/</loc></url>
+  <url><loc>https://shallwedog.com/en/</loc></url>
+  <url><loc>https://shallwedog.com/ja/</loc></url>
+  <url><loc>https://shallwedog.com/es/</loc></url>
   <url><loc>https://shallwedog.com/privacy/</loc></url>
-  <url><loc>https://shallwedog.com/terms/</loc></url>
-  <url><loc>https://shallwedog.com/delete/</loc></url>
   <url><loc>https://shallwedog.com/en/privacy/</loc></url>
+  <url><loc>https://shallwedog.com/terms/</loc></url>
   <url><loc>https://shallwedog.com/en/terms/</loc></url>
+  <url><loc>https://shallwedog.com/delete/</loc></url>
   <url><loc>https://shallwedog.com/en/delete/</loc></url>
+  <url><loc>https://shallwedog.com/ja/delete/</loc></url>
+  <url><loc>https://shallwedog.com/es/delete/</loc></url>
+  <url><loc>https://shallwedog.com/support/</loc></url>
+  <url><loc>https://shallwedog.com/en/support/</loc></url>
+  <url><loc>https://shallwedog.com/ja/support/</loc></url>
+  <url><loc>https://shallwedog.com/es/support/</loc></url>
 </urlset>

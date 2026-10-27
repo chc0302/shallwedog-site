@@ -184,3 +184,16 @@ p{margin:0}
   .tbl th{font-weight:800; background:var(--green-soft)}
   .tbl tbody tr:last-child td{border-bottom:0}
 }
+
+/* 언어 고르기 (바닥) */
+.foot .langs{margin-top:10px; gap:6px 16px}
+.foot .langs a{color:var(--sub); font-weight:600; text-decoration:none}
+.foot .langs a:hover,.foot .langs a[aria-current]{color:var(--ink); text-decoration:underline}
+
+/* 고객센터 */
+.doc h3{font-size:18px; font-weight:800; margin:0 0 6px; line-height:1.4}
+.faq .box p+p{margin-top:8px}
+.tips{list-style:none; padding:0; margin:12px 0 0; display:grid; gap:10px}
+.tips li{display:flex; gap:12px; align-items:flex-start; background:var(--card); border-radius:16px; padding:12px 14px; box-shadow:var(--shadow)}
+.tips .ico{flex:none; width:36px; height:36px; border-radius:12px; display:grid; place-items:center; background:var(--green-soft); font-size:19px}
+.tips li+li{margin-top:0}

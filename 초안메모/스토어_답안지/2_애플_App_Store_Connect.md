@@ -5,6 +5,15 @@
 
 ---
 
+## 0. 주소 칸 (버전 페이지 · 현지화마다)
+| 칸 | 한국어 | English | 日本語 | Español |
+|---|---|---|---|---|
+| 지원 URL (필수) | https://shallwedog.com/support/ | https://shallwedog.com/en/support/ | https://shallwedog.com/ja/support/ | https://shallwedog.com/es/support/ |
+| 마케팅 URL (선택) | https://shallwedog.com/ | https://shallwedog.com/en/ | https://shallwedog.com/ja/ | https://shallwedog.com/es/ |
+| 개인정보처리방침 URL (앱 정보, 하나) | https://shallwedog.com/privacy/ | | | |
+
+- 지원 URL은 공개(사용자 OK) 뒤에 열려요. 등록 전에 공개가 끝나야 해요.
+
 ## 1. 연령 등급 (앱 정보 > 연령 등급 설정)
 새 등급 체계(4+ · 9+ · 13+ · 16+ · 18+)예요. 2026년 7월에 생긴 '소셜 미디어' 질문은 9월부터 새 앱에 필수예요.
 
@@ -79,7 +88,7 @@ Thank you for reviewing Shall We Dog?
 
 GUEST MODE: No sign-in is needed. All game features (dog creation, walks, home, training, agility, mini-games, styling, screenshots) are available as a guest. Game data is stored on the device.
 
-SIGN-IN (optional, 14+): Sign in with Apple or Google only backs up game data to the cloud and is required for Custom Dog orders. Account deletion: Settings > Delete account (also https://shallwedog.com/delete/).
+SIGN-IN (optional, 14+): Sign in with Apple or Google only backs up game data to the cloud and is required for Custom Dog orders. Account deletion: Settings > Request account deletion (also https://shallwedog.com/delete/).
 
 IN-APP PURCHASES: Shop (paws icon) and Settings > Full Version. Products: Full Version (non-consumable), Paws (consumable currency), styling items, and Custom Dog (consumable).
 
@@ -97,7 +106,7 @@ Contact: hello@shallwedog.com
 - **5.1.2(i):** 개인정보를 제3자(제3자 AI 포함)와 공유할 때는 어디로 가는지 분명히 밝히고, 그 전에 명시적인 허락을 받아야 해요.
   - 우리는 결제 전 필수 체크와 처리방침 5조로 대응해요.
 - **5.1.1(v):** 계정을 만들 수 있으면 앱 안에서 삭제도 돼야 해요.
-  - 우리는 [설정 > 계정 삭제]로 대응해요.
+  - 우리는 [설정 > 계정 삭제 요청]로 대응해요.
 - **3.1.1:** 앱 안에서 쓰는 디지털 상품, 게임 재화, 정식판은 앱 안 결제로 팔아야 해요.
   - 커스텀 강아지도 앱 안에서만 쓰는 디지털 콘텐츠라 앱 안 결제예요. 이건 내 해석이에요.
 

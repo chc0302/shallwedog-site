@@ -1,4 +1,6 @@
 import re, os, sys
+sys.path.insert(0, os.path.expanduser('~/shallwedog-site/초안메모/site_tools'))
+import sitekit
 os.chdir(os.path.expanduser('~/shallwedog-site'))
 V=[
 ("Google LLC (USA)<br><span class=\"muted\">Firebase</span>","Sign-in, data storage, notifications, usage statistics, crash reports","Sign-in information, cloud backup, order forms, photos and finished files, backups of order and account information, notification tokens and notification text (which includes the dog’s name), usage and crash logs. Order forms and their backups are stored in Seoul; sign-in data, photos and files in the USA.","As in Section 2",'Web form <a href="https://support.google.com/policies?p=privpol_privts">support.google.com/policies</a>'),
@@ -21,12 +23,8 @@ def make(slug,title,desc,main,src='privacy'):
     s=s.replace('ko_KR','en_US').replace(f'https://shallwedog.com/{src}/',f'https://shallwedog.com/en/{slug}/')
     main=re.sub(r'<p class="muted">\[Expert check needed[^<]*</p>\n','',main)
     s=re.sub(r'<main id="main".*?</main>',lambda m:main.strip(),s,flags=re.S)
-    for a,b in [('본문으로 건너뛰기','Skip to content'),('인스타그램 @shallwedog','Instagram @shallwedog'),('aria-label="안내 문서"','aria-label="Documents"'),
-      ('<a href="/privacy/">개인정보처리방침</a>','<a href="/en/privacy/">Privacy Policy</a>'),('<a href="/terms/">이용약관</a>','<a href="/en/terms/">Terms of Service</a>'),
-      ('<a href="/delete/">계정·데이터 삭제</a>','<a href="/en/delete/">Account &amp; data deletion</a>'),
-      ('<span>상호 케이퍼프랩(K-Puff Lab)</span>','<span>Business name K-Puff Lab</span>'),('<span>대표 조현창</span>','<span>Owner <span lang="ko">조현창</span></span>'),
-      ('<span>사업자등록번호 ','<span>Business registration no. '),
-      ('<span>주소 서울특별시 강남구 개포로30길 20</span>','<span>Address 20 Gaepo-ro 30-gil, Gangnam-gu, Seoul, Republic of Korea</span>'),('<span>전화 010-4854-9943</span>','<span>Phone +82 10-4854-9943</span>'),('<span>문의 ','<span>Contact ')]:
+    s=sitekit.set_footer(s,'en')
+    for a,b in [('본문으로 건너뛰기','Skip to content'),('인스타그램 @shallwedog','Instagram @shallwedog')]:
         assert a in s,a; s=s.replace(a,b)
     left=re.findall(r'[가-힣]+',re.sub(r'<(span|a)[^>]*lang="ko"[^>]*>[^<]*</(span|a)>','',s)); assert not left,left
     os.makedirs(f'en/{slug}',exist_ok=True); open(f'en/{slug}/index.html','w',encoding='utf-8').write(s)

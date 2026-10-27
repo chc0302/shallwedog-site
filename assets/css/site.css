@@ -164,3 +164,22 @@ p{margin:0}
 .foot .biz .blank{display:inline-block; min-width:5em; border-bottom:1px dashed var(--line)}
 .foot .mail{font-weight:700; color:var(--ink)}
 .foot .copy{margin-top:12px}
+
+/* 처리방침·약관 표: 폰에서는 줄마다 카드 */
+.legal h2{scroll-margin-top:16px}
+.tbl table{border-collapse:collapse; width:100%; font-size:15px; line-height:1.6; margin:12px 0}
+.tbl thead{display:none}
+.tbl tr{display:block; background:var(--card); border-radius:16px; box-shadow:var(--shadow); padding:12px 16px; margin-bottom:10px}
+.tbl td{display:block; padding:3px 0}
+.tbl td[data-label]::before{content:attr(data-label); display:block; font-size:13px; font-weight:800; color:var(--orange-deep)}
+.tbl td:first-child{font-weight:700; font-size:16px}
+.tbl td:first-child::before{display:none}
+@media (min-width:720px){
+  .tbl table{background:var(--card); border-radius:16px; overflow:hidden; box-shadow:var(--shadow)}
+  .tbl thead{display:table-header-group}
+  .tbl tr{display:table-row; box-shadow:none; border-radius:0}
+  .tbl th,.tbl td{display:table-cell; text-align:left; vertical-align:top; padding:10px 12px; border-bottom:1px solid var(--line)}
+  .tbl td[data-label]::before{display:none}
+  .tbl th{font-weight:800; background:var(--green-soft)}
+  .tbl tbody tr:last-child td{border-bottom:0}
+}

@@ -30,7 +30,7 @@
   - 로그인은 아무 구글 계정으로나 되는 선택 기능이에요.
   - 커스텀은 결제가 필요한 상품이라 '제한'에 해당하지 않아요.
 - 커스텀 결제를 심사관이 해 봐야 한다는 요청이 오면 '일부 기능이 제한됨'으로 바꾸고 아래를 붙여요(10/27 6차 다시 씀).
-  > Guest mode gives access to all game features without signing in. Shop: the Shop button on the home screen (tabs: Style, Paws, Custom, Full version). Custom dog (paid, made to order) requires Google sign-in (any Google account, 14+) and an in-app purchase; license testers are not charged. Each order is actually made from the uploaded dog photos by our team with outside processing companies and checked by a person before delivery: the estimated date is shown before ordering, usually about one day and always within 7 days (checks run 9:00–23:00 Korea time). If a photo is not of a dog or is inappropriate, the order asks for new photos. Limit: 3 custom orders per account per day.
+  > Guest mode gives access to all game features without signing in. Shop: the Shop button on the home screen (tabs: Style, Paws, Custom, Full version). Custom dog (paid, made to order, with a human check step) requires Google sign-in (any Google account, 14+) and an in-app purchase; license testers are not charged. Orders placed with a test purchase are also actually made and delivered to the app (up to 5 test orders per 24 hours). Delivery is usually within 24 hours, at most 7 days; during the review period our team checks orders between 7:00 and 24:00 Korea time (UTC+9). Photos needed: one clear front photo of the dog's face and one of the whole body standing. If a photo is not of a dog, the order shows "Please send new photos". Limit: 3 custom orders per account per day.
 - 사용자가 할 일: **설정 > 라이선스 테스트**에 시험용 지메일을 넣어요(시험 결제용).
 
 ### 2-3. 광고

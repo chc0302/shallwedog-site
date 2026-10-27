@@ -152,6 +152,7 @@ p{margin:0}
 .box{background:var(--card); border-radius:20px; padding:20px 22px; box-shadow:var(--shadow); margin-top:16px}
 .menu-path{display:inline-block; font-weight:700; background:var(--green-soft); padding:1px 8px; border-radius:8px}
 .placeholder{background:var(--card); border:2px dashed var(--line); border-radius:20px; padding:28px 22px; text-align:center; color:var(--sub); margin-top:20px}
+.mt-20{margin-top:20px}
 .placeholder strong{display:block; font-size:19px; color:var(--ink); margin-bottom:4px}
 
 /* 바닥 */
@@ -183,3 +184,16 @@ p{margin:0}
   .tbl th{font-weight:800; background:var(--green-soft)}
   .tbl tbody tr:last-child td{border-bottom:0}
 }
+
+/* 언어 고르기 (바닥) */
+.foot .langs{margin-top:10px; gap:6px 16px}
+.foot .langs a{color:var(--sub); font-weight:600; text-decoration:none}
+.foot .langs a:hover,.foot .langs a[aria-current]{color:var(--ink); text-decoration:underline}
+
+/* 고객센터 */
+.doc h3{font-size:18px; font-weight:800; margin:0 0 6px; line-height:1.4}
+.faq .box p+p{margin-top:8px}
+.tips{list-style:none; padding:0; margin:12px 0 0; display:grid; gap:10px}
+.tips li{display:flex; gap:12px; align-items:flex-start; background:var(--card); border-radius:16px; padding:12px 14px; box-shadow:var(--shadow)}
+.tips .ico{flex:none; width:36px; height:36px; border-radius:12px; display:grid; place-items:center; background:var(--green-soft); font-size:19px}
+.tips li+li{margin-top:0}

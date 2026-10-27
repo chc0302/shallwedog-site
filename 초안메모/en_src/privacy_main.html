@@ -7,8 +7,8 @@
 <div class="box">
 <p><strong>At a glance</strong></p>
 <ul>
-  <li>Your game data is stored on your phone.</li>
-  <li>There is no sign-in button. When you open the app, it signs you in automatically with Game Center on iPhone or Google Play Games on Android. If sign-in does not happen, you can still play; only custom orders need sign-in.</li>
+  <li>Your game progress is stored on your phone. Only users who check “I am 14 or older” when they first start are connected to our servers, for account save (moving to a new phone) and custom orders. If you do not check it, nothing is sent to our account save or order servers.</li>
+  <li>There is no sign-in button. The connection is made automatically with Game Center on iPhone or Google Play Games on Android. If it does not happen, you can still play.</li>
   <li>Photos sent for a custom dog order are deleted automatically 14 days after the last delivery.</li>
   <li>We do not sell personal information, and we never delete your data on our own initiative.</li>
   <li>You can delete your data at any time with <span class="menu-path">Request data deletion</span> at the bottom of the app’s <span class="menu-path">Settings</span>, or by email.</li>
@@ -19,13 +19,14 @@
 <div class="tbl"><table>
 <thead><tr><th>When</th><th>Information</th><th>Purpose</th></tr></thead>
 <tbody>
-<tr><td data-label="When">While you play</td><td data-label="Information">Game progress (your dog’s settings, records, paws, decorations, etc.) is stored only on your phone and is not sent to our servers (except the automatically collected information below).</td><td data-label="Purpose">—</td></tr>
-<tr><td data-label="When">Automatic sign-in when you open the app (Game Center on iPhone, Google Play Games on Android)</td><td data-label="Information">The player identifier and game nickname provided by Game Center or Google Play Games (and, for Google Play Games, the profile picture address), and the account identifier made from them. We do not receive your email address. If sign-in does not happen or you decline it, we receive nothing.</td><td data-label="Purpose">Identifying you, linking purchases and custom dogs to your account and getting them again</td></tr>
+<tr><td data-label="When">While you play</td><td data-label="Information">Game progress (your dog’s settings, records, paws, decorations, etc.) is stored on your phone. Only when account save is on, the information in the “Account save” row below is also stored on our servers (except the automatically collected information below).</td><td data-label="Purpose">—</td></tr>
+<tr><td data-label="When">Connecting your account after you check “I am 14 or older” (Game Center on iPhone, Google Play Games on Android)</td><td data-label="Information">The player identifier and game nickname provided by Game Center or Google Play Games (and, for Google Play Games, the profile picture address), the account identifier made from them, and when you agreed to the terms and Privacy Policy and checked “I am 14 or older”. We do not receive your email address. If you did not check it or the connection does not happen, we receive nothing.</td><td data-label="Purpose">Identifying you, linking account save, purchases and custom dogs to your account and getting them again, keeping consent records</td></tr>
+<tr><td data-label="When">Account save (when your account is connected)</td><td data-label="Information">Paw balance (free and paid separately), purchases (Full Version, decorations, dog slots), dog list (breed, body type, name, decorations), game progress (missions, notebook, etc.), time of saving. Photos are not saved.</td><td data-label="Purpose">Continuing on a new phone, checking paid paws for refunds</td></tr>
 <tr><td data-label="When">Custom dog order</td><td data-label="Information">Two photos of your dog (face from the front, whole body standing), breed (two for mixed breeds, or “not sure”), body type, current coat, features, one free-text line (up to 60 characters), dog’s name, order number, product and transaction number, device type, app version and app language, confirmation that you are 14 or older, the time you checked each consent before payment (to check in case of a dispute), (optional) whether you agreed to one-year photo retention and when you withdrew it. If you ask for a revision: what to fix and a note (up to 100 characters); if you resend photos: the two new photos</td><td data-label="Purpose">Making, delivering and revising your custom dog; answering questions</td></tr>
 <tr><td data-label="When">Payments</td><td data-label="Information">App user ID, product, transaction number, date. Card and other payment details are handled by Apple or Google; we never receive them.</td><td data-label="Purpose">Confirming payments, refunds, legally required records</td></tr>
-<tr><td data-label="When">Notifications (signed-in users)</td><td data-label="Information">Device notification token, app language, phone time zone</td><td data-label="Purpose">Order notices (dog ready, fixed dog ready, new photos needed). The time zone is used only to avoid sending between 9 pm and 8 am. The evening play reminder is scheduled on your phone and nothing about it is sent to our servers.</td></tr>
+<tr><td data-label="When">Notifications (when your account is connected)</td><td data-label="Information">Device notification token, app language, phone time zone</td><td data-label="Purpose">Order notices (dog ready, fixed dog ready, new photos needed). The time zone is used only to avoid sending between 9 pm and 8 am. The evening play reminder is scheduled on your phone and nothing about it is sent to our servers.</td></tr>
 <tr><td data-label="When">Automatically, while you use the app</td><td data-label="Information">Device model, OS and app version, in-app activity, crash logs, advertising ID (Android advertising ID only; we do not use the iPhone advertising identifier)</td><td data-label="Purpose">Showing ads, usage statistics, fixing errors</td></tr>
-<tr><td data-label="When">Email enquiries</td><td data-label="Information">Email address, message</td><td data-label="Purpose">Replying</td></tr>
+<tr><td data-label="When">Email enquiries</td><td data-label="Information">Email address, message. When we refund you directly (for example, for paid paws), the account to refund to (bank, account number, account holder)</td><td data-label="Purpose">Replying, refunds</td></tr>
 </tbody></table></div>
 <p>We ask for photo library access only when you pick photos for an order or save a game screenshot. The app removes location data from photos before uploading them, and our server removes it once more after receiving them. Please take photos without people’s faces. We do not collect your date of birth, phone number or address.</p>
 <p class="muted">[Expert check needed — EU/UK users: legal basis for each purpose under GDPR Art. 6 (e.g. contract, legitimate interests, consent).]</p>
@@ -35,6 +36,7 @@
 <thead><tr><th>Information</th><th>Retention</th></tr></thead>
 <tbody>
 <tr><td data-label="Information">Account information, notification token</td><td data-label="Retention">Until you delete your account</td></tr>
+<tr><td data-label="Information">Account save records</td><td data-label="Retention">Until you delete your account or request data deletion. After deletion, a copy stays in Google Firestore scheduled backups (Seoul) for up to 7 days and is then deleted automatically.</td></tr>
 <tr><td data-label="Information">Original custom order photos</td><td data-label="Retention">Deleted automatically 14 days after the last delivery (the free revision period). One year from the last delivery only if you agree to optional retention below</td></tr>
 <tr><td data-label="Information">Finished custom dog files, order records, production records (reference images we made, game screenshots, review records — without your original photos, dog’s name or free-text line)</td><td data-label="Retention">Until you delete your account (for re-downloads and quality control). Transaction records below are kept separately as required by law.</td></tr>
 <tr><td data-label="Information">Transaction records: contract and withdrawal records (order number, product, the consents you checked before payment and when), payment and delivery records (transaction number, payment, delivery and refund dates). Photos, finished dog files, your dog’s name and the free-text line are not included</td><td data-label="Retention">5 years (Article 6 of the Korean E-Commerce Consumer Protection Act and Article 6 of its Enforcement Decree). Even if you delete your account, we unlink them from it, keep them separately for this period and then delete them.</td></tr>
@@ -50,7 +52,8 @@
 <p>We never delete your data on our own initiative. Your on-device data stays even if a payment lapses, you stop playing for a long time, or the Service ends; server-side data is deleted when you ask.</p>
 
 <h2 id="a3">3. Children under 14</h2>
-<p>Anyone can play, and the app does not ask your age when you open it. Ordering a custom dog is only for users aged 14 or older, who confirm “I am 14 or older” when ordering (we do not ask for a date of birth). Automatic sign-in when you open the app uses only the Game Center or Google Play Games identifiers listed in Section 1. If we learn that an account or order belongs to a child under 14, we delete it promptly.</p>
+<p>Anyone can play. When you first start, you can choose “I am 14 or older” (optional; we do not ask for a date of birth). Only users who check it are connected to our servers for account save and custom orders. If you do not check it, your progress stays only on your phone and nothing is sent to our account save or order servers; we also ask Google to show only non-personalised ads. Once you are 14 or older, you can turn it on in the app’s <span class="menu-path">Settings</span>.</p>
+<p>If we learn that a child under 14 checked it, or a legal guardian tells us at <a href="mailto:hello@shallwedog.com">hello@shallwedog.com</a>, we promptly delete that account’s saved progress, account information and orders. Only the transaction records we must keep by law are kept separately as described in Section 2.</p>
 <p class="muted">[Expert check needed — EU/UK: digital consent age varies from 13 to 16 by country (GDPR Art. 8). US: COPPA (under 13).]</p>
 
 <h2 id="a4">4. Sharing</h2>
@@ -62,7 +65,7 @@
 <!--EN_VENDOR_TABLE-->
 <p>Custom order photos are also downloaded to the operator’s work computer (Korea) and deleted with the rest after the period in Section 2. Photo checks and review assistance are for reference only; the operator always makes the decision. If a photo is not of a dog or is inappropriate, we do not make the dog and ask you to send new photos.</p>
 <p>The [Details] link in the custom order consent (“your photos are sent to outside processing companies”) leads to this section.</p>
-<p>If you do not want your information transferred abroad, turn off Game Center (iPhone) or Google Play Games (Android) sign-in in your phone’s settings and do not order a custom dog. You can still play; only custom dogs are not available. For custom orders we ask for your consent to overseas transfer before payment.</p>
+<p>If you do not want your information transferred abroad, do not check “I am 14 or older” and do not order a custom dog. You can still play; only account save and custom dogs are not available. Ads, usage statistics and crash reports are still sent to Google as described in Section 8. For custom orders we ask for your consent to overseas transfer before payment.</p>
 <p class="muted">[Expert check needed — EU/UK: transfer safeguards (EU–Korea adequacy decision, Standard Contractual Clauses, EU–US Data Privacy Framework).]</p>
 
 <h2 id="a6">6. Deletion</h2>
@@ -71,14 +74,14 @@
 <h2 id="a7">7. Your rights</h2>
 <ul>
   <li>You can ask to see, correct, delete or stop the processing of your information, and withdraw consent, at any time.</li>
-  <li>Tapping <span class="menu-path">Request data deletion</span> at the bottom of the app’s <span class="menu-path">Settings</span> deletes your server data (account information, custom dog re-downloads, order and production records); copies in backups for recovery are deleted after up to 30 days. Data on your device remains and is removed when you delete the app. See <a href="/en/delete/">Account &amp; data deletion</a>.</li>
+  <li>Tapping <span class="menu-path">Request data deletion</span> at the bottom of the app’s <span class="menu-path">Settings</span> deletes your server data (account information, account save records, custom dog re-downloads, order and production records). Paid paws left in your account save are deleted too, so you can ask for a refund first (<a href="/en/terms/#t8">Terms, Section 8</a>); copies in backups for recovery are deleted after up to 30 days. Data on your device remains and is removed when you delete the app. See <a href="/en/delete/">Account &amp; data deletion</a>.</li>
   <li>For other requests, email <a href="mailto:hello@shallwedog.com">hello@shallwedog.com</a>. After confirming your identity we reply within 10 days. A legal guardian or authorised representative may also make requests.</li>
   <li>Transaction records we must keep by law (Section 2) are kept separately for that period even if you delete your account, and then deleted.</li>
 </ul>
 <p class="muted">[Expert check needed — EU/UK: right to data portability, right to object, right to lodge a complaint with a supervisory authority; EU/UK representative (GDPR Art. 27).]</p>
 
 <h2 id="a8">8. Advertising and analytics</h2>
-<p>To keep the game free, we show ads through Google LLC’s AdMob. Google uses device information, in-app activity and an approximate location inferred from your IP address to show ads and measure them.</p>
+<p>To keep the game free, we show ads through Google LLC’s AdMob. Without the Full Version you see banner ads, interstitial ads after an activity ends and rewarded ads you choose to watch; with the Full Version there are only ads for continuing a mini game (<a href="/en/terms/#t5">Terms, Section 5</a>). Google uses device information, in-app activity and an approximate location inferred from your IP address to show ads and measure them.</p>
 <ul>
   <li>iPhone: we do not ask for permission to track, and we do not show personalised ads that combine information from other apps or websites. Only non-personalised ads are shown.</li>
   <li>EU and UK: before showing ads, we display a Google-certified consent message. If you do not consent, only limited ads that use less personal information are shown. You can change your choice in <span class="menu-path">Settings</span> at any time.</li>

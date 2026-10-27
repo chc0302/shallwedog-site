@@ -1,6 +1,7 @@
 # 애플 App Store Connect 답안지 (10/29 등록 · 11/9 심사 제출용, 10/27 탭 3)
 
-⚑ = 출시 빌드에 그 기능이 실제로 들어갈 때만 해당해요. 10/27 밤부터 로그인 = **아이폰 게임센터 자동 로그인**(구글 · 애플 버튼 없음), **클라우드 백업 없음**(게임 데이터는 폰에만). 진짜 커스텀 주문은 아직 개발 빌드에서만 동작해요(10/27 코드 확인).
+**10/28 10차:** 첫 실행 약관 화면에 **'만 14세 이상이에요'(선택)**. 체크한 사람만 게임센터로 서버에 연결해 **계정 저장**(발바닥 · 산 것 · 개 목록 · 진행, Firestore 서울, 사진 X)과 커스텀 주문을 써요. 광고는 무료판 배너 · 전면 · 보상형, 정식판은 미니게임 이어하기 광고만.
+⚑ = 출시 빌드에 그 기능이 실제로 들어갈 때만 해당해요. 10/27 밤부터 로그인 = **아이폰 게임센터 자동 연결**(구글 · 애플 버튼 없음). 진짜 커스텀 주문은 아직 개발 빌드에서만 동작해요(10/27 코드 확인).
 [미확인] = 공식 도움말에 화면 글이 그대로 나오지 않아요.
 
 ---
@@ -25,7 +26,7 @@
 | 기능 > 사용자 생성 콘텐츠 | **아니요** | 주문 사진은 우리만 보고 다른 이용자에게 보이지 않아요(약관 10조) |
 | 기능 > 소셜 미디어 | 아니요 | |
 | 기능 > 메시지 · 채팅 | 아니요 | |
-| 기능 > 광고 | **예** | AdMob 보상형 |
+| 기능 > 광고 | **예** | AdMob 배너 · 전면 · 보상형 (정식판도 미니게임 이어하기 광고) |
 | 성숙한 주제 (욕설 · 공포 · 술 · 담배 · 약물) | 모두 **없음** | |
 | 의료 · 건강 주제 | 모두 **없음** | |
 | 성적 내용 · 노출 | 모두 **없음** | |
@@ -49,16 +50,19 @@
 |---|---|---|---|---|
 | 식별자 > 사용자 ID (게임센터 플레이어 ID · 게임 닉네임 · 계정 ID · 결제 ID) | 예 | 아니요 | 앱 기능 | 1조 자동 로그인 · 결제 |
 | 식별자 > 기기 ID | 아니요 | 아니요 | 제3자 광고, 분석 | 1조 자동 · 8조 |
-| 구입 항목 > 구입 내역 | 예 | 아니요 | 앱 기능 | 1조 결제 |
+| 구입 항목 > 구입 내역 (결제 관리 · 계정 저장의 산 것) | 예 | 아니요 | 앱 기능 | 1조 결제 · 계정 저장 |
+| 사용자 콘텐츠 > 게임 플레이 콘텐츠 (계정 저장: 개 목록 · 꾸민 것 · 미션 · 수첩 · 발바닥 잔액) ⚑ | 예 | 아니요 | 앱 기능 | 1조 계정 저장 |
 | 사용자 콘텐츠 > 사진 또는 비디오 ⚑ | 예 | 아니요 | 앱 기능 | 1조 커스텀 |
 | 사용자 콘텐츠 > 기타 사용자 콘텐츠 (주문서 · 강아지 이름 · 자유 한 줄 · 고칠 메모) ⚑ | 예 | 아니요 | 앱 기능 | 1조 커스텀 |
 | 사용 데이터 > 제품 상호작용 | 아니요 | 아니요 | 분석, 제3자 광고 | 1조 자동 |
 | 사용 데이터 > 광고 데이터 | 아니요 | 아니요 | 제3자 광고 | 8조 |
-| 위치 > 대략적인 위치 (AdMob이 IP로 추정) | 아니요 | 아니요 | 제3자 광고 | 8조 |
+| 위치 > 대략적인 위치 (AdMob이 IP로 추정 · 우리가 계정에 받는 폰 시간대) | **예** | 아니요 | 제3자 광고, 앱 기능 | 1조 알림 · 8조 |
 | 진단 > 충돌 데이터 · 성능 데이터 | 아니요 | 아니요 | 앱 기능, 분석 | 1조 자동 |
 
-- 수집 안 함: 이메일 주소(10/27 밤 로그인 방식이 바뀌어 받지 않음) · 게임 플레이 콘텐츠(클라우드 백업 없음) · 이름 · 전화 · 주소 · 결제 정보(애플이 처리) · 정밀 위치 · 연락처 · 건강 · 검색 · 방문 기록 · 민감 정보 · 신체 · 주변 환경.
+- 수집 안 함: 이메일 주소(10/27 밤 로그인 방식이 바뀌어 받지 않음) · 이름 · 전화 · 주소 · 결제 정보(애플이 처리) · 정밀 위치 · 연락처 · 건강 · 검색 · 방문 기록 · 민감 정보 · 신체 · 주변 환경.
 - 게임센터 닉네임은 애플 정의상 '사용자 ID'(화면 이름 · 핸들)에 들어가요. 애플이 게임센터 안에서 쓰는 정보는 우리가 받는 게 아니라 적지 않아요.
+- 계정 저장(10차)은 애플 정의의 '게임 플레이 콘텐츠'(saved games …)예요. 계정 저장을 켠 사람만 보내지만, 애플은 '일부 사용자에게서만 받는 데이터도 모두 적으라'고 해서 적어요(App Privacy Details 'Additional guidance').
+- 폰 시간대는 애플 정의의 '대략적인 위치'(위도 · 경도 소수 셋째 자리보다 낮은 정밀도의 위치)에 든다고 봤어요. 계정에 묶어 저장하므로 이 줄은 '사용자와 연결 = 예'로 바꿨어요(한 데이터 유형 안에서 하나라도 연결이면 연결).
 
 ## 3. 수출 규정 (암호화)
 - "앱이 암호화를 사용하나요?" → **예, 단 면제 대상(표준 HTTPS · 운영체제 암호화만)**
@@ -77,7 +81,7 @@
 ## 5. 앱 심사 정보 (버전 페이지 맨 아래)
 | 칸 | 넣을 것 |
 |---|---|
-| 로그인 필요 | **체크 안 함** (로그인 버튼이 없고, 게임센터 로그인이 없어도 게임 전부 가능) |
+| 로그인 필요 | **체크 안 함** (로그인 버튼이 없고, '만 14세 이상이에요' 체크 · 게임센터가 없어도 게임 전부 가능) |
 | 연락처 | 이름 · 이메일 hello@shallwedog.com · 전화(+82 형식) — 사용자가 직접 입력 |
 | 메모 (4000바이트 이내) | 아래 초안 |
 
@@ -85,12 +89,12 @@
 ```
 Thank you for reviewing Shall We Dog?
 
-SIGN-IN: There is no sign-in button and no account to create. When the app opens, it signs in silently with Game Center. If Game Center is not signed in or the prompt is declined, nothing is blocked: all game features (dog creation, walks, home, training, agility, mini games, styling, screenshots) work, and game data is stored on the device.
+SIGN-IN AND ACCOUNT SAVE: There is no sign-in button and no account to create. The first screen asks for agreement to the terms and privacy policy and has an optional "I am 14 or older" checkbox. Only if it is checked does the app connect silently with Game Center, for Account save (paws, purchases, dogs and progress come back on a new device; no photos) and Custom orders. If it is not checked, or Game Center is not signed in, nothing is blocked: all game features (dog creation, walks, home, training, agility, mini games, styling, screenshots) work, and game data stays on the device. It can be turned on later in Settings > Account save.
 
 IN-APP PURCHASES: Tap the Shop button on the home screen (also in the walk menu). Tabs: Style, Paws (consumable currency), Custom (Custom dog, consumable) and Full version (non-consumable).
 
 CUSTOM DOG (paid, made to order):
-- Requires Game Center sign-in (only for this product) and a 14+ confirmation when ordering. If the sign-in sheet does not appear, sign in at Settings > Game Center (any Apple Account), then return to the app. Buy Custom in the Shop, check the required consents, then upload two photos of a real dog (face from the front, whole body) and fill in a short order form.
+- Requires the "I am 14 or older" check (first screen or Settings) and Game Center (only for this product). If the sign-in sheet does not appear, sign in at Settings > Game Center (any Apple Account), then return to the app. Buy Custom in the Shop, check the required consents, then upload two photos of a real dog (face from the front, whole body) and fill in a short order form.
 - Before payment, the user must check a required consent that names each outside processing company (OpenAI, Anthropic, Meshy; overseas), with a link to Section 5 of our privacy policy. See the attached screenshot.
 - This is a made-to-order product with a human check step. Orders placed with a sandbox (test) purchase are also actually made and delivered to the app, so you can see the finished dog. Up to 5 sandbox orders are accepted per 24 hours.
 - Delivery time: usually within 24 hours, at most 7 days. During the review period, our team checks orders between 7:00 and 24:00 Korea time (UTC+9). The order screen shows the estimated date. The app shows "We're checking your payment" until the store confirms the purchase, then "We're making it", then "It's here".
@@ -100,7 +104,7 @@ CUSTOM DOG (paid, made to order):
 
 ACCOUNT DELETION: Settings > "Request data deletion" in the small line at the bottom (also https://shallwedog.com/delete/). Restore purchases is in the same line.
 
-ADS: Rewarded ads only (Google AdMob). We do not use the App Tracking Transparency prompt and do not track users; iPhone users receive non-personalized ads.
+ADS (Google AdMob): Without the Full version: banner ads (home and walk screens), interstitial ads after an activity ends (at most once every 5 minutes, none in the first 24 hours) and optional rewarded ads. The Full version has no banner or interstitial ads and gives rewards without ads; continuing a mini game still uses a rewarded ad. We do not use the App Tracking Transparency prompt and do not track users; iPhone users receive non-personalized ads.
 
 Support: https://shallwedog.com/en/support/
 Privacy policy: https://shallwedog.com/en/privacy/
@@ -120,7 +124,7 @@ Contact: hello@shallwedog.com
 - **5.1.2(i):** 개인정보를 제3자(제3자 AI 포함)와 공유할 때는 어디로 가는지 분명히 밝히고, 그 전에 명시적인 허락을 받아야 해요.
   - 우리는 결제 전 필수 체크와 처리방침 5조로 대응해요.
 - **5.1.1(v):** 계정을 만들 수 있으면 앱 안에서 삭제도 돼야 해요.
-  - 우리는 [설정 > 계정 삭제 요청]로 대응해요.
+  - 우리는 [설정 맨 아래 줄 > 데이터 삭제 요청]로 대응해요.
 - **3.1.1:** 앱 안에서 쓰는 디지털 상품, 게임 재화, 정식판은 앱 안 결제로 팔아야 해요.
   - 커스텀 강아지도 앱 안에서만 쓰는 디지털 콘텐츠라 앱 안 결제예요. 이건 내 해석이에요.
 

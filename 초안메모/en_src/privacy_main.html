@@ -36,12 +36,12 @@
 <thead><tr><th>Information</th><th>Retention</th></tr></thead>
 <tbody>
 <tr><td data-label="Information">Account information, notification token</td><td data-label="Retention">Until you delete your account</td></tr>
-<tr><td data-label="Information">Account save records</td><td data-label="Retention">Until you delete your account or request data deletion. After deletion, a copy stays in Google Firestore scheduled backups (Seoul) for up to 7 days and is then deleted automatically.</td></tr>
+<tr><td data-label="Information">Account save records</td><td data-label="Retention">Until you delete your account or request data deletion. After deletion, a copy stays in the backups for recovery below for up to 30 days and is then deleted automatically.</td></tr>
 <tr><td data-label="Information">Original custom order photos</td><td data-label="Retention">Deleted automatically 14 days after the last delivery (the free revision period). One year from the last delivery only if you agree to optional retention below</td></tr>
 <tr><td data-label="Information">Finished custom dog files, order records, production records (reference images we made, game screenshots, review records — without your original photos, dog’s name or free-text line)</td><td data-label="Retention">Until you delete your account (for re-downloads and quality control). Transaction records below are kept separately as required by law.</td></tr>
 <tr><td data-label="Information">Transaction records: contract and withdrawal records (order number, product, the consents you checked before payment and when), payment and delivery records (transaction number, payment, delivery and refund dates). Photos, finished dog files, your dog’s name and the free-text line are not included</td><td data-label="Retention">5 years (Article 6 of the Korean E-Commerce Consumer Protection Act and Article 6 of its Enforcement Decree). Even if you delete your account, we unlink them from it, keep them separately for this period and then delete them.</td></tr>
 <tr><td data-label="Information">Complaint and dispute records, email enquiries</td><td data-label="Retention">3 years (Article 6 of the same Enforcement Decree). Kept separately even if you delete your account, then deleted.</td></tr>
-<tr><td data-label="Information">Backups for recovery (order and account information, without photos)</td><td data-label="Retention">Backups on the operator’s work computer (Korea) are deleted automatically after 30 days, and Google Firestore scheduled backups (Seoul) after 7 days. If you delete your account, copies stay in backups for up to 30 days and are then deleted.</td></tr>
+<tr><td data-label="Information">Backups for recovery (order and account information and account save records, without photos)</td><td data-label="Retention">Backups on the operator’s work computer (Korea) are deleted automatically after 30 days, and Google Firestore scheduled backups (Seoul) after 7 days. If you delete your account, copies stay in backups for up to 30 days and are then deleted.</td></tr>
 <tr><td data-label="Information">Crash logs</td><td data-label="Retention">90 days</td></tr>
 <tr><td data-label="Information">Usage statistics</td><td data-label="Retention">14 months</td></tr>
 </tbody></table></div>
@@ -52,7 +52,7 @@
 <p>We never delete your data on our own initiative. Your on-device data stays even if a payment lapses, you stop playing for a long time, or the Service ends; server-side data is deleted when you ask.</p>
 
 <h2 id="a3">3. Children under 14</h2>
-<p>Anyone can play. When you first start, you can choose “I am 14 or older” (optional; we do not ask for a date of birth). Only users who check it are connected to our servers for account save and custom orders. If you do not check it, your progress stays only on your phone and nothing is sent to our account save or order servers; we also ask Google to show only non-personalised ads. Once you are 14 or older, you can turn it on in the app’s <span class="menu-path">Settings</span>.</p>
+<p>Anyone can play. When you first start, you can choose “I am 14 or older” (optional; we do not ask for a date of birth). Only users who check it are connected to our servers for account save and custom orders. If you do not check it, your progress stays only on your phone and nothing is sent to our account save or order servers; we also do not collect usage statistics (Firebase Analytics) and ask Google to show only non-personalised ads. Once you are 14 or older, you can turn it on in the app’s <span class="menu-path">Settings</span>.</p>
 <p>If we learn that a child under 14 checked it, or a legal guardian tells us at <a href="mailto:hello@shallwedog.com">hello@shallwedog.com</a>, we promptly delete that account’s saved progress, account information and orders. Only the transaction records we must keep by law are kept separately as described in Section 2.</p>
 <p class="muted">[Expert check needed — EU/UK: digital consent age varies from 13 to 16 by country (GDPR Art. 8). US: COPPA (under 13).]</p>
 
@@ -65,7 +65,7 @@
 <!--EN_VENDOR_TABLE-->
 <p>Custom order photos are also downloaded to the operator’s work computer (Korea) and deleted with the rest after the period in Section 2. Photo checks and review assistance are for reference only; the operator always makes the decision. If a photo is not of a dog or is inappropriate, we do not make the dog and ask you to send new photos.</p>
 <p>The [Details] link in the custom order consent (“your photos are sent to outside processing companies”) leads to this section.</p>
-<p>If you do not want your information transferred abroad, do not check “I am 14 or older” and do not order a custom dog. You can still play; only account save and custom dogs are not available. Ads, usage statistics and crash reports are still sent to Google as described in Section 8. For custom orders we ask for your consent to overseas transfer before payment.</p>
+<p>If you do not want your information transferred abroad, do not check “I am 14 or older” and do not order a custom dog. You can still play; only account save and custom dogs are not available. Ads and crash reports are still sent to Google as described in Section 8. For custom orders we ask for your consent to overseas transfer before payment.</p>
 <p class="muted">[Expert check needed — EU/UK: transfer safeguards (EU–Korea adequacy decision, Standard Contractual Clauses, EU–US Data Privacy Framework).]</p>
 
 <h2 id="a6">6. Deletion</h2>

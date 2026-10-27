@@ -22,13 +22,13 @@
 <tr><td data-label="When">Playing as a guest</td><td data-label="Information">Nothing is sent to our servers. Game data is stored on your device (except the automatically collected information below).</td><td data-label="Purpose">—</td></tr>
 <tr><td data-label="When">Google or Apple sign-in</td><td data-label="Information">Account identifier, email address (or the relay address if you use Apple’s Hide My Email)</td><td data-label="Purpose">Identifying you, cloud backup, restoring purchases and custom dogs</td></tr>
 <tr><td data-label="When">Cloud backup (signed-in users)</td><td data-label="Information">Game progress (your dog’s settings, records, paws, decorations, etc.)</td><td data-label="Purpose">Continuing on a new device</td></tr>
-<tr><td data-label="When">Custom dog order</td><td data-label="Information">Two photos of your dog (face from the front, whole body standing), breed (two for mixed breeds, or “not sure”), body type, current coat, features, one free-text line, dog’s name, order number, confirmation that you are 14 or older, consent records</td><td data-label="Purpose">Making, delivering and revising your custom dog; answering questions</td></tr>
+<tr><td data-label="When">Custom dog order</td><td data-label="Information">Two photos of your dog (face from the front, whole body standing), breed (two for mixed breeds, or “not sure”), body type, current coat, features, one free-text line (up to 60 characters), dog’s name, order number, product and transaction number, device type, app version and app language, confirmation that you are 14 or older, consent records, (optional) whether you agreed to one-year photo retention and when you withdrew it. If you ask for a revision: what to fix and a note (up to 100 characters); if you resend photos: the two new photos</td><td data-label="Purpose">Making, delivering and revising your custom dog; answering questions</td></tr>
 <tr><td data-label="When">Payments</td><td data-label="Information">App user ID, product, transaction number, date. Card and other payment details are handled by Apple or Google; we never receive them.</td><td data-label="Purpose">Confirming payments, refunds, legally required records</td></tr>
-<tr><td data-label="When">Notifications</td><td data-label="Information">Device notification token, your notification choices and times</td><td data-label="Purpose">Custom dog ready notices; notifications you agreed to</td></tr>
+<tr><td data-label="When">Notifications</td><td data-label="Information">Device notification token, app language, your notification choices and times</td><td data-label="Purpose">Custom dog ready notices; notifications you agreed to</td></tr>
 <tr><td data-label="When">Automatically, while you use the app</td><td data-label="Information">Device model, OS and app version, in-app activity, crash logs, advertising ID (Android advertising ID only; we do not use the iPhone advertising identifier)</td><td data-label="Purpose">Showing ads, usage statistics, fixing errors</td></tr>
 <tr><td data-label="When">Email enquiries</td><td data-label="Information">Email address, message</td><td data-label="Purpose">Replying</td></tr>
 </tbody></table></div>
-<p>The app removes location data from photos before uploading them. Please take photos without people’s faces. We do not collect your date of birth, phone number or address.</p>
+<p>We ask for photo library access only when you pick photos for an order or save a game screenshot. The app removes location data from photos before uploading them. Please take photos without people’s faces. We do not collect your date of birth, phone number or address.</p>
 <p class="muted">[Expert check needed — EU/UK users: legal basis for each purpose under GDPR Art. 6 (e.g. contract, legitimate interests, consent).]</p>
 
 <h2 id="a2">2. How long we keep it</h2>
@@ -40,7 +40,7 @@
 <tr><td data-label="Information">Finished custom dog files, order records, production records (reference images we made, game screenshots, review records — without your original photos, dog’s name or free-text line)</td><td data-label="Retention">Until you delete your account (for re-downloads and quality control)</td></tr>
 <tr><td data-label="Information">Payment records (contracts and withdrawals, payments)</td><td data-label="Retention">5 years (Korean E-Commerce Consumer Protection Act). When you delete your account, we unlink them from it.</td></tr>
 <tr><td data-label="Information">Complaint and dispute records, email enquiries</td><td data-label="Retention">3 years (same Act)</td></tr>
-<tr><td data-label="Information">Backups for recovery (order and account information, without photos)</td><td data-label="Retention">Deleted automatically 30 days after they are made. Kept in two places: on the operator’s work computer (Korea) and in Google Firestore scheduled backups. If you delete your account, copies stay in backups for up to 30 days and are then deleted.</td></tr>
+<tr><td data-label="Information">Backups for recovery (order and account information, without photos)</td><td data-label="Retention">Backups on the operator’s work computer (Korea) are deleted automatically after 30 days, and Google Firestore scheduled backups (Seoul) after 7 days. If you delete your account, copies stay in backups for up to 30 days and are then deleted.</td></tr>
 <tr><td data-label="Information">Crash logs</td><td data-label="Retention">90 days</td></tr>
 <tr><td data-label="Information">Usage statistics</td><td data-label="Retention">14 months</td></tr>
 </tbody></table></div>
@@ -79,7 +79,7 @@
 <p class="muted">[Expert check needed — EU/UK: right to data portability, right to object, right to lodge a complaint with a supervisory authority; EU/UK representative (GDPR Art. 27).]</p>
 
 <h2 id="a8">8. Advertising and analytics</h2>
-<p>To keep the game free, we show ads through Google LLC’s AdMob. Google uses device and in-app activity information to show ads and measure them.</p>
+<p>To keep the game free, we show ads through Google LLC’s AdMob. Google uses device information, in-app activity and an approximate location inferred from your IP address to show ads and measure them.</p>
 <ul>
   <li>iPhone: we do not ask for permission to track, and we do not show personalised ads that combine information from other apps or websites. Only non-personalised ads are shown.</li>
   <li>EU and UK: before showing ads, we display a Google-certified consent message. If you do not consent, only limited ads that use less personal information are shown. You can change your choice in <span class="menu-path">Settings</span> at any time.</li>

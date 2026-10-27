@@ -152,6 +152,7 @@ p{margin:0}
 .box{background:var(--card); border-radius:20px; padding:20px 22px; box-shadow:var(--shadow); margin-top:16px}
 .menu-path{display:inline-block; font-weight:700; background:var(--green-soft); padding:1px 8px; border-radius:8px}
 .placeholder{background:var(--card); border:2px dashed var(--line); border-radius:20px; padding:28px 22px; text-align:center; color:var(--sub); margin-top:20px}
+.mt-20{margin-top:20px}
 .placeholder strong{display:block; font-size:19px; color:var(--ink); margin-bottom:4px}
 
 /* 바닥 */

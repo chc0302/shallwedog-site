@@ -45,11 +45,11 @@
 <div class="box">
 <p><strong>At a glance</strong></p>
 <ul>
-  <li>As a guest, your game data stays on your device.</li>
-  <li>If you sign in with Google or Apple, we back up your game data to the cloud for free.</li>
+  <li>Your game data is stored on your phone.</li>
+  <li>There is no sign-in button. When you open the app, it signs you in automatically with Game Center on iPhone or Google Play Games on Android. If sign-in does not happen, you can still play; only custom orders need sign-in.</li>
   <li>Photos sent for a custom dog order are deleted automatically 14 days after the last delivery.</li>
   <li>We do not sell personal information, and we never delete your data on our own initiative.</li>
-  <li>You can delete your data at any time in <span class="menu-path">Settings &gt; Request account deletion</span> or by email.</li>
+  <li>You can delete your data at any time with <span class="menu-path">Request data deletion</span> at the bottom of the app’s <span class="menu-path">Settings</span>, or by email.</li>
 </ul>
 </div>
 
@@ -57,12 +57,11 @@
 <div class="tbl"><table>
 <thead><tr><th>When</th><th>Information</th><th>Purpose</th></tr></thead>
 <tbody>
-<tr><td data-label="When">Playing as a guest</td><td data-label="Information">Nothing is sent to our servers. Game data is stored on your device (except the automatically collected information below).</td><td data-label="Purpose">—</td></tr>
-<tr><td data-label="When">Google or Apple sign-in</td><td data-label="Information">Account identifier, email address (or the relay address if you use Apple’s Hide My Email)</td><td data-label="Purpose">Identifying you, cloud backup, restoring purchases and custom dogs</td></tr>
-<tr><td data-label="When">Cloud backup (signed-in users)</td><td data-label="Information">Game progress (your dog’s settings, records, paws, decorations, etc.)</td><td data-label="Purpose">Continuing on a new device</td></tr>
+<tr><td data-label="When">While you play</td><td data-label="Information">Game progress (your dog’s settings, records, paws, decorations, etc.) is stored only on your phone and is not sent to our servers (except the automatically collected information below).</td><td data-label="Purpose">—</td></tr>
+<tr><td data-label="When">Automatic sign-in when you open the app (Game Center on iPhone, Google Play Games on Android)</td><td data-label="Information">The player identifier and game nickname provided by Game Center or Google Play Games (and, for Google Play Games, the profile picture address), and the account identifier made from them. We do not receive your email address. If sign-in does not happen or you decline it, we receive nothing.</td><td data-label="Purpose">Identifying you, linking purchases and custom dogs to your account and getting them again</td></tr>
 <tr><td data-label="When">Custom dog order</td><td data-label="Information">Two photos of your dog (face from the front, whole body standing), breed (two for mixed breeds, or “not sure”), body type, current coat, features, one free-text line (up to 60 characters), dog’s name, order number, product and transaction number, device type, app version and app language, confirmation that you are 14 or older, the time you checked each consent before payment (to check in case of a dispute), (optional) whether you agreed to one-year photo retention and when you withdrew it. If you ask for a revision: what to fix and a note (up to 100 characters); if you resend photos: the two new photos</td><td data-label="Purpose">Making, delivering and revising your custom dog; answering questions</td></tr>
 <tr><td data-label="When">Payments</td><td data-label="Information">App user ID, product, transaction number, date. Card and other payment details are handled by Apple or Google; we never receive them.</td><td data-label="Purpose">Confirming payments, refunds, legally required records</td></tr>
-<tr><td data-label="When">Notifications</td><td data-label="Information">Device notification token, app language, your notification choices and times</td><td data-label="Purpose">Custom dog ready notices; notifications you agreed to</td></tr>
+<tr><td data-label="When">Notifications (signed-in users)</td><td data-label="Information">Device notification token, app language, phone time zone</td><td data-label="Purpose">Order notices (dog ready, fixed dog ready, new photos needed). The time zone is used only to avoid sending between 9 pm and 8 am. The evening play reminder is scheduled on your phone and nothing about it is sent to our servers.</td></tr>
 <tr><td data-label="When">Automatically, while you use the app</td><td data-label="Information">Device model, OS and app version, in-app activity, crash logs, advertising ID (Android advertising ID only; we do not use the iPhone advertising identifier)</td><td data-label="Purpose">Showing ads, usage statistics, fixing errors</td></tr>
 <tr><td data-label="When">Email enquiries</td><td data-label="Information">Email address, message</td><td data-label="Purpose">Replying</td></tr>
 </tbody></table></div>
@@ -72,7 +71,7 @@
 <div class="tbl"><table>
 <thead><tr><th>Information</th><th>Retention</th></tr></thead>
 <tbody>
-<tr><td data-label="Information">Account information, cloud backup, notification token</td><td data-label="Retention">Until you delete your account</td></tr>
+<tr><td data-label="Information">Account information, notification token</td><td data-label="Retention">Until you delete your account</td></tr>
 <tr><td data-label="Information">Original custom order photos</td><td data-label="Retention">Deleted automatically 14 days after the last delivery (the free revision period). One year from the last delivery only if you agree to optional retention below</td></tr>
 <tr><td data-label="Information">Finished custom dog files, order records, production records (reference images we made, game screenshots, review records — without your original photos, dog’s name or free-text line)</td><td data-label="Retention">Until you delete your account (for re-downloads and quality control). Transaction records below are kept separately as required by law.</td></tr>
 <tr><td data-label="Information">Transaction records: contract and withdrawal records (order number, product, the consents you checked before payment and when), payment and delivery records (transaction number, payment, delivery and refund dates). Photos, finished dog files, your dog’s name and the free-text line are not included</td><td data-label="Retention">5 years (Article 6 of the Korean E-Commerce Consumer Protection Act and Article 6 of its Enforcement Decree). Even if you delete your account, we unlink them from it, keep them separately for this period and then delete them.</td></tr>
@@ -88,7 +87,7 @@
 <p>We never delete your data on our own initiative. Your on-device data stays even if a payment lapses, you stop playing for a long time, or the Service ends; server-side data is deleted when you ask.</p>
 
 <h2 id="a3">3. Children under 14</h2>
-<p>Anyone can play. Signing in and ordering a custom dog are only for users aged 14 or older, who confirm “I am 14 or older” (we do not ask for a date of birth). Children under 14 play as guests with data stored on the device. If we learn that an account or order belongs to a child under 14, we delete it promptly.</p>
+<p>Anyone can play, and the app does not ask your age when you open it. Ordering a custom dog is only for users aged 14 or older, who confirm “I am 14 or older” when ordering (we do not ask for a date of birth). Automatic sign-in when you open the app uses only the Game Center or Google Play Games identifiers listed in Section 1. If we learn that an account or order belongs to a child under 14, we delete it promptly.</p>
 
 <h2 id="a4">4. Sharing</h2>
 <p>We do not sell or give personal information to other companies, except when authorities request it through procedures set by law.</p>
@@ -98,7 +97,7 @@
 <div class="tbl"><table>
 <thead><tr><th>Company (country)</th><th>Work</th><th>Information sent</th><th>Retention</th><th>Contact</th></tr></thead>
 <tbody>
-<tr><td data-label="Company (country)">Google LLC (USA)<br><span class="muted">Firebase</span></td><td data-label="Work">Sign-in, data storage, notifications, usage statistics, crash reports</td><td data-label="Information sent">Sign-in information, cloud backup, order forms, photos and finished files, backups of order and account information, notification tokens and notification text (which includes the dog’s name), usage and crash logs. Order forms and their backups are stored in Seoul; sign-in data, photos and files in the USA.</td><td data-label="Retention">As in Section 2</td><td data-label="Contact">Web form <a href="https://support.google.com/policies?p=privpol_privts">support.google.com/policies</a></td></tr>
+<tr><td data-label="Company (country)">Google LLC (USA)<br><span class="muted">Firebase</span></td><td data-label="Work">Sign-in, data storage, notifications, usage statistics, crash reports</td><td data-label="Information sent">Sign-in information, order forms, photos and finished files, backups of order and account information, notification tokens, phone time zone and notification text (which includes the dog’s name), usage and crash logs. Order forms and their backups are stored in Seoul; sign-in data, photos and files in the USA.</td><td data-label="Retention">As in Section 2</td><td data-label="Contact">Web form <a href="https://support.google.com/policies?p=privpol_privts">support.google.com/policies</a></td></tr>
 <tr><td data-label="Company (country)">OpenAI OpCo, LLC (USA)</td><td data-label="Work">Image processing (creating a reference picture from the photos)</td><td data-label="Information sent">Two dog photos, breed, body type, coat, features, a one-line description written by the operator. No dog name or email.</td><td data-label="Retention">We request deletion as soon as processing ends. Under its policy the company keeps data up to 30 days for abuse monitoring, then deletes it, and does not use it for training.</td><td data-label="Contact">privacy@openai.com</td></tr>
 <tr><td data-label="Company (country)">Meshy LLC (USA)</td><td data-label="Work">3D model creation</td><td data-label="Information sent">Only the reference picture made above. Your original photos are not sent.</td><td data-label="Retention">We request deletion as soon as we receive the result. Under Meshy’s terms, however, Meshy may use the picture and the result to improve and train its services.</td><td data-label="Contact">support@meshy.ai<br>111 West Evelyn Ave, Suite 304, Sunnyvale, CA 94086, USA</td></tr>
 <tr><td data-label="Company (country)">Anthropic, PBC (USA)</td><td data-label="Work">Image processing (checking photos, filtering out photos that are not of a dog or are inappropriate, checking coat, polishing descriptions, comparing results)</td><td data-label="Information sent">Two dog photos, breed, body type, coat, the free-text line and any revision note (emails and phone numbers masked), finished game screenshots. No dog name or contact details.</td><td data-label="Retention">Deleted within 30 days and not used for training (kept longer if flagged for a policy violation).</td><td data-label="Contact">privacy@anthropic.com<br>548 Market St, PMB 90375, San Francisco, CA 94104, USA</td></tr>
@@ -108,7 +107,7 @@
 </tbody></table></div>
 <p>Custom order photos are also downloaded to the operator’s work computer (Korea) and deleted with the rest after the period in Section 2. Photo checks and review assistance are for reference only; the operator always makes the decision. If a photo is not of a dog or is inappropriate, we do not make the dog and ask you to send new photos.</p>
 <p>The [Details] link in the custom order consent (“your photos are sent to outside processing companies”) leads to this section.</p>
-<p>If you do not want your information transferred abroad, you can play as a guest without signing in or ordering a custom dog. In that case cloud backup and custom dogs are not available. For custom orders we ask for your consent to overseas transfer before payment.</p>
+<p>If you do not want your information transferred abroad, turn off Game Center (iPhone) or Google Play Games (Android) sign-in in your phone’s settings and do not order a custom dog. You can still play; only custom dogs are not available. For custom orders we ask for your consent to overseas transfer before payment.</p>
 
 <h2 id="a6">6. Deletion</h2>
 <p>When a retention period ends or you ask us to delete, we delete within 5 days. Electronic files are deleted so they cannot be recovered; we do not keep personal information on paper. Information we must keep by law is stored separately and used only for that purpose. Copies in backups for recovery are deleted automatically after up to 30 days, as described in Section 2.</p>
@@ -116,7 +115,7 @@
 <h2 id="a7">7. Your rights</h2>
 <ul>
   <li>You can ask to see, correct, delete or stop the processing of your information, and withdraw consent, at any time.</li>
-  <li>Tapping <span class="menu-path">Settings &gt; Request account deletion</span> deletes your server data (account information, cloud backup, custom dog re-downloads, order and production records); copies in backups for recovery are deleted after up to 30 days. Data on your device remains and is removed when you delete the app. See <a href="/en/delete/">Account &amp; data deletion</a>.</li>
+  <li>Tapping <span class="menu-path">Request data deletion</span> at the bottom of the app’s <span class="menu-path">Settings</span> deletes your server data (account information, custom dog re-downloads, order and production records); copies in backups for recovery are deleted after up to 30 days. Data on your device remains and is removed when you delete the app. See <a href="/en/delete/">Account &amp; data deletion</a>.</li>
   <li>For other requests, email <a href="mailto:hello@shallwedog.com">hello@shallwedog.com</a>. After confirming your identity we reply within 10 days. A legal guardian or authorised representative may also make requests.</li>
   <li>Transaction records we must keep by law (Section 2) are kept separately for that period even if you delete your account, and then deleted.</li>
 </ul>
@@ -130,12 +129,12 @@
 </ul>
 <p>We use Google LLC’s Firebase for usage statistics and crash reports. We do not send names or contact details that identify you.</p>
 
-<h2 id="a9">9. Notifications and marketing messages</h2>
+<h2 id="a9">9. Notifications</h2>
 <ul>
-  <li>Order-related notices, such as “your custom dog is ready”, are sent to the person who ordered.</li>
-  <li>Other notifications are sent only if you opted in when you first started. Notifications between 9 pm and 8 am are sent only with separate consent.</li>
-  <li>Marketing notifications, such as discounts, require separate consent and are never sent between 9 pm and 8 am. They are marked “(Ad)” with instructions to opt out, and we reconfirm your consent every two years.</li>
-  <li>You can turn notifications off in the app’s <span class="menu-path">Settings</span> or your device settings at any time.</li>
+  <li>Order notices, such as “your custom dog is ready”, are sent to the person who ordered. They are never sent between 9 pm and 8 am on your phone’s clock; anything due in that time is sent at 8 am.</li>
+  <li>Once a day at 8 pm we send a play reminder with news from your dog, only if you allowed notifications when your phone first asked. It is never sent between 9 pm and 8 am.</li>
+  <li>Notifications never contain advertising such as discounts, prices or sales, so we do not ask for separate consent to marketing messages.</li>
+  <li>You can turn notifications off at any time in your phone’s notification settings.</li>
 </ul>
 
 <h2 id="a10">10. Security</h2>
@@ -179,7 +178,8 @@
       <a href="/ja/" lang="ja" hreflang="ja">日本語</a>
       <a href="/es/" lang="es" hreflang="es">Español</a>
     </nav>
-    <p class="biz">
+    <p class="biz" id="biz">
+      <strong class="biz-title">Business info</strong>
       <span>Business name K-Puff Lab</span>
       <span>Owner Hyunchang Cho</span>
       <span>Business registration no. 609-49-03292</span>

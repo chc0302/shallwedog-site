@@ -21,6 +21,7 @@ def make(slug,title,desc,main,src='privacy'):
         s=re.sub(rf'<meta {k} content="[^"]*">',f'<meta {k} content="{desc}">',s)
     s=re.sub(r'<meta property="og:title" content="[^"]*">',f'<meta property="og:title" content="{title} — Shall We Dog?">',s)
     s=s.replace('ko_KR','en_US').replace(f'https://shallwedog.com/{src}/',f'https://shallwedog.com/en/{slug}/')
+    b=sitekit.biz(); main=main.replace('{{OWNER_EN}}', b['owner_en'] or f'<span lang="ko">{b["owner"]}</span>')
     main=re.sub(r'<p class="muted">\[Expert check needed[^<]*</p>\n','',main)
     s=re.sub(r'<main id="main".*?</main>',lambda m:main.strip(),s,flags=re.S)
     s=sitekit.set_footer(s,'en')

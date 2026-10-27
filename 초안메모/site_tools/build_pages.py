@@ -184,11 +184,13 @@ for slug in ('', 'support', 'delete'):
     for l, p in paths.items():
         f = p.lstrip('/') + 'index.html'
         s = open(f, encoding='utf-8').read()
-        open(f, 'w', encoding='utf-8').write(sitekit.set_alternates(s, paths))
+        new = sitekit.set_alternates(s, paths)  # 다 만든 뒤에 씀 (파일을 먼저 비우지 않게)
+        open(f, 'w', encoding='utf-8').write(new)
 for slug in ('privacy', 'terms'):
     paths = {'ko': f'/{slug}/', 'en': f'/en/{slug}/'}
     for p in paths.values():
         f = p.lstrip('/') + 'index.html'
         s = open(f, encoding='utf-8').read()
-        open(f, 'w', encoding='utf-8').write(sitekit.set_alternates(s, paths))
+        new = sitekit.set_alternates(s, paths)  # 다 만든 뒤에 씀 (파일을 먼저 비우지 않게)
+        open(f, 'w', encoding='utf-8').write(new)
 print('끝')

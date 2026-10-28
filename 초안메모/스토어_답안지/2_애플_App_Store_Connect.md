@@ -91,7 +91,7 @@ Thank you for reviewing Shall We Dog?
 
 SIGN-IN AND ACCOUNT SAVE: There is no sign-in button and no account to create. The first screen asks for agreement to the terms and privacy policy and has an optional "I am 14 or older" checkbox. Only if it is checked does the app connect silently with Game Center, for Account save (paws, purchases, dogs and progress come back on a new device; no photos) and Custom orders. If it is not checked, or Game Center is not signed in, nothing is blocked: all game features (dog creation, walks, home, training, agility, mini games, styling, screenshots) work, and game data stays on the device. It can be turned on later in Settings > Account save.
 
-IN-APP PURCHASES: Tap the Shop button on the home screen (also in the walk menu). Tabs: Style, Paws (consumable currency), Custom (Custom dog, consumable) and Full version (non-consumable).
+IN-APP PURCHASES: Tap the Shop button on the home screen (also in the walk menu). Sections: Featured, Premium, Season, Decor, Paws (consumable currency), Full version (non-consumable) and Custom (Custom dog, consumable).
 
 CUSTOM DOG (paid, made to order):
 - Requires the "I am 14 or older" check (first screen or Settings) and Game Center (only for this product). If the sign-in sheet does not appear, sign in at Settings > Game Center (any Apple Account), then return to the app. Buy Custom in the Shop, check the required consents, then upload two photos of a real dog (face from the front, whole body) and fill in a short order form.
@@ -104,7 +104,7 @@ CUSTOM DOG (paid, made to order):
 
 ACCOUNT DELETION: Settings > "Request data deletion" in the small line at the bottom (also https://shallwedog.com/delete/). Restore purchases is in the same line.
 
-ADS (Google AdMob): Without the Full version: banner ads (home and walk screens), interstitial ads after an activity ends (at most once every 5 minutes, none in the first 24 hours) and optional rewarded ads. The Full version has no banner or interstitial ads and gives rewards without ads; continuing a mini game still uses a rewarded ad. We do not use the App Tracking Transparency prompt and do not track users; iPhone users receive non-personalized ads.
+ADS (Google AdMob): Without the Full version: banner ads (home and walk screens), interstitial ads only right before the result screen of a walk, mini game, agility run or training (never before competitions or award ceremonies; at most once every 5 minutes, none in the first 24 hours) and optional rewarded ads. The Full version has no banner or interstitial ads and gives rewards without ads; continuing a mini game still uses a rewarded ad. We do not use the App Tracking Transparency prompt and do not track users; iPhone users receive non-personalized ads.
 
 Support: https://shallwedog.com/en/support/
 Privacy policy: https://shallwedog.com/en/privacy/
@@ -112,7 +112,8 @@ Contact: hello@shallwedog.com
 ```
 - 위 Custom 단락은 탭 4 `Docs/서버/심사_대응.md`(10/27)에 맞췄어요: 시험 결제도 실제 제작 · 24시간 시험 결제 5건 · 검수 오전 10시~새벽 2시(10/28 14차: 운영 시간이 정해져 심사 기간도 같게) · 보통 1~2일(최대 7일 — '24시간 안'은 약속으로 읽혀 뺐어요) · 개 사진 아니면 '사진을 다시 보내 주세요' · 두 번째도 안 되면 멈추고 연락.
 - 상태 글('We're checking your payment' 등)은 탭 1 앱 글과 같아야 해요. 지금 앱에는 이 줄이 없어요. 제안은 `../b1_문구_제안_1027.md`에 있어요.
-- 'Shop' 위치는 앱 코드 기준이에요(첫 화면 · 산책 메뉴의 상점 버튼, 탭 4개).
+- 'Shop' 위치는 앱 코드 기준이에요(첫 화면 · 산책 메뉴의 상점 버튼). 상점 칸은 탭 1 답(15차)대로 7개예요: 추천 · 프리미엄 · 시즌 · 꾸미기 · 발바닥 · 정식판 · 커스텀(`ShopLogic.cs` ShopSection). 영어 이름은 앱 영어판 글과 같은지 탭 1이 확인해 주세요.
+- 전면 광고는 산책 · 미니게임 · 어질리티 · 훈련 결과 바로 전에만 나와요(대회 · 시상식 앞 X, 5분에 1번, 설치 뒤 24시간 X, 정식판 X — 탭 1 답 15차).
 - 구매 복원 버튼은 10/27 밤 코드에 들어왔어요(설정 맨 아래 작은 줄, `AppUiController.Account.cs`). 스토어 키가 없는 출시 빌드에서는 안 보이니, 출시 빌드에서 보이는지 탭 1이 확인해 주세요.
 - 로그인이 구글 · 애플 버튼에서 게임센터로 바뀌어 'Sign in with Apple을 함께 넣으라'는 지침 4.8은 해당하지 않아요(게임센터는 애플 자체 로그인). 계정 삭제(5.1.1(v))는 위 메모의 경로로 그대로 있어요.
 - 커스텀 상품의 '앱 내 구입 심사 메모'(상품마다 따로 쓰는 칸)는 탭 4 `상품_등록표.md` B-5 예시를 쓰되, 위 Custom 단락을 줄여 넣어요.

@@ -14,7 +14,7 @@
 | 기본 언어 | 한국어 – ko-KR | 원본이 한국어. 영어(en-US)는 '스토어 등록정보 > 번역 관리'에서 더해요 |
 | 앱 또는 게임 | **게임** | |
 | 무료 또는 유료 | **무료** | 앱 안 결제로 팔아요. 한 번 무료로 내면 유료로 못 바꿔요 |
-| 연락처 이메일 | hello@shallwedog.com | |
+| 이메일(칸이 나오면) | hello@shallwedog.com | 🌐 스토어 공개용. 계정의 'Google에서 연락하는 방법' 연락처 이메일(🔒 contact@shallwedog.com, 10/28 끝남)과 다른 칸이에요 |
 | 선언 | 개발자 프로그램 정책 · 미국 수출 법규 · Play 앱 서명 약관 **모두 체크** | |
 
 - 패키지 이름은 처음 올리는 AAB에서 정해지고 영구예요. 탭 1의 `ProjectSettings` 값과 같아야 해요. ('DefaultCompany'가 남아 있으면 안 돼요. 체크리스트 docs-biz-011)
@@ -123,7 +123,7 @@
 - 웹사이트: `https://shallwedog.com`
 - 고객 지원(문의 안내를 적는 칸이 나오면): `https://shallwedog.com/support/`. 언어별 등록정보에서는 영어 `/en/support/` · 일본어 `/ja/support/` · 스페인어 `/es/support/`를 써요.
   - app-ads.txt를 찾는 기준이에요. 웹사이트 칸 `https://shallwedog.com`(www 없음)과 파일 위치 `https://shallwedog.com/app-ads.txt`의 도메인이 같아요(10/28 18차 확인 — 사이트 `CNAME` = `shallwedog.com`).
-- 이메일: hello@shallwedog.com
+- 이메일: hello@shallwedog.com (🌐 공개. contact@는 여기 넣지 않아요)
 - 개인정보처리방침: https://shallwedog.com/privacy/
 
 ## 4-1. 출시 국가 (트랙마다 국가/지역)

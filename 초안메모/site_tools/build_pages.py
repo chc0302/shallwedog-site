@@ -1,4 +1,4 @@
-# 언어별 페이지 만들기: 고객센터(한·영·일·스), 첫 화면(영·일·스), 계정·데이터 삭제(일·스)
+# 언어별 페이지 만들기: 고객센터(한·영·일·스), 첫 화면(영·일·스), 계정·데이터 삭제(일·스), 특정상거래법 표시(일)
 # 실행: python3 -I 초안메모/site_tools/build_pages.py   (먼저 초안메모/en_src/build_en.py)
 # 원고: 초안메모/i18n/*.html (본문만), 첫 화면은 한국어 index.html 본문을 아래 표로 바꿔 만들어요.
 import os, re, sys
@@ -174,6 +174,16 @@ for lang in ('ja', 'es'):
     s = sitekit.page(lang, lang_path(lang, 'delete'), t, d, open(f'{SRC}/delete_{lang}.html', encoding='utf-8').read())
     check_hangul(s, f'delete {lang}')
     write(lang_path(lang, 'delete'), s)
+# 일본 특정상거래법 표시: 사업자 값은 원고에 쓰지 않고 한국어 바닥(biz)에서 읽어 넣어요
+b = sitekit.biz()
+main = open(f'{SRC}/tokushoho_ja.html', encoding='utf-8').read()
+for k, v in {'NAME': b['name_en'], 'OWNER': b['owner_en'] or f'<span lang="ko">{b["owner"]}</span>',
+             'ADDR': b['addr_en'] or f'<span lang="ko">{b["addr"]}</span>', 'TEL': b['tel_intl'], 'REG': b['reg']}.items():
+    assert main.count('{{' + k + '}}') == 1, k
+    main = main.replace('{{' + k + '}}', v)
+s = sitekit.page('ja', '/ja/tokushoho/', '特定商取引法に基づく表記 — Shall We Dog?', 'Shall We Dog? の特定商取引法に基づく表記:販売業者、所在地、連絡先、販売価格、支払方法、引渡し時期、申込みの撤回・返金。', main)
+check_hangul(s, 'tokushoho ja')
+write('/ja/tokushoho/', s)
 for lang in ('en', 'ja', 'es'):
     s = home(lang)
     check_hangul(s, f'home {lang}')

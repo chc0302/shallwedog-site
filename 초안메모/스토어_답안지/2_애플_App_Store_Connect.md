@@ -10,7 +10,7 @@
 | 칸 | 한국어 | English | 日本語 | Español |
 |---|---|---|---|---|
 | 지원 URL (필수) | https://shallwedog.com/support/ | https://shallwedog.com/en/support/ | https://shallwedog.com/ja/support/ | https://shallwedog.com/es/support/ |
-| 마케팅 URL (선택) | https://shallwedog.com/ | https://shallwedog.com/en/ | https://shallwedog.com/ja/ | https://shallwedog.com/es/ |
+| 마케팅 URL (app-ads.txt 때문에 꼭 넣기) | https://shallwedog.com/ | https://shallwedog.com/en/ | https://shallwedog.com/ja/ | https://shallwedog.com/es/ |
 | 개인정보처리방침 URL (앱 정보, 하나) | https://shallwedog.com/privacy/ | | | |
 
 - 지원 URL은 공개(사용자 OK) 뒤에 열려요. 등록 전에 공개가 끝나야 해요.
@@ -120,6 +120,10 @@ Contact: hello@shallwedog.com
 
 - 1차 심사에서 5.1.2(i)로 걸리면 동의 줄을 'AI'를 넣은 대비 문장으로 바꿔요(`../동의문구_사업자정보.md` 3절). 메모의 'outside processing companies'도 'outside AI image-processing companies'로 바꿔요(이 메모에서 두 곳 — 첫 줄 · Custom 단락).
 - 상점 위치(발바닥 아이콘 · 설정 > 정식판)는 탭 1 화면과 맞는지 확인해 주세요.
+
+## 5-1. 출시 국가 (가격 및 사용 가능 여부)
+- **브라질 · 중국 본토 · 러시아를 빼고 전부**(사용자 결정 10/28 18차). 브라질은 애플이 세금을 걷지 않고(계약 Exhibit B · C 2절), 중국 본토는 게임 허가가 필요해요. 북한은 목록에 없어요. 순서: `../스토어_등록_순서표_1029.md` B4.
+- app-ads.txt: 마케팅 URL의 도메인(`shallwedog.com`, www 없음) 루트에 `app-ads.txt`가 있어요. 애플 앱은 반영까지 최대 7일 걸려요(AdMob 도움말).
 
 ## 6. 관련 심사 지침 (원문 요약)
 - **5.1.2(i):** 개인정보를 제3자(제3자 AI 포함)와 공유할 때는 어디로 가는지 분명히 밝히고, 그 전에 명시적인 허락을 받아야 해요.

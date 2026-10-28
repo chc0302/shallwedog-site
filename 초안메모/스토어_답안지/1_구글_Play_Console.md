@@ -122,9 +122,12 @@
 - 설명 글은 `4_스토어_설명글_최종.md`에 있어요.
 - 웹사이트: `https://shallwedog.com`
 - 고객 지원(문의 안내를 적는 칸이 나오면): `https://shallwedog.com/support/`. 언어별 등록정보에서는 영어 `/en/support/` · 일본어 `/ja/support/` · 스페인어 `/es/support/`를 써요.
-  - app-ads.txt를 찾는 기준이에요.
+  - app-ads.txt를 찾는 기준이에요. 웹사이트 칸 `https://shallwedog.com`(www 없음)과 파일 위치 `https://shallwedog.com/app-ads.txt`의 도메인이 같아요(10/28 18차 확인 — 사이트 `CNAME` = `shallwedog.com`).
 - 이메일: hello@shallwedog.com
 - 개인정보처리방침: https://shallwedog.com/privacy/
+
+## 4-1. 출시 국가 (트랙마다 국가/지역)
+- **스위스 · 콜롬비아 · 페루 · 탄자니아 · 짐바브웨 · 브라질 · 러시아(목록에 있으면)를 빼고 전부**(사용자 결정 10/28 18차). 앞의 6곳은 구글이 세금을 걷지 않는 나라예요(구글 세금 도움말). 중국 · 북한은 Google Play 목록에 없어요. 순서: `../스토어_등록_순서표_1029.md` A6.
 
 출처:
 - 앱 만들기: https://support.google.com/googleplay/android-developer/answer/9859152

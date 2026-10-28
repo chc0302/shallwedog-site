@@ -29,7 +29,7 @@ def biz():
 DOCS = {
     'ko': ('안내 문서', [('/privacy/', '개인정보처리방침'), ('/terms/', '이용약관'), ('/delete/', '계정·데이터 삭제'), ('/support/', '고객센터')]),
     'en': ('Documents', [('/en/privacy/', 'Privacy Policy'), ('/en/terms/', 'Terms of Service'), ('/en/delete/', 'Account &amp; data deletion'), ('/en/support/', 'Help')]),
-    'ja': ('ご案内', [('/en/privacy/', 'プライバシーポリシー（英語）'), ('/en/terms/', '利用規約（英語）'), ('/ja/delete/', 'アカウント・データの削除'), ('/ja/support/', 'サポート')]),
+    'ja': ('ご案内', [('/en/privacy/', 'プライバシーポリシー（英語）'), ('/en/terms/', '利用規約（英語）'), ('/ja/delete/', 'アカウント・データの削除'), ('/ja/support/', 'サポート'), ('/ja/tokushoho/', '特定商取引法に基づく表記')]),
     'es': ('Documentos', [('/en/privacy/', 'Política de privacidad (en inglés)'), ('/en/terms/', 'Términos (en inglés)'), ('/es/delete/', 'Borrar cuenta y datos'), ('/es/support/', 'Ayuda')]),
 }
 # 첫 화면 맨 위 줄: 앱 설정 맨 아래 '약관 · 개인정보처리방침 · 사업자 정보 · 고객센터: shallwedog.com'을 누르면 오는 곳 (앱 말과 같은 이름)

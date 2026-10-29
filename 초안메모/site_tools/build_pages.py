@@ -108,6 +108,8 @@ T = [
 ('어질리티 단계 목록', 'Agility stage list', 'アジリティのステージ一覧', 'Lista de etapas de agility'),
 ('허들 런과 멍멍 배구 중에 고르는 미니게임 창', 'Mini game window to choose Hurdle Run or Woof Volleyball', 'ハードルランとわんわんバレーから選ぶミニゲーム画面', 'Ventana de minijuegos para elegir Carrera de vallas o Vóley perruno'),
 ('포메라니안 미용 스타일을 고르는 꾸미기 화면', 'Style screen choosing a Pomeranian grooming style', 'ポメラニアンのカットスタイルを選ぶおしゃれ画面', 'Pantalla de estilo eligiendo el corte de un pomerania'),
+('호숫가 공원 잔디밭에 작은 개부터 큰 개까지 여러 견종의 3D 강아지가 세 줄로 서 있는 게임 화면', 'Game screen of 3D dogs of many breeds, from small to large, standing in three rows on the lawn of a lakeside park', '湖のほとりの公園の芝生に、小型犬から大型犬までいろいろな犬種の3Dの犬が3列に並んだゲーム画面', 'Pantalla del juego: perros 3D de muchas razas, de pequeños a grandes, en tres filas sobre el césped de un parque junto al lago'),
+('게임 속 견종이 한자리에 모였어요', 'The breeds of the game, all in one place', 'ゲームの犬種が勢ぞろい', 'Todas las razas del juego, juntas'),
 ('스크린샷을 저장하거나 공유하는 화면', 'Screen for saving or sharing a screenshot', 'スクリーンショットを保存・シェアする画面', 'Pantalla para guardar o compartir una captura'),
 ]
 HOME_META = {

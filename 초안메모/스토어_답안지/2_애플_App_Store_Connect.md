@@ -100,7 +100,7 @@ CUSTOM DOG (paid, made to order):
 - Requires the "I am 14 or older" check (first screen or Settings) and Game Center (only for this product). If the sign-in sheet does not appear, sign in at Settings > Game Center (any Apple Account), then return to the app. Buy Custom in the Shop, check the required consents, then upload two photos of a real dog (face from the front, whole body) and fill in a short order form.
 - Before payment, the user must check a required consent that names each outside processing company (OpenAI, Anthropic, Meshy; overseas), with a link to Section 5 of our privacy policy. See the attached screenshot.
 - This is a made-to-order product with a human check step. Orders placed with a sandbox (test) purchase are also actually made and delivered to the app, so you can see the finished dog. Up to 5 sandbox orders are accepted per 24 hours.
-- Delivery time: usually 1-2 days, at most 7 days. Our team checks orders between 10:00 and 02:00 Korea time (UTC+9), including during the review period. The order screen shows the estimated date. The app shows "We're checking your payment" until the store confirms the purchase, then "We're making it", then "It's here".
+- Delivery time: usually within 48 hours, at most 7 days. Our team checks orders between 10:00 and 02:00 Korea time (UTC+9), including during the review period. The order screen shows the estimated date. The app shows "We're checking your payment" until the store confirms the purchase, then "We're making it", then "It's here".
 - Photos needed: one clear photo of the dog's face from the front and one photo of the whole body standing. If a photo is not of a dog (or is blurry or inappropriate), the order changes to "Please send new photos" and the photos can be sent again once from My orders. If the second set still cannot be used, we pause the order and contact you through App Review.
 - Limits: up to 3 custom orders per account per day; photos under 5 MB.
 - Photos are deleted 14 days after the last delivery unless the user opts in to one-year retention. The finished dog is digital content used only inside the app, sold via in-app purchase.
@@ -113,7 +113,7 @@ Support: https://shallwedog.com/en/support/
 Privacy policy: https://shallwedog.com/en/privacy/
 Contact: hello@shallwedog.com
 ```
-- 위 Custom 단락은 탭 4 `Docs/서버/심사_대응.md`(10/27)에 맞췄어요: 시험 결제도 실제 제작 · 24시간 시험 결제 5건 · 검수 오전 10시~새벽 2시(10/28 14차: 운영 시간이 정해져 심사 기간도 같게) · 보통 1~2일(최대 7일 — '24시간 안'은 약속으로 읽혀 뺐어요) · 개 사진 아니면 '사진을 다시 보내 주세요' · 두 번째도 안 되면 멈추고 연락.
+- 위 Custom 단락은 탭 4 `Docs/서버/심사_대응.md`(10/27)에 맞췄어요: 시험 결제도 실제 제작 · 24시간 시험 결제 5건 · 검수 오전 10시~새벽 2시(10/28 14차: 운영 시간이 정해져 심사 기간도 같게) · 보통 48시간 안(최대 7일 — 11/3 사용자 결정: 24시간 → 48시간) · 개 사진 아니면 '사진을 다시 보내 주세요' · 두 번째도 안 되면 멈추고 연락.
 - 상태 글('We're checking your payment' 등)은 탭 1 앱 글과 같아야 해요. 지금 앱에는 이 줄이 없어요. 제안은 `../b1_문구_제안_1027.md`에 있어요.
 - 'Shop' 위치는 앱 코드 기준이에요(첫 화면 · 산책 메뉴의 상점 버튼). 상점 칸은 탭 1 답(15차)대로 7개예요: 추천 · 프리미엄 · 시즌 · 꾸미기 · 발바닥 · 정식판 · 커스텀(`ShopLogic.cs` ShopSection). 영어 이름은 앱 영어판 글과 같은지 탭 1이 확인해 주세요.
 - 전면 광고는 산책 · 미니게임 · 어질리티 · 훈련 결과 바로 전에만 나와요(대회 · 시상식 앞 X, 5분에 1번, 설치 뒤 24시간 X, 정식판 X — 탭 1 답 15차).
@@ -129,7 +129,7 @@ Contact: hello@shallwedog.com
 - app-ads.txt: 마케팅 URL의 도메인(`shallwedog.com`, www 없음) 루트에 `app-ads.txt`가 있어요. 애플 앱은 반영까지 최대 7일 걸려요(AdMob 도움말).
 
 ## 6. 관련 심사 지침 (원문 요약)
-- **5.1.2(i):** 개인정보를 제3자(제3자 AI 포함)와 공유할 때는 어디로 가는지 분명히 밝히고, 그 전에 명시적인 허락을 받아야 해요.
+- **5.1.2(i):** 개인정보를 제3자(외부 처리 서비스 포함)와 공유할 때는 어디로 가는지 분명히 밝히고, 그 전에 명시적인 허락을 받아야 해요.
   - 우리는 결제 전 필수 체크와 처리방침 5조로 대응해요.
 - **5.1.1(v):** 계정을 만들 수 있으면 앱 안에서 삭제도 돼야 해요.
   - 우리는 [설정 맨 아래 줄 > 데이터 삭제 요청]로 대응해요.

@@ -22,7 +22,7 @@
 
 ## 1. 국내 마이크로 인플루언서 (한국어)
 > 안녕하세요, [계정 이름]님! 강아지 산책 게임 'Shall We Dog?'을 혼자 만들고 있는 개발자예요(@shallwedog · shallwedog.com).
-> 견종 · 털 색 · 체형을 골라 우리 개를 닮은 3D 강아지와 산책하는 게임이고, 11월 16일 App Store · Google Play에 나와요.
+> 견종 · 털 색 · 체형을 골라 우리 개를 닮은 3D 강아지와 산책하는 게임이고, 11월 15일 App Store · Google Play에 나와요.
 >
 > [강아지 이름] 영상을 보고, [강아지 이름]를 게임 속 3D 강아지로 만들어 드리고 싶어서 연락드렸어요. 조건을 먼저 다 적을게요.
 > · 해 주실 것: 릴스 1개(15~30초) + 스토리 1개
@@ -35,7 +35,7 @@
 > 관심 있으시면 답장 주세요. 사진 보내는 방법과 사진이 어디로 가는지(처리 회사) 안내를 이어서 드릴게요. 부담 없이 거절하셔도 괜찮아요 🐾
 
 ## 2. 미국 (English)
-> Hi [name]! I'm the solo developer of Shall We Dog? (@shallwedog · shallwedog.com), a game where you make a 3D dog that looks like yours and take it for walks. It comes out on the App Store and Google Play on November 16.
+> Hi [name]! I'm the solo developer of Shall We Dog? (@shallwedog · shallwedog.com), a game where you make a 3D dog that looks like yours and take it for walks. It comes out on the App Store and Google Play on November 15.
 >
 > I loved [dog's name]'s videos and would like to make [dog's name] as a 3D dog in the game. Here are all the terms up front:
 > · What we'd ask: 1 Reel (15–30 sec) + 1 Story
@@ -48,7 +48,7 @@
 > If you're interested, just reply and I'll send how to share photos and where they're processed. No pressure at all if it's not for you 🐾
 
 ## 3. 일본 (日本語)
-> [アカウント名]さん、はじめまして。犬のおさんぽゲーム「Shall We Dog?」を個人で作っている開発者です(@shallwedog・shallwedog.com)。犬種・毛色・体型を選んで、うちの子に似た3Dの犬とおさんぽできるゲームで、11月16日にApp Store・Google Playで配信予定です。
+> [アカウント名]さん、はじめまして。犬のおさんぽゲーム「Shall We Dog?」を個人で作っている開発者です(@shallwedog・shallwedog.com)。犬種・毛色・体型を選んで、うちの子に似た3Dの犬とおさんぽできるゲームで、11月15日にApp Store・Google Playで配信予定です。
 >
 > [犬の名前]ちゃんの動画を拝見して、ゲームの中の3Dの犬として制作させていただけないかと思いご連絡しました。条件を先にすべてお伝えします。
 > ・お願いしたいこと:リール1本(15〜30秒)+ストーリーズ1本

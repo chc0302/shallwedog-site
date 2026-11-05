@@ -1,0 +1,261 @@
+[
+ {
+  "id": "bichon",
+  "ko": "비숑 프리제",
+  "en": "Bichon Frise",
+  "ja": "ビション・フリーゼ",
+  "es": "Bichón frisé"
+ },
+ {
+  "id": "Maltese",
+  "ko": "말티즈",
+  "en": "Maltese",
+  "ja": "マルチーズ",
+  "es": "Bichón maltés"
+ },
+ {
+  "id": "ToyPoodle",
+  "ko": "토이푸들",
+  "en": "Toy Poodle",
+  "ja": "トイ・プードル",
+  "es": "Caniche toy"
+ },
+ {
+  "id": "Jindo",
+  "ko": "진돗개",
+  "en": "Jindo",
+  "ja": "珍島犬",
+  "es": "Jindo coreano"
+ },
+ {
+  "id": "Chihuahua",
+  "ko": "치와와",
+  "en": "Chihuahua",
+  "ja": "チワワ",
+  "es": "Chihuahua"
+ },
+ {
+  "id": "ShihTzu",
+  "ko": "시츄",
+  "en": "Shih Tzu",
+  "ja": "シーズー",
+  "es": "Shih tzu"
+ },
+ {
+  "id": "GoldenRetriever",
+  "ko": "골든 리트리버",
+  "en": "Golden Retriever",
+  "ja": "ゴールデン・レトリーバー",
+  "es": "Golden retriever"
+ },
+ {
+  "id": "Beagle",
+  "ko": "비글",
+  "en": "Beagle",
+  "ja": "ビーグル",
+  "es": "Beagle"
+ },
+ {
+  "id": "BorderCollie",
+  "ko": "보더 콜리",
+  "en": "Border Collie",
+  "ja": "ボーダー・コリー",
+  "es": "Border collie"
+ },
+ {
+  "id": "Samoyed",
+  "ko": "사모예드",
+  "en": "Samoyed",
+  "ja": "サモエド",
+  "es": "Samoyedo"
+ },
+ {
+  "id": "GreatDane",
+  "ko": "그레이트 데인",
+  "en": "Great Dane",
+  "ja": "グレート・デーン",
+  "es": "Gran danés"
+ },
+ {
+  "id": "Greyhound",
+  "ko": "그레이하운드",
+  "en": "Greyhound",
+  "ja": "グレーハウンド",
+  "es": "Galgo inglés"
+ },
+ {
+  "id": "Dachshund",
+  "ko": "닥스훈트",
+  "en": "Dachshund",
+  "ja": "ダックスフンド",
+  "es": "Dachshund"
+ },
+ {
+  "id": "Dalmatian",
+  "ko": "달마시안",
+  "en": "Dalmatian",
+  "ja": "ダルメシアン",
+  "es": "Dálmata"
+ },
+ {
+  "id": "Doberman",
+  "ko": "도베르만",
+  "en": "Dobermann",
+  "ja": "ドーベルマン",
+  "es": "Dóberman"
+ },
+ {
+  "id": "Labrador",
+  "ko": "래브라도 리트리버",
+  "en": "Labrador Retriever",
+  "ja": "ラブラドール・レトリーバー",
+  "es": "Labrador retriever"
+ },
+ {
+  "id": "Rottweiler",
+  "ko": "로트와일러",
+  "en": "Rottweiler",
+  "ja": "ロットワイラー",
+  "es": "Rottweiler"
+ },
+ {
+  "id": "Malinois",
+  "ko": "말리노이즈",
+  "en": "Malinois",
+  "ja": "マリノア",
+  "es": "Malinois"
+ },
+ {
+  "id": "Maltipoo",
+  "ko": "말티푸",
+  "en": "Maltipoo",
+  "ja": "マルプー",
+  "es": "Maltipoo"
+ },
+ {
+  "id": "Boxer",
+  "ko": "복서",
+  "en": "Boxer",
+  "ja": "ボクサー",
+  "es": "Bóxer"
+ },
+ {
+  "id": "Bulldog",
+  "ko": "불독",
+  "en": "Bulldog",
+  "ja": "ブルドッグ",
+  "es": "Bulldog inglés"
+ },
+ {
+  "id": "BullTerrier",
+  "ko": "불테리어",
+  "en": "Bull Terrier",
+  "ja": "ブル・テリア",
+  "es": "Bull terrier"
+ },
+ {
+  "id": "Schnauzer",
+  "ko": "슈나우저",
+  "en": "Schnauzer",
+  "ja": "シュナウザー",
+  "es": "Schnauzer"
+ },
+ {
+  "id": "Poodle",
+  "ko": "스탠다드 푸들",
+  "en": "Standard Poodle",
+  "ja": "スタンダード・プードル",
+  "es": "Caniche estándar"
+ },
+ {
+  "id": "Spitz",
+  "ko": "스피츠",
+  "en": "Spitz",
+  "ja": "スピッツ",
+  "es": "Spitz"
+ },
+ {
+  "id": "ShibaInu",
+  "ko": "시바견",
+  "en": "Shiba Inu",
+  "ja": "柴犬",
+  "es": "Shiba inu"
+ },
+ {
+  "id": "Husky",
+  "ko": "시베리안 허스키",
+  "en": "Siberian Husky",
+  "ja": "シベリアン・ハスキー",
+  "es": "Husky siberiano"
+ },
+ {
+  "id": "AkitaInu",
+  "ko": "아키타견",
+  "en": "Akita Inu",
+  "ja": "秋田犬",
+  "es": "Akita inu"
+ },
+ {
+  "id": "YorkTerrier",
+  "ko": "요크셔 테리어",
+  "en": "Yorkshire Terrier",
+  "ja": "ヨークシャー・テリア",
+  "es": "Yorkshire terrier"
+ },
+ {
+  "id": "Corgi",
+  "ko": "웰시 코기",
+  "en": "Welsh Corgi",
+  "ja": "ウェルシュ・コーギー",
+  "es": "Corgi galés"
+ },
+ {
+  "id": "JackRussellTerrier",
+  "ko": "잭 러셀 테리어",
+  "en": "Jack Russell Terrier",
+  "ja": "ジャック・ラッセル・テリア",
+  "es": "Jack Russell terrier"
+ },
+ {
+  "id": "Shepherd",
+  "ko": "저먼 셰퍼드",
+  "en": "German Shepherd",
+  "ja": "ジャーマン・シェパード",
+  "es": "Pastor alemán"
+ },
+ {
+  "id": "ToyTerrier",
+  "ko": "토이 테리어",
+  "en": "Toy Terrier",
+  "ja": "トイ・テリア",
+  "es": "Toy terrier"
+ },
+ {
+  "id": "Pug",
+  "ko": "퍼그",
+  "en": "Pug",
+  "ja": "パグ",
+  "es": "Pug"
+ },
+ {
+  "id": "Pomeranian",
+  "ko": "포메라니안",
+  "en": "Pomeranian",
+  "ja": "ポメラニアン",
+  "es": "Pomerania"
+ },
+ {
+  "id": "FrenchBulldog",
+  "ko": "프렌치 불독",
+  "en": "French Bulldog",
+  "ja": "フレンチ・ブルドッグ",
+  "es": "Bulldog francés"
+ },
+ {
+  "id": "Pitbull",
+  "ko": "핏불 테리어",
+  "en": "Pit Bull Terrier",
+  "ja": "ピット・ブル・テリア",
+  "es": "Pit bull terrier"
+ }
+]

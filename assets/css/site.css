@@ -257,3 +257,10 @@ p{margin:0}
 .compare figcaption{margin-top:8px; font-size:14px; font-weight:700; text-align:center}
 .compare .arrow{font-size:26px; font-weight:800; color:var(--orange-deep)}
 .custom .note{font-size:13px}
+/* 견종 카드 37종 (11/6, 탭 1 같은 각도 카드): 휴대폰 4칸 · PC 8칸 */
+.breeds{display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:14px 10px; overflow:visible; margin-inline:0; padding:4px 0 6px}
+@media (min-width:640px){.breeds{grid-template-columns:repeat(6,minmax(0,1fr))}}
+@media (min-width:860px){.breeds{grid-template-columns:repeat(8,minmax(0,1fr)); padding-inline:0}}
+.breeds figure{width:auto}
+.breeds img{width:100%; height:auto; aspect-ratio:1; border-radius:18px; border:0; box-shadow:var(--shadow)}
+.breeds figcaption{font-size:12.5px; word-break:keep-all}

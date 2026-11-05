@@ -21,8 +21,8 @@ T = [
 ('곧 출시', 'Soon', 'まもなく', 'Pronto'),
 ('출시되면 인스타그램', 'We’ll announce the launch on Instagram', '配信が始まったらInstagram', 'Anunciaremos el lanzamiento en Instagram'),
 ('에서 알려드려요.', '.', 'でお知らせします。', '.'),
-('달마시안', 'Dalmatian', 'ダルメシアン', 'Dálmata'),
-('공원 산책 중', 'Walking in the park', '公園をおさんぽ中', 'Paseando por el parque'),
+('견종 37종', '37 breeds', '37犬種', '37 razas'),
+('공원에 다 모였어요', 'All together in the park', '公園に勢ぞろい', 'Todas juntas en el parque'),
 ('만들기', 'Create', 'つくる', 'Crear'),
 ('견종부터 털 색, 체형까지 골라요', 'Choose breed, coat color and body type', '犬種から毛色、体型まで選べます', 'Elige raza, color del pelo y complexión'),
 ('우리 개와 닮은 견종을 고르고, 털 색과 체형을 맞춰요. 키와 몸무게를 적으면 크기도 비슷해져요.',
@@ -97,7 +97,9 @@ T = [
 ('출시되면 여기서 알려드려요', 'We’ll let you know when it launches', '配信が始まったらお知らせします', 'Te avisaremos cuando se lance'),
 ('새 소식과 게임 화면은 인스타그램에 먼저 올려요.', 'News and new screens go up on Instagram first.', '新しいお知らせやゲーム画面は、Instagramに先に載せます。', 'Las novedades y nuevas pantallas se publican primero en Instagram.'),
 ('인스타그램 @shallwedog', 'Instagram @shallwedog', 'Instagram @shallwedog', 'Instagram @shallwedog'),
-('공원 잔디밭을 목줄을 하고 걷는 달마시안 3D 강아지 게임 화면', 'Game screen of a 3D Dalmatian on a leash walking on the park lawn', '公園の芝生をリードをつけて歩くダルメシアンの3Dゲーム画面', 'Pantalla del juego: un dálmata 3D con correa paseando por el césped del parque'),
+('게임 속 견종이 공원 잔디밭에 한자리에 모인 3D 강아지들', 'Game screen of 3D dogs of many breeds gathered on the park lawn', '公園の芝生に集まった、さまざまな犬種の3Dの犬たち(ゲーム画面)', 'Perros 3D de muchas razas reunidos en el césped del parque (pantalla del juego)'),
+('나무 데크 산책길에서 하네스를 한 시바 3D 강아지가 혀를 내밀고 서 있는 게임 화면', 'Game screen of a 3D Shiba in a harness standing on a wooden boardwalk with its tongue out', '木のデッキのおさんぽ道で、ハーネスをつけた柴犬の3Dの犬が舌を出して立っているゲーム画面', 'Pantalla del juego: un shiba 3D con arnés, de pie en un paseo de madera y sacando la lengua'),
+('나무 데크 산책길', 'The wooden boardwalk trail', '木のデッキのおさんぽ道', 'El paseo de madera'),
 ('게임 화면 모음, 옆으로 넘겨 보세요', 'Game screens, swipe sideways', 'ゲーム画面の一覧。横にスワイプしてください', 'Pantallas del juego, desliza hacia los lados'),
 ('견종을 고르는 화면. 달마시안이 선택되어 있어요', 'Breed selection screen with the Dalmatian selected', '犬種を選ぶ画面。ダルメシアンが選ばれています', 'Pantalla de elegir raza con el dálmata seleccionado'),
 ('털 색을 고르는 화면', 'Coat color selection screen', '毛色を選ぶ画面', 'Pantalla de elegir color del pelo'),
@@ -108,8 +110,6 @@ T = [
 ('어질리티 단계 목록', 'Agility stage list', 'アジリティのステージ一覧', 'Lista de etapas de agility'),
 ('허들 런과 멍멍 배구 중에 고르는 미니게임 창', 'Mini game window to choose Hurdle Run or Woof Volleyball', 'ハードルランとわんわんバレーから選ぶミニゲーム画面', 'Ventana de minijuegos para elegir Carrera de vallas o Vóley perruno'),
 ('포메라니안 미용 스타일을 고르는 꾸미기 화면', 'Style screen choosing a Pomeranian grooming style', 'ポメラニアンのカットスタイルを選ぶおしゃれ画面', 'Pantalla de estilo eligiendo el corte de un pomerania'),
-('호숫가 공원 잔디밭에 작은 개부터 큰 개까지 여러 견종의 3D 강아지가 세 줄로 서 있는 게임 화면', 'Game screen of 3D dogs of many breeds, from small to large, standing in three rows on the lawn of a lakeside park', '湖のほとりの公園の芝生に、小型犬から大型犬までいろいろな犬種の3Dの犬が3列に並んだゲーム画面', 'Pantalla del juego: perros 3D de muchas razas, de pequeños a grandes, en tres filas sobre el césped de un parque junto al lago'),
-('게임 속 견종이 한자리에 모였어요', 'The breeds of the game, all in one place', 'ゲームの犬種が勢ぞろい', 'Todas las razas del juego, juntas'),
 ('스크린샷을 저장하거나 공유하는 화면', 'Screen for saving or sharing a screenshot', 'スクリーンショットを保存・シェアする画面', 'Pantalla para guardar o compartir una captura'),
 ]
 HOME_META = {
@@ -135,7 +135,19 @@ def home(lang):
     n = main.count('href="/support/#custom"'); assert n == 1, n
     main = main.replace('href="/support/#custom"', f'href="/{lang}/support/#custom"')
     title, desc = HOME_META[lang]
-    return sitekit.page(lang, f'/{lang}/', title, desc, main)
+    s = sitekit.page(lang, f'/{lang}/', title, desc, main)
+    # 첫 화면만: 공유 그림 설명 + 구조화 데이터 (한국어 index.html 머리와 같은 것)
+    head = open('index.html', encoding='utf-8').read()
+    ld = re.search(r'<script type="application/ld\+json">.*?</script>', head, re.S).group(0)
+    alt = OG_ALT[lang]
+    tw = '<meta name="twitter:card" content="summary_large_image">'
+    assert s.count(tw) == 1
+    return s.replace(tw, tw + f'\n<meta property="og:image:alt" content="{alt}">\n<meta name="twitter:image:alt" content="{alt}">\n' + ld)
+
+
+OG_ALT = {'en': 'Many breeds of 3D dogs gathered on the park lawn in the game',
+          'ja': 'ゲームの中で公園の芝生に集まった、さまざまな犬種の3Dの犬',
+          'es': 'Perros 3D de muchas razas reunidos en el césped del parque del juego'}
 
 
 TITLES = {

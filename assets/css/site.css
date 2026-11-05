@@ -259,8 +259,17 @@ p{margin:0}
 .custom .note{font-size:13px}
 /* 견종 카드 37종 (11/6, 탭 1 같은 각도 카드): 휴대폰 4칸 · PC 8칸 */
 .breeds{display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:14px 10px; overflow:visible; margin-inline:0; padding:4px 0 6px}
-@media (min-width:640px){.breeds{grid-template-columns:repeat(6,minmax(0,1fr))}}
 @media (min-width:860px){.breeds{grid-template-columns:repeat(8,minmax(0,1fr)); padding-inline:0}}
 .breeds figure{width:auto}
 .breeds img{width:100%; height:auto; aspect-ratio:1; border-radius:18px; border:0; box-shadow:var(--shadow)}
 .breeds figcaption{font-size:12.5px; word-break:keep-all}
+/* 견종 카드 펼치기: 처음엔 8종(휴대폰 2줄 · PC 1줄)만, 나머지는 눌러서 */
+.breeds-more{margin-top:4px}
+.breeds-more > summary{list-style:none; cursor:pointer; display:flex; justify-content:center; margin:6px 0 2px}
+.breeds-more > summary::-webkit-details-marker{display:none}
+.breeds-more > summary span{font-size:14px; font-weight:700; color:var(--ink); background:var(--card); border:1px solid var(--line); border-radius:999px; padding:9px 18px; box-shadow:var(--shadow)}
+.breeds-more > summary span::after{content:" ▾"}
+.breeds-more[open] > summary span::after{content:" ▴"}
+.breeds-more .more-close, .breeds-more[open] .more-open{display:none}
+.breeds-more[open] .more-close{display:inline}
+.breeds-more[open] > summary{margin-bottom:12px}

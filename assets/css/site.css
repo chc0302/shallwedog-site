@@ -273,4 +273,5 @@ p{margin:0}
 .more-btn::after{content:""; width:7px; height:7px; border-right:2px solid currentColor; border-bottom:2px solid currentColor; transform:translateY(-2px) rotate(45deg)}
 .more-btn:hover{background:rgba(250,154,103,.24)}
 .more-btn:focus-visible{outline:3px solid var(--orange-deep); outline-offset:2px}
-.more-btn[hidden]{display:none}
+.more-btn[hidden], .more-btn [hidden]{display:none}
+.more-btn[aria-expanded="true"]::after{transform:translateY(2px) rotate(-135deg)}

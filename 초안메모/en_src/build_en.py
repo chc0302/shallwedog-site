@@ -25,8 +25,8 @@ def make(slug,title,desc,main,src='privacy'):
     b=sitekit.biz(); main=main.replace('{{OWNER_EN}}', b['owner_en'] or f'<span lang="ko">{b["owner"]}</span>')
     main=re.sub(r'<p class="muted">\[Expert check needed[^<]*</p>\n','',main)
     s=re.sub(r'<main id="main".*?</main>',lambda m:main.strip(),s,flags=re.S)
-    s=sitekit.set_footer(s,'en')
-    for a,b in [('본문으로 건너뛰기','Skip to content'),('인스타그램 @shallwedog','Instagram @shallwedog')]:
+    s=sitekit.set_footer(sitekit.set_header(s,'en'),'en')
+    for a,b in [('본문으로 건너뛰기','Skip to content')]:
         assert a in s,a; s=s.replace(a,b)
     left=re.findall(r'[가-힣]+',re.sub(r'<(span|a)[^>]*lang="ko"[^>]*>[^<]*</(span|a)>','',s)); assert not left,left
     os.makedirs(f'en/{slug}',exist_ok=True); open(f'en/{slug}/index.html','w',encoding='utf-8').write(s)

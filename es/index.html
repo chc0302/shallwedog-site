@@ -47,17 +47,16 @@
 
 <header class="wrap top">
   <a class="brand" href="/es/"><img src="/assets/img/logo-96.png" width="40" height="40" alt="">Shall We Dog?</a>
-  <a class="top-link" href="https://www.instagram.com/shallwedog/" rel="noopener">Instagram @shallwedog</a>
+  <nav class="langs-top" aria-label="Language">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>
+    <a href="/" lang="ko" hreflang="ko" data-short="KO">한국어</a>
+    <a href="/en/" lang="en" hreflang="en" data-short="EN">English</a>
+    <a href="/ja/" lang="ja" hreflang="ja" data-short="JA">日本語</a>
+    <a href="/es/" lang="es" hreflang="es" data-short="ES" aria-current="true">Español</a>
+  </nav>
 </header>
 
 <main id="main">
-<nav class="wrap quick" aria-label="Enlaces rápidos">
-  <a href="/en/terms/">Términos (en inglés)</a>
-  <a href="/en/privacy/">Privacidad (en inglés)</a>
-  <a href="#biz">Datos de la empresa</a>
-  <a href="/es/support/">Ayuda</a>
-  <a href="/es/delete/">Solicitar borrado de datos</a>
-</nav>
   <section class="wrap hero">
     <div class="hero-text">
       <span class="badge">Juego de pasear perros · Llega pronto a las tiendas</span>
@@ -70,7 +69,7 @@
       <p class="notice">Anunciaremos el lanzamiento en Instagram <a href="https://www.instagram.com/shallwedog/" rel="noopener">@shallwedog</a>.</p>
     </div>
     <div class="hero-pic">
-      <div class="phone"><picture><source media="(max-width:859px)" srcset="/assets/img/hero-lineup-m.webp" width="1040" height="780"><img src="/assets/img/hero-lineup-wide.webp" width="1280" height="720" alt="Perros 3D de muchas razas reunidos en el césped del parque (pantalla del juego)" fetchpriority="high"></picture></div>
+      <div class="phone"><picture><source media="(max-width:859px)" srcset="/assets/img/hero-lineup-m.webp" width="1040" height="650"><img src="/assets/img/hero-lineup-wide.webp" width="1280" height="720" alt="Perros 3D de muchas razas reunidos en el césped del parque (pantalla del juego)" fetchpriority="high"></picture></div>
       <p class="tag">37 razas<span>Todas juntas en el parque</span></p>
     </div>
   </section>
@@ -80,7 +79,7 @@
       <div class="sec-head">
         <span class="eyebrow">Crear</span>
         <h2 id="make-title">Elige raza, color del pelo y complexión</h2>
-        <p>Elige la raza que se parezca a tu perro y ajusta el color del pelo y la complexión. Indica altura y peso para que el tamaño también se parezca.</p>
+        <p>Elige la raza que quieras y ajusta el color del pelo y la complexión.</p>
       </div>
       <div class="breeds" role="list">
         <figure role="listitem"><img src="/assets/img/breeds/bichon.webp" width="300" height="300" alt="" loading="lazy"><figcaption>Bichón frisé</figcaption></figure>
@@ -94,12 +93,12 @@
         <figure role="listitem"><img src="/assets/img/breeds/bordercollie.webp" width="300" height="300" alt="" loading="lazy"><figcaption>Border collie</figcaption></figure>
         <figure role="listitem"><img src="/assets/img/breeds/samoyed.webp" width="300" height="300" alt="" loading="lazy"><figcaption>Samoyedo</figcaption></figure>
       </div>
-      <dl class="facts">
-        <div><dt>Razas</dt><dd>37</dd></div>
-        <div><dt>Complexiones</dt><dd>6</dd></div>
-        <div><dt>Colores de pelo</dt><dd>Según la raza</dd></div>
-        <div><dt>Tamaño</dt><dd>Altura · peso</dd></div>
-      </dl>
+      <ol class="steps">
+        <li><figure><div class="frame"><img src="/assets/img/make/step1.webp" width="600" height="1304" alt="Paso 1: elegir raza, con el husky siberiano elegido" loading="lazy" decoding="async"></div><figcaption><b>1</b>Elegir raza</figcaption></figure></li>
+        <li><figure><div class="frame"><img src="/assets/img/make/step2.webp" width="600" height="1304" alt="Elegir la complexión más parecida" loading="lazy" decoding="async"></div><figcaption><b>2</b>Elegir complexión</figcaption></figure></li>
+        <li><figure><div class="frame"><img src="/assets/img/make/step3.webp" width="600" height="1304" alt="Pantalla de elegir color del pelo" loading="lazy" decoding="async"></div><figcaption><b>3</b>Elegir color del pelo</figcaption></figure></li>
+        <li><figure><div class="frame"><img src="/assets/img/make/step4.webp" width="600" height="1304" alt="Último paso: elegir color de ojos y nombre" loading="lazy" decoding="async"></div><figcaption><b>4</b>Color de ojos y nombre</figcaption></figure></li>
+      </ol>
     </div>
   </section>
 
@@ -107,14 +106,14 @@
     <div class="wrap">
       <div class="sec-head">
         <span class="eyebrow">Juntos</span>
-        <h2 id="play-title">Pasear, descansar, aprender y correr</h2>
+        <h2 id="play-title">Paseos, entrenamiento, minijuegos y más para disfrutar juntos</h2>
       </div>
       <div class="features">
         <article class="feature">
           <div class="ico" aria-hidden="true">🌳</div>
           <h3>Paseos por el parque del lago</h3>
           <p>Una vuelta junto al lago. Puedes cambiar entre mañana, día, tarde y noche.</p>
-          <ul><li>Conoce a otros perros amigos por el camino</li><li>Los amigos que conoces se guardan en Amigos</li><li>Camina y corre con el joystick o da una vuelta con Paseo auto</li></ul>
+          <ul><li>Conoce a otros perros amigos por el camino</li><li>Los amigos que conoces se guardan en Amigos</li><li>Camina y corre con el joystick o da una vuelta con Paseo auto</li><li>Completa las Misiones de hoy cada día</li></ul>
         </article>
         <article class="feature">
           <div class="ico" aria-hidden="true">🏠</div>
@@ -139,6 +138,7 @@
           <ul>
             <li><b>Carrera de vallas</b> — salta obstáculos en el camino de cerezos, la playa, el camino otoñal y el camino nevado</li>
             <li><b>Vóley perruno</b> — un partido contra una raza distinta en cada etapa</li>
+            <li><b>Lanzar el disco</b> — lanza el disco teniendo en cuenta el viento y tu perro corre a atraparlo</li>
           </ul>
         </article>
         <article class="feature">
@@ -148,8 +148,8 @@
         </article>
       </div>
       <figure class="walkpic">
-        <img src="/assets/img/walk-deck-600.webp" srcset="/assets/img/walk-deck-600.webp 600w, /assets/img/walk-deck-900.webp 900w" sizes="(min-width:860px) 420px, 88vw" width="600" height="800" alt="Pantalla del juego: un shiba 3D con arnés, de pie en un paseo de madera y sacando la lengua" loading="lazy" decoding="async">
-        <figcaption>El paseo de madera</figcaption>
+        <img src="/assets/img/walk-lake-600.webp" srcset="/assets/img/walk-lake-600.webp 600w, /assets/img/walk-lake-900.webp 900w" sizes="(min-width:860px) 420px, 88vw" width="600" height="800" alt="Pantalla del juego: un husky siberiano 3D con correa, de pie en el camino junto al lago y sacando la lengua" loading="lazy" decoding="async">
+        <figcaption>El camino junto al lago</figcaption>
       </figure>
     </div>
   </section>
@@ -162,16 +162,12 @@
         <p>El juego aún está en desarrollo, así que las pantallas pueden cambiar un poco al lanzarse.</p>
       </div>
       <div class="shots" tabindex="0" aria-label="Pantallas del juego, desliza hacia los lados">
-        <figure><div class="frame"><img src="/assets/img/screens/breed.webp" width="600" height="936" alt="Pantalla de elegir raza con el dálmata seleccionado" loading="lazy"></div><figcaption>Elegir raza</figcaption></figure>
-        <figure><div class="frame"><img src="/assets/img/screens/coat.webp" width="600" height="936" alt="Pantalla de elegir color del pelo" loading="lazy"></div><figcaption>Color del pelo</figcaption></figure>
-        <figure><div class="frame"><img src="/assets/img/screens/body.webp" width="600" height="936" alt="Pantalla de complexión y altura" loading="lazy"></div><figcaption>Complexiones</figcaption></figure>
-        <figure><div class="frame"><img src="/assets/img/screens/walk.webp" width="600" height="936" alt="Paseando con un pomerania al atardecer" loading="lazy"></div><figcaption>Paseo al atardecer</figcaption></figure>
-        <figure><div class="frame"><img src="/assets/img/screens/home.webp" width="600" height="936" alt="Un pomerania recorriendo el pasillo de casa" loading="lazy"></div><figcaption>Recorrer la casa</figcaption></figure>
-        <figure><div class="frame"><img src="/assets/img/screens/train.webp" width="600" height="1073" alt="Pantalla de entrenar Gira" loading="lazy"></div><figcaption>Entrenar</figcaption></figure>
-        <figure><div class="frame"><img src="/assets/img/screens/agility.webp" width="600" height="1073" alt="Lista de etapas de agility" loading="lazy"></div><figcaption>Agility</figcaption></figure>
-        <figure><div class="frame"><img src="/assets/img/screens/minigame.webp" width="600" height="854" alt="Ventana de minijuegos para elegir Carrera de vallas o Vóley perruno" loading="lazy"></div><figcaption>Minijuegos</figcaption></figure>
-        <figure><div class="frame"><img src="/assets/img/screens/style.webp" width="600" height="936" alt="Pantalla de estilo eligiendo el corte de un pomerania" loading="lazy"></div><figcaption>Estilo</figcaption></figure>
-        <figure><div class="frame"><img src="/assets/img/screens/album.webp" width="600" height="936" alt="Pantalla para guardar o compartir una captura" loading="lazy"></div><figcaption>Captura</figcaption></figure>
+        <figure><div class="frame"><picture><source media="(prefers-reduced-motion: reduce)" srcset="/assets/img/screens/hurdle-run-still.webp"><img src="/assets/img/screens/hurdle-run.webp" width="300" height="652" alt="Pantalla animada de Carrera de vallas: un perro corre entre conos por el camino de cerezos" loading="lazy" decoding="async"></picture></div><figcaption>Carrera de vallas</figcaption></figure>
+        <figure class="wide"><div class="frame"><img src="/assets/img/screens/volleyball.webp" width="960" height="540" alt="Dos perros jugando al vóley en una playa de arena" loading="lazy" decoding="async"></div><figcaption>Vóley perruno</figcaption></figure>
+        <figure><div class="frame"><img src="/assets/img/screens/frisbee.webp" width="600" height="1304" alt="Un perro espera el disco frente a la diana en el césped al atardecer" loading="lazy" decoding="async"></div><figcaption>Lanzar el disco</figcaption></figure>
+        <figure><div class="frame"><img src="/assets/img/screens/agility-run.webp" width="600" height="1066" alt="Un perro corre hacia el neumático en el circuito de agility" loading="lazy" decoding="async"></div><figcaption>Agility</figcaption></figure>
+        <figure><div class="frame"><img src="/assets/img/screens/train-praise.webp" width="600" height="1050" alt="Un husky siberiano entrenando en casa" loading="lazy" decoding="async"></div><figcaption>Entrenar</figcaption></figure>
+        <figure><div class="frame"><img src="/assets/img/screens/home-room.webp" width="600" height="1304" alt="Un husky siberiano de pie en el salón" loading="lazy" decoding="async"></div><figcaption>Casa</figcaption></figure>
       </div>
     </div>
   </section>
@@ -182,6 +178,12 @@
         <span class="pill">De pago · Hecho a medida</span>
         <h2 id="custom-title">Perro personalizado a partir de tus fotos</h2>
         <p>En el juego creas tu perro eligiendo una raza. Lo único que se hace aparte a partir de las fotos de tu perro es el «Perro personalizado», que es de pago. <a href="/es/support/#custom">Más detalles</a></p>
+        <div class="compare">
+          <figure><img src="/assets/img/custom-real.webp" width="600" height="600" alt="Foto de un chihuahua real tumbado" loading="lazy" decoding="async"><figcaption>Tu foto</figcaption></figure>
+          <span class="arrow" aria-hidden="true">→</span>
+          <figure><img src="/assets/img/custom-game.webp" width="600" height="600" alt="El chihuahua 3D creado en el juego a partir de esa foto" loading="lazy" decoding="async"><figcaption>Perro personalizado en el juego</figcaption></figure>
+        </div>
+        <p class="note">Un ejemplo real, publicado con permiso de la familia del perro.</p>
       </div>
     </div>
   </section>
@@ -200,18 +202,14 @@
 
 <footer class="foot">
   <div class="wrap">
-    <nav class="row" aria-label="Documentos">
-      <a href="/en/privacy/">Política de privacidad (en inglés)</a>
+    <nav class="row" aria-label="Información">
       <a href="/en/terms/">Términos (en inglés)</a>
-      <a href="/es/delete/">Borrar cuenta y datos</a>
+      <a href="/en/privacy/">Privacidad (en inglés)</a>
+      <a href="#biz">Datos de la empresa</a>
       <a href="/es/support/">Ayuda</a>
+      <a href="/es/delete/">Solicitar borrado de datos</a>
     </nav>
-    <nav class="row langs" aria-label="Language">
-      <a href="/" lang="ko" hreflang="ko">한국어</a>
-      <a href="/en/" lang="en" hreflang="en">English</a>
-      <a href="/ja/" lang="ja" hreflang="ja">日本語</a>
-      <a href="/es/" lang="es" hreflang="es" aria-current="true">Español</a>
-    </nav>
+    <p class="row insta">Instagram <a href="https://www.instagram.com/shallwedog/" rel="noopener">@shallwedog</a></p>
     <p class="biz" id="biz">
       <strong class="biz-title">Datos de la empresa</strong>
       <span>Nombre comercial K-Puff Lab</span>

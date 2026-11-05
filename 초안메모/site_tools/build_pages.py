@@ -25,10 +25,6 @@ T = [
 ('공원에 다 모였어요', 'All together in the park', '公園に勢ぞろい', 'Todas juntas en el parque'),
 ('만들기', 'Create', 'つくる', 'Crear'),
 ('견종부터 털 색, 체형까지 골라요', 'Choose breed, coat color and body type', '犬種から毛色、体型まで選べます', 'Elige raza, color del pelo y complexión'),
-('우리 개와 닮은 견종을 고르고, 털 색과 체형을 맞춰요. 키와 몸무게를 적으면 크기도 비슷해져요.',
- 'Pick the breed that looks like your dog, then match the coat color and body type. Enter height and weight to match the size too.',
- 'うちの子に似た犬種を選び、毛色と体型を合わせます。体高と体重を入れると、大きさも近くなります。',
- 'Elige la raza que se parezca a tu perro y ajusta el color del pelo y la complexión. Indica altura y peso para que el tamaño también se parezca.'),
 ('비숑 프리제', 'Bichon Frise', 'ビション・フリーゼ', 'Bichón frisé'),
 ('말티즈', 'Maltese', 'マルチーズ', 'Bichón maltés'),
 ('토이푸들', 'Toy Poodle', 'トイ・プードル', 'Caniche toy'),
@@ -39,16 +35,7 @@ T = [
 ('비글', 'Beagle', 'ビーグル', 'Beagle'),
 ('보더 콜리', 'Border Collie', 'ボーダー・コリー', 'Border collie'),
 ('사모예드', 'Samoyed', 'サモエド', 'Samoyedo'),
-('견종', 'Breeds', '犬種', 'Razas'),
-('37종', '37', '37種', '37'),
-('체형', 'Body types', '体型', 'Complexiones'),
-('6가지', '6', '6種類', '6'),
-('털 색 고르기', 'Coat colors', '毛色えらび', 'Colores de pelo'),
-('견종별', 'By breed', '犬種ごと', 'Según la raza'),
-('크기 맞추기', 'Size', '大きさ合わせ', 'Tamaño'),
-('키·몸무게', 'Height · weight', '体高・体重', 'Altura · peso'),
 ('함께 하기', 'Together', 'いっしょに', 'Juntos'),
-('걷고, 쉬고, 배우고, 뛰어요', 'Walk, rest, learn and run', '歩いて、休んで、覚えて、走ろう', 'Pasear, descansar, aprender y correr'),
 ('호수공원 산책', 'Lake park walks', '湖の公園をおさんぽ', 'Paseos por el parque del lago'),
 ('호숫가를 따라 한 바퀴. 아침, 낮, 저녁, 밤 시간대도 바꿀 수 있어요.',
  'A loop along the lakeside. You can switch between morning, day, evening and night.',
@@ -82,11 +69,6 @@ T = [
 ('실제 게임 화면이에요', 'Real screens from the game', '実際のゲーム画面です', 'Pantallas reales del juego'),
 ('만들고 있는 화면이라 출시 때는 조금 달라질 수 있어요.', 'The game is still in development, so the screens may change a little at launch.', '開発中の画面のため、配信時には少し変わることがあります。', 'El juego aún está en desarrollo, así que las pantallas pueden cambiar un poco al lanzarse.'),
 ('견종 고르기', 'Choosing a breed', '犬種えらび', 'Elegir raza'),
-('털 색', 'Coat color', '毛色', 'Color del pelo'),
-('저녁 산책', 'Evening walk', '夕方のおさんぽ', 'Paseo al atardecer'),
-('집 돌아다니기', 'Exploring the home', 'おうちを歩き回る', 'Recorrer la casa'),
-('꾸미기', 'Style', 'おしゃれ', 'Estilo'),
-('스크린샷', 'Screenshot', 'スクリーンショット', 'Captura'),
 ('유료 · 주문 제작', 'Paid · Made to order', '有料・受注制作', 'De pago · Hecho a medida'),
 ('사진으로 만드는 커스텀 강아지', 'Custom dog from your photos', '写真から作るカスタム犬', 'Perro personalizado a partir de tus fotos'),
 ('기본 견종은 게임 안에서 골라서 만들어요. 우리 개 사진을 바탕으로 따로 만드는 건 유료 상품인 ‘커스텀 강아지’ 하나뿐이에요.',
@@ -98,19 +80,33 @@ T = [
 ('새 소식과 게임 화면은 인스타그램에 먼저 올려요.', 'News and new screens go up on Instagram first.', '新しいお知らせやゲーム画面は、Instagramに先に載せます。', 'Las novedades y nuevas pantallas se publican primero en Instagram.'),
 ('인스타그램 @shallwedog', 'Instagram @shallwedog', 'Instagram @shallwedog', 'Instagram @shallwedog'),
 ('게임 속 견종이 공원 잔디밭에 한자리에 모인 3D 강아지들', 'Game screen of 3D dogs of many breeds gathered on the park lawn', '公園の芝生に集まった、さまざまな犬種の3Dの犬たち(ゲーム画面)', 'Perros 3D de muchas razas reunidos en el césped del parque (pantalla del juego)'),
-('나무 데크 산책길에서 하네스를 한 시바 3D 강아지가 혀를 내밀고 서 있는 게임 화면', 'Game screen of a 3D Shiba in a harness standing on a wooden boardwalk with its tongue out', '木のデッキのおさんぽ道で、ハーネスをつけた柴犬の3Dの犬が舌を出して立っているゲーム画面', 'Pantalla del juego: un shiba 3D con arnés, de pie en un paseo de madera y sacando la lengua'),
-('나무 데크 산책길', 'The wooden boardwalk trail', '木のデッキのおさんぽ道', 'El paseo de madera'),
 ('게임 화면 모음, 옆으로 넘겨 보세요', 'Game screens, swipe sideways', 'ゲーム画面の一覧。横にスワイプしてください', 'Pantallas del juego, desliza hacia los lados'),
-('견종을 고르는 화면. 달마시안이 선택되어 있어요', 'Breed selection screen with the Dalmatian selected', '犬種を選ぶ画面。ダルメシアンが選ばれています', 'Pantalla de elegir raza con el dálmata seleccionado'),
 ('털 색을 고르는 화면', 'Coat color selection screen', '毛色を選ぶ画面', 'Pantalla de elegir color del pelo'),
-('체형과 키를 고르는 화면', 'Body type and height screen', '体型と体高を選ぶ画面', 'Pantalla de complexión y altura'),
-('포메라니안과 저녁 산책길을 걷는 화면', 'Walking with a Pomeranian on an evening path', 'ポメラニアンと夕方のおさんぽ道を歩く画面', 'Paseando con un pomerania al atardecer'),
-('집 안 복도를 돌아다니는 포메라니안', 'A Pomeranian exploring the hallway at home', '家の廊下を歩き回るポメラニアン', 'Un pomerania recorriendo el pasillo de casa'),
-('빙글 돌기 훈련 화면', 'Spin training screen', 'くるりんのトレーニング画面', 'Pantalla de entrenar Gira'),
-('어질리티 단계 목록', 'Agility stage list', 'アジリティのステージ一覧', 'Lista de etapas de agility'),
-('허들 런과 멍멍 배구 중에 고르는 미니게임 창', 'Mini game window to choose Hurdle Run or Woof Volleyball', 'ハードルランとわんわんバレーから選ぶミニゲーム画面', 'Ventana de minijuegos para elegir Carrera de vallas o Vóley perruno'),
-('포메라니안 미용 스타일을 고르는 꾸미기 화면', 'Style screen choosing a Pomeranian grooming style', 'ポメラニアンのカットスタイルを選ぶおしゃれ画面', 'Pantalla de estilo eligiendo el corte de un pomerania'),
-('스크린샷을 저장하거나 공유하는 화면', 'Screen for saving or sharing a screenshot', 'スクリーンショットを保存・シェアする画面', 'Pantalla para guardar o compartir una captura'),
+('원하는 견종을 고르고, 털 색과 체형을 맞춰요.', 'Pick the breed you want, then match the coat color and body type.', '好きな犬種を選んで、毛色と体型を合わせます。', 'Elige la raza que quieras y ajusta el color del pelo y la complexión.'),
+('체형 고르기', 'Choosing a body type', '体型えらび', 'Elegir complexión'),
+('털 색 고르기', 'Choosing a coat color', '毛色えらび', 'Elegir color del pelo'),
+('눈 색 · 이름 정하기', 'Eye color and name', '目の色・名前を決める', 'Color de ojos y nombre'),
+('견종을 고르는 첫 화면. 시베리안 허스키를 골랐어요', 'Step 1: choosing a breed, with the Siberian Husky picked', 'はじめの犬種えらび画面。シベリアン・ハスキーを選んでいます', 'Paso 1: elegir raza, con el husky siberiano elegido'),
+('가장 비슷한 체형을 고르는 화면', 'Choosing the closest body type', 'いちばん近い体型を選ぶ画面', 'Elegir la complexión más parecida'),
+('눈 색과 이름을 정하는 마지막 화면', 'Last step: choosing eye color and name', '目の色と名前を決める最後の画面', 'Último paso: elegir color de ojos y nombre'),
+('산책도, 훈련도, 미니게임도 함께 즐겨요', 'Walks, training, mini games and more to enjoy together', 'おさんぽも、トレーニングも、ミニゲームも、いっしょに楽しもう', 'Paseos, entrenamiento, minijuegos y más para disfrutar juntos'),
+('매일 오늘의 미션을 깨 봐요', 'Clear Today’s missions every day', '毎日「今日のミッション」をクリアしよう', 'Completa las Misiones de hoy cada día'),
+('원반 던지기', 'Frisbee Toss', 'フリスビー投げ', 'Lanzar el disco'),
+('— 바람을 보고 원반을 던지면 강아지가 달려가 받아요', '— throw the disc with the wind in mind and your dog runs to catch it', '— 風を見てフリスビーを投げると、犬が走ってキャッチ', '— lanza el disco teniendo en cuenta el viento y tu perro corre a atraparlo'),
+('호숫가 산책길에서 목줄을 한 시베리안 허스키 3D 강아지가 혀를 내밀고 서 있는 게임 화면', 'Game screen of a 3D Siberian Husky on a leash standing on the lakeside path with its tongue out', '湖のほとりのおさんぽ道で、リードをつけたシベリアン・ハスキーの3Dの犬が舌を出して立っているゲーム画面', 'Pantalla del juego: un husky siberiano 3D con correa, de pie en el camino junto al lago y sacando la lengua'),
+('호숫가 산책길', 'The lakeside path', '湖のほとりのおさんぽ道', 'El camino junto al lago'),
+('벚꽃길 허들 런에서 강아지가 콘 사이를 달리는 움직이는 화면', 'Animated Hurdle Run screen: a dog running between cones on the cherry blossom road', '桜並木のハードルランで犬がコーンの間を走る動く画面', 'Pantalla animada de Carrera de vallas: un perro corre entre conos por el camino de cerezos'),
+('해변 모래밭에서 강아지 두 마리가 배구를 하는 화면', 'Two dogs playing volleyball on a sandy beach', '海辺の砂浜で2匹の犬がバレーをする画面', 'Dos perros jugando al vóley en una playa de arena'),
+('해 질 녘 잔디밭 과녁 앞에서 원반을 기다리는 강아지', 'A dog waiting for the disc in front of the target on the lawn at sunset', '夕暮れの芝生で、的の前でフリスビーを待つ犬', 'Un perro espera el disco frente a la diana en el césped al atardecer'),
+('어질리티 코스에서 타이어 장애물로 달려가는 강아지', 'A dog running toward the tire jump on the agility course', 'アジリティのコースでタイヤ障害に向かって走る犬', 'Un perro corre hacia el neumático en el circuito de agility'),
+('집 안에서 훈련하는 시베리안 허스키', 'A Siberian Husky training at home', '家の中でトレーニングするシベリアン・ハスキー', 'Un husky siberiano entrenando en casa'),
+('집 안 거실에 서 있는 시베리안 허스키', 'A Siberian Husky standing in the living room', 'リビングに立つシベリアン・ハスキー', 'Un husky siberiano de pie en el salón'),
+('집', 'Home', 'おうち', 'Casa'),
+('보내 주신 사진', 'Your photo', 'お送りいただいた写真', 'Tu foto'),
+('게임 속 커스텀 강아지', 'Custom dog in the game', 'ゲームの中のカスタム犬', 'Perro personalizado en el juego'),
+('엎드려 있는 실제 치와와 사진', 'Photo of a real Chihuahua lying down', '伏せている本物のチワワの写真', 'Foto de un chihuahua real tumbado'),
+('그 사진으로 만든 게임 속 3D 치와와', 'The 3D Chihuahua made in the game from that photo', 'その写真から作ったゲームの中の3Dのチワワ', 'El chihuahua 3D creado en el juego a partir de esa foto'),
+('보호자 동의를 받아 실은 실제 제작 예시예요.', 'A real example, shown with the owner’s permission.', '飼い主さんの同意を得て載せた、実際の制作例です。', 'Un ejemplo real, publicado con permiso de la familia del perro.'),
 ]
 HOME_META = {
     'en': ('Shall We Dog? — Walk a 3D dog just like yours', 'A dog walking game: make a 3D dog that looks like yours and walk the lake park together. Teach tricks, play mini games (Hurdle Run, Woof Volleyball, Frisbee Toss) and enter agility competitions from Beginner to Championship.'),
@@ -221,5 +217,17 @@ for slug in ('privacy', 'terms'):
         f = p.lstrip('/') + 'index.html'
         s = open(f, encoding='utf-8').read()
         new = sitekit.set_alternates(s, paths)  # 다 만든 뒤에 씀 (파일을 먼저 비우지 않게)
+        open(f, 'w', encoding='utf-8').write(new)
+# 모든 페이지 머리(언어 바꾸기 · 이 페이지의 다른 언어 주소)와 바닥을 같은 모양으로 (한국어 손글 페이지 포함)
+import glob
+for f in sorted(glob.glob('**/index.html', recursive=True)) + ['404.html']:
+    if f.startswith(('초안메모', '_')):
+        continue
+    s = open(f, encoding='utf-8').read()
+    lang = re.search(r'<html lang="(\w+)"', s).group(1)
+    new = sitekit.set_footer(sitekit.set_header(s, lang), lang)
+    if lang != 'ko':
+        check_hangul(new, f)
+    if new != s:
         open(f, 'w', encoding='utf-8').write(new)
 print('끝')

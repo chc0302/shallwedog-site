@@ -26,32 +26,46 @@ def biz():
     return out
 
 
+# 바닥 안내 줄 (11/6 사용자: 위쪽 바로 가기 줄을 없애고 다 맨 아래로). 앱 설정 맨 아래 '약관 · 개인정보처리방침 · 사업자 정보 · 고객센터: shallwedog.com'과 같은 이름
 DOCS = {
-    'ko': ('안내 문서', [('/privacy/', '개인정보처리방침'), ('/terms/', '이용약관'), ('/delete/', '계정·데이터 삭제'), ('/support/', '고객센터')]),
-    'en': ('Documents', [('/en/privacy/', 'Privacy Policy'), ('/en/terms/', 'Terms of Service'), ('/en/delete/', 'Account &amp; data deletion'), ('/en/support/', 'Help')]),
-    'ja': ('ご案内', [('/en/privacy/', 'プライバシーポリシー（英語）'), ('/en/terms/', '利用規約（英語）'), ('/ja/delete/', 'アカウント・データの削除'), ('/ja/support/', 'サポート'), ('/ja/tokushoho/', '特定商取引法に基づく表記')]),
-    'es': ('Documentos', [('/en/privacy/', 'Política de privacidad (en inglés)'), ('/en/terms/', 'Términos (en inglés)'), ('/es/delete/', 'Borrar cuenta y datos'), ('/es/support/', 'Ayuda')]),
+    'ko': ('안내', [('/terms/', '약관'), ('/privacy/', '개인정보처리방침'), ('#biz', '사업자 정보'), ('/support/', '고객센터'), ('/delete/', '데이터 삭제 요청')]),
+    'en': ('Information', [('/en/terms/', 'Terms'), ('/en/privacy/', 'Privacy Policy'), ('#biz', 'Business info'), ('/en/support/', 'Help'), ('/en/delete/', 'Request data deletion')]),
+    'ja': ('ご案内', [('/en/terms/', '利用規約（英語）'), ('/en/privacy/', 'プライバシーポリシー（英語）'), ('#biz', '事業者情報'), ('/ja/support/', 'サポート'), ('/ja/delete/', 'データ削除のリクエスト'), ('/ja/tokushoho/', '特定商取引法に基づく表記')]),
+    'es': ('Información', [('/en/terms/', 'Términos (en inglés)'), ('/en/privacy/', 'Privacidad (en inglés)'), ('#biz', 'Datos de la empresa'), ('/es/support/', 'Ayuda'), ('/es/delete/', 'Solicitar borrado de datos')]),
 }
-# 첫 화면 맨 위 줄: 앱 설정 맨 아래 '약관 · 개인정보처리방침 · 사업자 정보 · 고객센터: shallwedog.com'을 누르면 오는 곳 (앱 말과 같은 이름)
-QUICK = {
-    'ko': ('바로 가기', [('/terms/', '약관'), ('/privacy/', '개인정보처리방침'), ('#biz', '사업자 정보'), ('/support/', '고객센터'), ('/delete/', '데이터 삭제 요청')]),
-    'en': ('Quick links', [('/en/terms/', 'Terms'), ('/en/privacy/', 'Privacy Policy'), ('#biz', 'Business info'), ('/en/support/', 'Help'), ('/en/delete/', 'Request data deletion')]),
-    'ja': ('すぐに見る', [('/en/terms/', '利用規約（英語）'), ('/en/privacy/', 'プライバシーポリシー（英語）'), ('#biz', '事業者情報'), ('/ja/support/', 'サポート'), ('/ja/delete/', 'データ削除のリクエスト')]),
-    'es': ('Enlaces rápidos', [('/en/terms/', 'Términos (en inglés)'), ('/en/privacy/', 'Privacidad (en inglés)'), ('#biz', 'Datos de la empresa'), ('/es/support/', 'Ayuda'), ('/es/delete/', 'Solicitar borrado de datos')]),
-}
-
-
-def quick(lang):
-    aria, links = QUICK[lang]
-    return (f'<nav class="wrap quick" aria-label="{aria}">\n'
-            + '\n'.join(f'  <a href="{h}">{t}</a>' for h, t in links) + '\n</nav>')
+# 인스타그램 계정: (계정 이름, 언어 표시). 영어 계정이 생기면 ('계정', 'English')를 더하고 한국어 줄에 '한국어'를 적어요
+INSTA_ACCOUNTS = [('shallwedog', None)]
+INSTA_LABEL = {'ko': '인스타그램', 'en': 'Instagram', 'ja': 'Instagram', 'es': 'Instagram'}
 
 
 def set_quick(main, lang):
-    """첫 화면 본문 맨 앞에 바로 가기 줄 (있으면 바꿔 끼움)"""
-    main = re.sub(r'<nav class="wrap quick".*?</nav>\n', '', main, flags=re.S)
-    assert main.count('<main id="main">\n') == 1
-    return main.replace('<main id="main">\n', '<main id="main">\n' + quick(lang) + '\n', 1)
+    """예전 첫 화면 맨 위 바로 가기 줄을 빼요 (11/6부터 바닥에만)"""
+    return re.sub(r'<nav class="wrap quick".*?</nav>\n', '', main, flags=re.S)
+
+
+# 머리: 오른쪽 위 언어 바꾸기 (휴대폰에서는 KO · EN · JA · ES로 짧게)
+SHORT = {'ko': 'KO', 'en': 'EN', 'ja': 'JA', 'es': 'ES'}
+GLOBE = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>'
+
+
+def header(lang, alts=None):
+    """alts = 이 페이지의 다른 언어 주소 {'en': '/en/support/', …} (없는 언어는 그 언어 첫 화면)"""
+    alts = alts or {}
+    links = '\n'.join(f'    <a href="{alts.get(l, HOME[l])}" lang="{l}" hreflang="{l}" data-short="{SHORT[l]}"'
+                      + (' aria-current="true"' if l == lang else '') + f'>{NATIVE[l]}</a>' for l in LANGS)
+    return ('<header class="wrap top">\n'
+            f'  <a class="brand" href="{HOME[lang]}"><img src="/assets/img/logo-96.png" width="40" height="40" alt="">Shall We Dog?</a>\n'
+            f'  <nav class="langs-top" aria-label="Language">\n    {GLOBE}\n{links}\n  </nav>\n</header>')
+
+
+def page_alts(s):
+    return dict(re.findall(r'<link rel="alternate" hreflang="(ko|en|ja|es)" href="https://shallwedog\.com([^"]*)">', s))
+
+
+def set_header(s, lang):
+    n = len(re.findall(r'<header class="wrap top">.*?</header>', s, re.S))
+    assert n == 1, n
+    return re.sub(r'<header class="wrap top">.*?</header>', lambda m: header(lang, page_alts(s)), s, flags=re.S)
 
 
 LABELS = {
@@ -79,10 +93,10 @@ def footer(lang):
                  f'<span>{L[2]} {b["reg"]}</span>', f'<span>{L[3]} {addr}</span>', f'<span>{L[4]} {b["tel_intl"]}</span>']
     spans.append(f'<span>{L[5]} <a class="mail" href="mailto:hello@shallwedog.com">hello@shallwedog.com</a></span>')
     nav = '\n'.join(f'      <a href="{h}">{t}</a>' for h, t in links)
-    langs = '\n'.join(f'      <a href="{HOME[l]}" lang="{l}" hreflang="{l}"' + (' aria-current="true"' if l == lang else '') + f'>{NATIVE[l]}</a>' for l in LANGS)
+    insta = ' · '.join(f'<a href="https://www.instagram.com/{a}/" rel="noopener">@{a}</a>' + (f' ({t})' if t else '') for a, t in INSTA_ACCOUNTS)
     return ('<footer class="foot">\n  <div class="wrap">\n'
             f'    <nav class="row" aria-label="{aria}">\n{nav}\n    </nav>\n'
-            f'    <nav class="row langs" aria-label="Language">\n{langs}\n    </nav>\n'
+            f'    <p class="row insta">{INSTA_LABEL[lang]} {insta}</p>\n'
             '    <p class="biz" id="biz">\n' + f'      <strong class="biz-title">{L[6]}</strong>\n' + '\n'.join('      ' + x for x in spans) + '\n    </p>\n'
             '    <p class="copy">© 2026 Shall We Dog?</p>\n  </div>\n</footer>')
 
@@ -140,17 +154,13 @@ HEAD = '''<!doctype html>
 <body>
 <a class="skip" href="#main">{skip}</a>
 
-<header class="wrap top">
-  <a class="brand" href="{home}"><img src="/assets/img/logo-96.png" width="40" height="40" alt="">Shall We Dog?</a>
-  <a class="top-link" href="https://www.instagram.com/shallwedog/" rel="noopener">{insta}</a>
-</header>
+{header}
 
 '''
 SKIP = {'ko': '본문으로 건너뛰기', 'en': 'Skip to content', 'ja': '本文へスキップ', 'es': 'Saltar al contenido'}
-INSTA = {'ko': '인스타그램 @shallwedog', 'en': 'Instagram @shallwedog', 'ja': 'Instagram @shallwedog', 'es': 'Instagram @shallwedog'}
 
 
 def page(lang, path, title, desc, main):
     s = HEAD.format(lang=lang, title=html.escape(title, quote=True), desc=html.escape(desc, quote=True), path=path,
-                    locale=OG_LOCALE[lang], skip=SKIP[lang], home=HOME[lang], insta=INSTA[lang])
+                    locale=OG_LOCALE[lang], skip=SKIP[lang], header=header(lang))
     return s + main.strip() + '\n\n' + footer(lang) + '\n</body>\n</html>\n'

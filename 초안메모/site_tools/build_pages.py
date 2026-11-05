@@ -35,6 +35,8 @@ T = [
 ('비글', 'Beagle', 'ビーグル', 'Beagle'),
 ('보더 콜리', 'Border Collie', 'ボーダー・コリー', 'Border collie'),
 ('사모예드', 'Samoyed', 'サモエド', 'Samoyedo'),
+('견종 37종 모두 보기', 'See all 37 breeds', '37犬種をすべて見る', 'Ver las 37 razas'),
+('접기', 'Show less', '閉じる', 'Ver menos'),
 # 견종 카드 나머지 (탭 1 견종카드.json 이름 그대로)
 ('그레이트 데인', 'Great Dane', 'グレート・デーン', 'Gran danés'),
 ('그레이하운드', 'Greyhound', 'グレーハウンド', 'Galgo inglés'),

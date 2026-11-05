@@ -33,8 +33,8 @@ DOCS = {
     'ja': ('ご案内', [('/en/terms/', '利用規約（英語）'), ('/en/privacy/', 'プライバシーポリシー（英語）'), ('#biz', '事業者情報'), ('/ja/support/', 'サポート'), ('/ja/delete/', 'データ削除のリクエスト'), ('/ja/tokushoho/', '特定商取引法に基づく表記')]),
     'es': ('Información', [('/en/terms/', 'Términos (en inglés)'), ('/en/privacy/', 'Privacidad (en inglés)'), ('#biz', 'Datos de la empresa'), ('/es/support/', 'Ayuda'), ('/es/delete/', 'Solicitar borrado de datos')]),
 }
-# 인스타그램 계정: (계정 이름, 언어 표시). 영어 계정이 생기면 ('계정', 'English')를 더하고 한국어 줄에 '한국어'를 적어요
-INSTA_ACCOUNTS = [('shallwedog', None)]
+# 인스타그램 계정 (11/6 사용자): 한국어 페이지는 한국 계정, 영어 · 일본어 · 스페인어 페이지는 영어 계정
+INSTA = {'ko': 'shallwedog.kr', 'en': 'shallwedog', 'ja': 'shallwedog', 'es': 'shallwedog'}
 INSTA_LABEL = {'ko': '인스타그램', 'en': 'Instagram', 'ja': 'Instagram', 'es': 'Instagram'}
 
 
@@ -93,7 +93,7 @@ def footer(lang):
                  f'<span>{L[2]} {b["reg"]}</span>', f'<span>{L[3]} {addr}</span>', f'<span>{L[4]} {b["tel_intl"]}</span>']
     spans.append(f'<span>{L[5]} <a class="mail" href="mailto:hello@shallwedog.com">hello@shallwedog.com</a></span>')
     nav = '\n'.join(f'      <a href="{h}">{t}</a>' for h, t in links)
-    insta = ' · '.join(f'<a href="https://www.instagram.com/{a}/" rel="noopener">@{a}</a>' + (f' ({t})' if t else '') for a, t in INSTA_ACCOUNTS)
+    insta = f'<a href="https://www.instagram.com/{INSTA[lang]}/" rel="noopener">@{INSTA[lang]}</a>'
     return ('<footer class="foot">\n  <div class="wrap">\n'
             f'    <nav class="row" aria-label="{aria}">\n{nav}\n    </nav>\n'
             f'    <p class="row insta">{INSTA_LABEL[lang]} {insta}</p>\n'

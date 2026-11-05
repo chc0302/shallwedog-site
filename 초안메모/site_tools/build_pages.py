@@ -78,7 +78,8 @@ T = [
 ('자세히 보기', 'More details', '詳しく見る', 'Más detalles'),
 ('출시되면 여기서 알려드려요', 'We’ll let you know when it launches', '配信が始まったらお知らせします', 'Te avisaremos cuando se lance'),
 ('새 소식과 게임 화면은 인스타그램에 먼저 올려요.', 'News and new screens go up on Instagram first.', '新しいお知らせやゲーム画面は、Instagramに先に載せます。', 'Las novedades y nuevas pantallas se publican primero en Instagram.'),
-('인스타그램 @shallwedog', 'Instagram @shallwedog', 'Instagram @shallwedog', 'Instagram @shallwedog'),
+('인스타그램 @shallwedog.kr', 'Instagram @shallwedog', 'Instagram @shallwedog', 'Instagram @shallwedog'),
+('@shallwedog.kr', '@shallwedog', '@shallwedog', '@shallwedog'),
 ('게임 속 견종이 공원 잔디밭에 한자리에 모인 3D 강아지들', 'Game screen of 3D dogs of many breeds gathered on the park lawn', '公園の芝生に集まった、さまざまな犬種の3Dの犬たち(ゲーム画面)', 'Perros 3D de muchas razas reunidos en el césped del parque (pantalla del juego)'),
 ('게임 화면 모음, 옆으로 넘겨 보세요', 'Game screens, swipe sideways', 'ゲーム画面の一覧。横にスワイプしてください', 'Pantallas del juego, desliza hacia los lados'),
 ('털 색을 고르는 화면', 'Coat color selection screen', '毛色を選ぶ画面', 'Pantalla de elegir color del pelo'),
@@ -89,7 +90,7 @@ T = [
 ('견종을 고르는 첫 화면. 시베리안 허스키를 골랐어요', 'Step 1: choosing a breed, with the Siberian Husky picked', 'はじめの犬種えらび画面。シベリアン・ハスキーを選んでいます', 'Paso 1: elegir raza, con el husky siberiano elegido'),
 ('가장 비슷한 체형을 고르는 화면', 'Choosing the closest body type', 'いちばん近い体型を選ぶ画面', 'Elegir la complexión más parecida'),
 ('눈 색과 이름을 정하는 마지막 화면', 'Last step: choosing eye color and name', '目の色と名前を決める最後の画面', 'Último paso: elegir color de ojos y nombre'),
-('산책도, 훈련도, 미니게임도 함께 즐겨요', 'Walks, training, mini games and more to enjoy together', 'おさんぽも、トレーニングも、ミニゲームも、いっしょに楽しもう', 'Paseos, entrenamiento, minijuegos y más para disfrutar juntos'),
+('산책도, 훈련도, 미니게임도, 어질리티도 함께 즐겨요', 'Walks, training, mini games and agility to enjoy together', 'おさんぽも、トレーニングも、ミニゲームも、アジリティも、いっしょに楽しもう', 'Paseos, entrenamiento, minijuegos y agility para disfrutar juntos'),
 ('매일 오늘의 미션을 깨 봐요', 'Clear Today’s missions every day', '毎日「今日のミッション」をクリアしよう', 'Completa las Misiones de hoy cada día'),
 ('원반 던지기', 'Frisbee Toss', 'フリスビー投げ', 'Lanzar el disco'),
 ('— 바람을 보고 원반을 던지면 강아지가 달려가 받아요', '— throw the disc with the wind in mind and your dog runs to catch it', '— 風を見てフリスビーを投げると、犬が走ってキャッチ', '— lanza el disco teniendo en cuenta el viento y tu perro corre a atraparlo'),
@@ -129,6 +130,7 @@ def home(lang):
         main = pat_text.sub(lambda m: '>' + m.group(1) + new + m.group(2) + '<', main)
         main = pat_attr.sub(lambda m: f'{m.group(1)}="{new}"', main)
     main = sitekit.set_quick(main, lang)
+    main = main.replace('instagram.com/shallwedog.kr/', 'instagram.com/shallwedog/')  # 영어 · 일본어 · 스페인어 = 영어 계정
     n = main.count('href="/support/#custom"'); assert n == 1, n
     main = main.replace('href="/support/#custom"', f'href="/{lang}/support/#custom"')
     title, desc = HOME_META[lang]

@@ -1,7 +1,7 @@
 # 언어별 페이지 만들기: 고객센터(한·영·일·스), 첫 화면(영·일·스), 계정·데이터 삭제(일·스), 특정상거래법 표시(일)
 # 실행: python3 -I 초안메모/site_tools/build_pages.py   (먼저 초안메모/en_src/build_en.py)
 # 원고: 초안메모/i18n/*.html (본문만), 첫 화면은 한국어 index.html 본문을 아래 표로 바꿔 만들어요.
-import os, re, sys
+import json, os, re, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import sitekit
 os.chdir(sitekit.ROOT)
@@ -14,10 +14,10 @@ T = [
 ('3D 강아지', 'just like yours', '3Dの犬', 'perro 3D'),
 ('와', '', 'と', ''),
 ('오늘도 산책 가요', 'today', '今日もおさんぽ', 'como el tuyo'),
-('견종, 털 색, 체형을 골라 우리 개를 닮은 3D 강아지를 만들어요. 호수공원을 같이 걷고, 집에서 놀고, 새 기술도 배워요.',
- 'Choose the breed, coat color and body type to make a 3D dog that looks like yours. Walk around the lake park together, relax at home and learn new tricks.',
- '犬種・毛色・体型を選んで、うちの子に似た3Dの犬を作ります。湖の公園をいっしょに歩いて、おうちで遊んで、新しい技も覚えます。',
- 'Elige la raza, el color del pelo y la complexión para crear un perro 3D que se parezca al tuyo. Pasead por el parque del lago, descansad en casa y aprended trucos nuevos.'),
+('견종, 털 색, 체형을 골라 우리 개를 닮은 3D 강아지를 만들어요. 호수공원을 같이 걷고, 칭찬하며 앉아 · 손 · 빙글 돌기 같은 기술을 가르쳐요. 미니게임 허들 런 · 멍멍 배구 · 원반 던지기와 초급부터 챔피언십까지 이어지는 어질리티 대회도 있어요.',
+ 'Choose the breed, coat color and body type to make a 3D dog that looks like yours. Walk around the lake park together and use praise to teach tricks like Sit, Paw and Spin. There are mini games too (Hurdle Run, Woof Volleyball and Frisbee Toss) and agility competitions from Beginner to Championship.',
+ '犬種・毛色・体型を選んで、うちの子に似た3Dの犬を作ります。湖の公園をいっしょに歩き、ほめながらおすわり・お手・くるりんなどの芸を教えます。ハードルラン・わんわんバレー・フリスビー投げのミニゲームと、初級からチャンピオンシップまで続くアジリティ大会もあります。',
+ 'Elige la raza, el color del pelo y la complexión para crear un perro 3D que se parezca al tuyo. Pasead por el parque del lago y enséñale trucos como Sentado, La pata y Gira con elogios. También hay minijuegos (Carrera de vallas, Vóley perruno y Lanzar el disco) y competiciones de agility de Principiante a Campeonato.'),
 ('곧 출시', 'Soon', 'まもなく', 'Pronto'),
 ('출시되면 인스타그램', 'We’ll announce the launch on Instagram', '配信が始まったらInstagram', 'Anunciaremos el lanzamiento en Instagram'),
 ('에서 알려드려요.', '.', 'でお知らせします。', '.'),
@@ -113,11 +113,12 @@ T = [
 ('스크린샷을 저장하거나 공유하는 화면', 'Screen for saving or sharing a screenshot', 'スクリーンショットを保存・シェアする画面', 'Pantalla para guardar o compartir una captura'),
 ]
 HOME_META = {
-    'en': ('Shall We Dog? — Walk a 3D dog just like yours', 'A dog walking game: choose breed, coat color and body type to make a 3D dog that looks like yours, then walk around the lake park together.'),
-    'ja': ('Shall We Dog? — うちの子に似た3Dの犬とおさんぽ', '犬種・毛色・体型を選んでうちの子に似た3Dの犬を作り、湖の公園をいっしょにおさんぽする犬のゲーム。'),
-    'es': ('Shall We Dog? — Pasea con un perro 3D como el tuyo', 'Juego de pasear perros: elige raza, color del pelo y complexión para crear un perro 3D como el tuyo y pasead juntos por el parque del lago.'),
+    'en': ('Shall We Dog? — Walk a 3D dog just like yours', 'A dog walking game: make a 3D dog that looks like yours and walk the lake park together. Teach tricks, play mini games (Hurdle Run, Woof Volleyball, Frisbee Toss) and enter agility competitions from Beginner to Championship.'),
+    'ja': ('Shall We Dog? — うちの子に似た3Dの犬とおさんぽ', 'うちの子に似た3Dの犬を作り、湖の公園をいっしょにおさんぽする犬のゲーム。芸のトレーニング、ミニゲーム(ハードルラン・わんわんバレー・フリスビー投げ)、初級からチャンピオンシップまでのアジリティ大会もあります。'),
+    'es': ('Shall We Dog? — Pasea con un perro 3D como el tuyo', 'Juego de pasear perros: crea un perro 3D como el tuyo y pasead juntos por el parque del lago. Enséñale trucos, juega a minijuegos (Carrera de vallas, Vóley perruno, Lanzar el disco) y participa en competiciones de agility de Principiante a Campeonato.'),
 }
 COL = {'en': 1, 'ja': 2, 'es': 3}
+T_LEAD = next(r for r in T if r[0].startswith('견종, 털 색, 체형을 골라'))  # 첫 화면 소개글 = 구조화 데이터 게임 설명
 
 
 def home(lang):
@@ -139,6 +140,9 @@ def home(lang):
     # 첫 화면만: 공유 그림 설명 + 구조화 데이터 (한국어 index.html 머리와 같은 것)
     head = open('index.html', encoding='utf-8').read()
     ld = re.search(r'<script type="application/ld\+json">.*?</script>', head, re.S).group(0)
+    k = '"description":"' + T_LEAD[0] + '"'
+    assert ld.count(k) == 1
+    ld = ld.replace(k, '"description":' + json.dumps(T_LEAD[COL[lang]], ensure_ascii=False))
     alt = OG_ALT[lang]
     tw = '<meta name="twitter:card" content="summary_large_image">'
     assert s.count(tw) == 1

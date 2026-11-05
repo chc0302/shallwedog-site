@@ -35,7 +35,13 @@
 
 <header class="wrap top">
   <a class="brand" href="/"><img src="/assets/img/logo-96.png" width="40" height="40" alt="">Shall We Dog?</a>
-  <a class="top-link" href="https://www.instagram.com/shallwedog/" rel="noopener">인스타그램 @shallwedog</a>
+  <nav class="langs-top" aria-label="Language">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>
+    <a href="/delete/" lang="ko" hreflang="ko" data-short="KO" aria-current="true">한국어</a>
+    <a href="/en/delete/" lang="en" hreflang="en" data-short="EN">English</a>
+    <a href="/ja/delete/" lang="ja" hreflang="ja" data-short="JA">日本語</a>
+    <a href="/es/delete/" lang="es" hreflang="es" data-short="ES">Español</a>
+  </nav>
 </header>
 
 <main id="main" class="wrap doc">
@@ -48,7 +54,7 @@
   <li>Shall We Dog? 앱을 열어요.</li>
   <li>화면 위쪽의 톱니바퀴 <span class="menu-path">설정</span>을 눌러요.</li>
   <li>맨 아래 작은 글씨 줄의 <span class="menu-path">데이터 삭제 요청</span>을 눌러요.</li>
-  <li>한 번 더 누르면 삭제가 요청되고, 서버 데이터가 지워져요. 로그인되지 않은 폰이면 서버에 데이터가 없어서 이 안내가 열려요.</li>
+  <li>한 번 더 누르면 삭제가 요청되고, 서버 데이터가 지워져요. 계정이 연결되지 않은 폰(‘만 14세 이상이에요’를 체크하지 않은 폰)이면 서버에 데이터가 없어서 이 안내가 열려요.</li>
 </ol>
 </div>
 
@@ -61,11 +67,13 @@
   <li>본문에 쓰시는 기기(아이폰·안드로이드)와 게임센터·구글 플레이 게임즈의 게임 닉네임을 적어요. 커스텀 주문을 했다면 주문 번호나 스토어 영수증의 주문 번호도 적어 주세요.</li>
 </ol>
 <p>본인 확인을 위해 몇 가지를 더 여쭤볼 수 있어요. 확인되면 지우고, 끝나면 메일로 알려드려요.</p>
+<p>만 14세 미만 아이의 기록을 보호자가 지우려면 같은 메일로 보내 주세요. 보호자이신 것과 아이의 게임 닉네임을 적어 주세요.</p>
 </div>
 
 <h2>지워지는 것 (서버)</h2>
 <ul>
-  <li>계정 정보 (게임센터·구글 플레이 게임즈 로그인 정보)</li>
+  <li>계정 정보 (게임센터·구글 플레이 게임즈 로그인 정보)와 우리 서버의 로그인 계정(Firebase). 다음에 앱을 켜면 서버 연결이 풀려요</li>
+  <li>계정 저장 기록 (발바닥, 산 것, 강아지 목록, 게임 진행). 남은 유료 발바닥은 이때 <a href="/support/#paws">환불</a>을 요청할 수 있어요(수수료 10%)</li>
   <li>커스텀 강아지 다시 받기 (완성 파일)</li>
   <li>커스텀 주문 기록과 제작 기록, 아직 남아 있는 주문 사진</li>
   <li>앱 알림을 보내는 데 쓰는 기기 정보</li>
@@ -75,26 +83,22 @@
 <ul>
   <li><strong>이 기기 안의 게임 데이터</strong>는 그대로 남아서 계속 할 수 있어요. 기기에서도 지우려면 앱을 삭제해 주세요.</li>
   <li>계정을 지워도 법으로 정한 거래 기록(주문·결제·동의 기록. 사진과 완성된 강아지는 빼요)은 계정과 연결을 끊고 정해진 기간(5년, 불만·분쟁 기록은 3년) 따로 보관한 뒤 지워요.</li>
-  <li>사고에 대비한 백업(주문·계정 정보, 사진은 빼요)에는 사본이 최대 30일 남았다가 자동으로 지워져요.</li>
+  <li>사고에 대비한 백업(주문·계정 정보·계정 저장 기록, 사진은 빼요)에는 사본이 최대 30일 남았다가 자동으로 지워져요.</li>
 </ul>
-<p class="muted">로그인되지 않은 채로 하셨다면 서버에 계정이 없어서, 앱을 삭제하면 기기 안 데이터가 함께 지워져요. 메일로 요청하시면 받은 날부터 5일 안에 지우고 끝나면 알려드려요. 한 번 지운 데이터는 되돌릴 수 없어요. 자세한 내용은 <a href="/privacy/">개인정보처리방침</a>을 봐 주세요.</p>
+<p class="muted">계정을 연결하지 않고 하셨다면 서버에 계정이 없어서, 앱을 삭제하면 기기 안 데이터가 함께 지워져요. 메일로 요청하시면 받은 날부터 5일 안에 지우고 끝나면 알려드려요. 한 번 지운 데이터는 되돌릴 수 없어요. 자세한 내용은 <a href="/privacy/">개인정보처리방침</a>을 봐 주세요.</p>
 <p class="muted"><a href="/en/delete/" lang="en">English</a></p>
 </main>
 
 <footer class="foot">
   <div class="wrap">
-    <nav class="row" aria-label="안내 문서">
+    <nav class="row" aria-label="안내">
+      <a href="/terms/">약관</a>
       <a href="/privacy/">개인정보처리방침</a>
-      <a href="/terms/">이용약관</a>
-      <a href="/delete/">계정·데이터 삭제</a>
+      <a href="#biz">사업자 정보</a>
       <a href="/support/">고객센터</a>
+      <a href="/delete/">데이터 삭제 요청</a>
     </nav>
-    <nav class="row langs" aria-label="Language">
-      <a href="/" lang="ko" hreflang="ko" aria-current="true">한국어</a>
-      <a href="/en/" lang="en" hreflang="en">English</a>
-      <a href="/ja/" lang="ja" hreflang="ja">日本語</a>
-      <a href="/es/" lang="es" hreflang="es">Español</a>
-    </nav>
+    <p class="row insta">인스타그램 <a href="https://www.instagram.com/shallwedog/" rel="noopener">@shallwedog</a></p>
     <p class="biz" id="biz">
       <strong class="biz-title">사업자 정보</strong>
       <span>상호 케이퍼프랩(K-Puff Lab)</span>

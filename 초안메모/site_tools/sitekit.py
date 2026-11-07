@@ -54,7 +54,7 @@ def header(lang, alts=None):
     links = '\n'.join(f'    <a href="{alts.get(l, HOME[l])}" lang="{l}" hreflang="{l}" data-short="{SHORT[l]}"'
                       + (' aria-current="true"' if l == lang else '') + f'>{NATIVE[l]}</a>' for l in LANGS)
     return ('<header class="wrap top">\n'
-            f'  <a class="brand" href="{HOME[lang]}"><img src="/assets/img/logo-96.png" width="40" height="40" alt="">Shall We Dog?</a>\n'
+            f'  <a class="brand" href="{HOME[lang]}"><img class="wordmark" src="/assets/img/logo-text.webp" width="480" height="152" alt="Shall We Dog?"></a>\n'
             f'  <nav class="langs-top" aria-label="Language">\n    {GLOBE}\n{links}\n  </nav>\n</header>')
 
 

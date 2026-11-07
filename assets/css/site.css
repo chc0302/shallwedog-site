@@ -279,3 +279,11 @@ p{margin:0}
 /* 글자 로고 (맨 위) */
 .brand img.wordmark{width:auto; height:46px; border-radius:0; box-shadow:none}
 @media (min-width:860px){ .brand img.wordmark{height:58px} }
+
+/* 스토어 배지 (11/15 출시): 공식 그림 그대로, 보이는 높이를 48px로 맞춰요
+   구글 PNG는 그림 안에 투명 여백이 있어요 — 한 · 일 · 스페인어 = 위아래만(높이 62 → 보이는 48), 영어 = 사방(높이 72 → 보이는 48) */
+.store{align-items:center; gap:12px}
+.store-badge{display:inline-flex; line-height:0; border-radius:8px}
+.store-badge img{height:48px; width:auto}
+.store-badge.gp img{height:62px; margin:-7px 0}
+.store-badge.gp-pad img{height:72px; margin:-12px}

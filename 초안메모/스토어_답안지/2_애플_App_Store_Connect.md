@@ -94,7 +94,7 @@ Thank you for reviewing Shall We Dog?
 
 SIGN-IN AND ACCOUNT SAVE: There is no sign-in button and no account to create. The first screen asks for agreement to the terms and privacy policy and has an optional "I am 14 or older" checkbox. Only if it is checked does the app connect silently with Game Center, for Account save (paws, purchases, dogs and progress come back on a new device; no photos) and Custom orders. If it is not checked, or Game Center is not signed in, nothing is blocked: all game features (dog creation, walks, home, training, agility, mini games, styling, screenshots) work, and game data stays on the device. It can be turned on later in Settings > Account save.
 
-IN-APP PURCHASES: Tap the Shop button on the home screen (also in the walk menu). Sections: Featured, Premium, Season, Decor, Paws (consumable currency), Full version (non-consumable) and Custom (Custom dog, consumable).
+IN-APP PURCHASES: Tap the Shop button on the home screen (also in the walk menu). Tabs: Featured, Style, Paws (consumable currency), Full version (non-consumable) and Custom (Custom dog, consumable).
 
 CUSTOM DOG (paid, made to order):
 - Requires the "I am 14 or older" check (first screen or Settings) and Game Center (only for this product). If the sign-in sheet does not appear, sign in at Settings > Game Center (any Apple Account), then return to the app. Buy Custom in the Shop, check the required consents, then upload two photos of a real dog (face from the front, whole body) and fill in a short order form.

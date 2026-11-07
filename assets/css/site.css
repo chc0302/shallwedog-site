@@ -275,3 +275,7 @@ p{margin:0}
 .more-btn:focus-visible{outline:3px solid var(--orange-deep); outline-offset:2px}
 .more-btn[hidden], .more-btn [hidden]{display:none}
 .more-btn[aria-expanded="true"]::after{transform:translateY(2px) rotate(-135deg)}
+
+/* 글자 로고 (맨 위) */
+.brand img.wordmark{width:auto; height:46px; border-radius:0; box-shadow:none}
+@media (min-width:860px){ .brand img.wordmark{height:58px} }

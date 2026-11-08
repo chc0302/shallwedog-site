@@ -14,7 +14,7 @@ def biz():
     s = open(os.path.join(ROOT, 'index.html'), encoding='utf-8').read()
     block = re.search(r'<p class="biz"[^>]*>(.*?)</p>', s, re.S).group(1)
     out = {}
-    for label, key in (('상호', 'name'), ('대표', 'owner'), ('사업자등록번호', 'reg'), ('주소', 'addr'), ('전화', 'tel')):
+    for label, key in (('상호', 'name'), ('사업자등록번호', 'reg'), ('주소', 'addr'), ('전화', 'tel')):
         m = re.search(r'<span( data-en="([^"]*)")?>' + label + r' ([^<]+)</span>', block)
         assert m, f'바닥에서 {label} 줄을 못 찾음'
         out[key] = m.group(3).strip()
@@ -81,15 +81,14 @@ def footer(lang):
     aria, links = DOCS[lang]
     L = LABELS[lang]
     if lang == 'ko':
-        name, owner, addr, tel = b['name'], b['owner'], b['addr'], b['tel']
+        name, addr, tel = b['name'], b['addr'], b['tel']
         def keep(key):  # 한국어 바닥은 data-en 속성을 그대로 둬요 (다른 언어가 읽는 곳)
             return f' data-en="{b[key + "_en"]}"' if b[key + '_en'] else ''
-        spans = [f'<span>{L[0]} {name}</span>', f'<span{keep("owner")}>{L[1]} {owner}</span>',
+        spans = [f'<span>{L[0]} {name}</span>',
                  f'<span>{L[2]} {b["reg"]}</span>', f'<span{keep("addr")}>{L[3]} {addr}</span>', f'<span>{L[4]} {tel}</span>']
     else:
-        owner = b['owner_en'] or f'<span lang="ko">{b["owner"]}</span>'
         addr = b['addr_en'] or f'<span lang="ko">{b["addr"]}</span>'
-        spans = [f'<span>{L[0]} {b["name_en"]}</span>', f'<span>{L[1]} {owner}</span>',
+        spans = [f'<span>{L[0]} {b["name_en"]}</span>',
                  f'<span>{L[2]} {b["reg"]}</span>', f'<span>{L[3]} {addr}</span>', f'<span>{L[4]} {b["tel_intl"]}</span>']
     spans.append(f'<span>{L[5]} <a class="mail" href="mailto:hello@shallwedog.com">hello@shallwedog.com</a></span>')
     nav = '\n'.join(f'      <a href="{h}">{t}</a>' for h, t in links)

@@ -223,7 +223,7 @@ for lang in ('ja', 'es'):
 # 일본 특정상거래법 표시: 사업자 값은 원고에 쓰지 않고 한국어 바닥(biz)에서 읽어 넣어요
 b = sitekit.biz()
 main = open(f'{SRC}/tokushoho_ja.html', encoding='utf-8').read()
-for k, v in {'NAME': b['name_en'], 'OWNER': b['owner_en'] or f'<span lang="ko">{b["owner"]}</span>',
+for k, v in {'NAME': b['name_en'], 'OWNER': '請求があった場合は遅滞なく開示します',
              'ADDR': b['addr_en'] or f'<span lang="ko">{b["addr"]}</span>', 'TEL': b['tel_intl'], 'REG': b['reg']}.items():
     assert main.count('{{' + k + '}}') == 1, k
     main = main.replace('{{' + k + '}}', v)

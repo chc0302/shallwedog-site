@@ -48,13 +48,14 @@
   </nav>
 </header>
 
-<main id="main" class="wrap doc invite" data-copied="コピーしました">
+<main id="main" class="wrap doc invite" data-go="{n}秒後に{s}へ移動します" data-copied="コピーしました">
 <h1>いっしょに犬と遊ぼう 🐾</h1>
 
 <div class="box gift">
 <p class="gift-paw" aria-hidden="true">🐾300</p>
 <p class="gift-what">招待コードを入れて初めてのお散歩を終えると<span class="nw">🐾300</span>をプレゼント</p>
 <p class="gift-code" id="has-code" hidden>招待コード <strong id="code" translate="no"></strong> <button class="btn btn-sub" type="button" id="copy">コピー</button></p>
+<p class="go-row" id="go-row" hidden><span id="go-msg"></span> <button class="btn btn-sub" type="button" id="go-stop">移動しない</button></p>
 <p class="muted" id="no-code">招待してくれた友だちにコードを聞いて、アプリで入れてください。</p>
 </div>
 

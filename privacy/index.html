@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' https://cdn.jsdelivr.net; font-src https://cdn.jsdelivr.net; img-src 'self' data:; manifest-src 'self'; base-uri 'none'; form-action 'none'; object-src 'none'; upgrade-insecure-requests">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' https://static.cloudflareinsights.com; connect-src 'self' https://cloudflareinsights.com; style-src 'self' https://cdn.jsdelivr.net; font-src https://cdn.jsdelivr.net; img-src 'self' data:; manifest-src 'self'; base-uri 'none'; form-action 'none'; object-src 'none'; upgrade-insecure-requests">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <script src="/assets/js/frame.js"></script>
 <title>개인정보처리방침 — Shall We Dog?</title>
@@ -11,6 +11,8 @@
 <link rel="canonical" href="https://shallwedog.com/privacy/">
 <link rel="alternate" hreflang="ko" href="https://shallwedog.com/privacy/">
 <link rel="alternate" hreflang="en" href="https://shallwedog.com/en/privacy/">
+<link rel="alternate" hreflang="ja" href="https://shallwedog.com/ja/privacy/">
+<link rel="alternate" hreflang="es" href="https://shallwedog.com/es/privacy/">
 <link rel="alternate" hreflang="x-default" href="https://shallwedog.com/en/privacy/">
 <meta name="theme-color" content="#F8ECD7" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#1E1611" media="(prefers-color-scheme: dark)">
@@ -27,6 +29,7 @@
 <link rel="manifest" href="/site.webmanifest">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
 <link rel="stylesheet" href="/assets/css/site.css">
+<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "2cc02963a96e4ff4a896fc2dba7ea844"}'></script><!-- End Cloudflare Web Analytics -->
 </head>
 <body>
 <a class="skip" href="#main">본문으로 건너뛰기</a>
@@ -37,8 +40,8 @@
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>
     <a href="/privacy/" lang="ko" hreflang="ko" data-short="KO" aria-current="true">한국어</a>
     <a href="/en/privacy/" lang="en" hreflang="en" data-short="EN">English</a>
-    <a href="/ja/" lang="ja" hreflang="ja" data-short="JA">日本語</a>
-    <a href="/es/" lang="es" hreflang="es" data-short="ES">Español</a>
+    <a href="/ja/privacy/" lang="ja" hreflang="ja" data-short="JA">日本語</a>
+    <a href="/es/privacy/" lang="es" hreflang="es" data-short="ES">Español</a>
   </nav>
 </header>
 
@@ -52,7 +55,7 @@
 <ul>
   <li>게임 기록은 폰에 저장해요. 처음 시작할 때 ‘만 14세 이상이에요’를 체크한 분만 계정 저장(새 폰으로 옮기기)과 커스텀 주문을 위해 서버에 연결해요. 체크하지 않으면 계정 저장·커스텀 주문 서버로 아무것도 보내지 않아요. 체크하기 전에는 이용 통계·오류 보고도 보내지 않아요.</li>
   <li>로그인 버튼은 없어요. 서버 연결은 아이폰은 게임센터, 안드로이드는 구글 플레이 게임즈 계정으로 자동으로 해요. 연결이 안 돼도 게임은 그대로 할 수 있어요.</li>
-  <li>커스텀 강아지 주문 사진은 마지막 전달 후 14일이 지나면 자동으로 지워요. 결제가 되지 않았거나 주문서가 깨져 만들지 못한 주문의 사진은 7일 뒤 지워요.</li>
+  <li>우리 개 커스텀 주문 사진은 마지막 전달 후 14일이 지나면 자동으로 지워요. 결제가 되지 않았거나 주문서가 깨져 만들지 못한 주문의 사진은 7일 뒤 지워요.</li>
   <li>개인정보를 팔지 않아요. 우리가 먼저 데이터를 지우는 일도 없어요.</li>
   <li>앱 <span class="menu-path">설정</span> 맨 아래 <span class="menu-path">데이터 삭제 요청</span>이나 메일로 언제든 지울 수 있어요.</li>
 </ul>
@@ -63,11 +66,11 @@
 <thead><tr><th>언제</th><th>항목</th><th>목적</th></tr></thead>
 <tbody>
 <tr><td data-label="언제">게임을 하는 동안</td><td data-label="항목">게임 진행 데이터(만든 강아지 설정, 기록, 발바닥, 꾸미기 등)는 폰에 저장해요. 계정 저장이 켜져 있을 때만 아래 ‘계정 저장’ 줄의 정보를 서버에도 저장해요. (아래 자동 수집 정보는 예외)</td><td data-label="목적">—</td></tr>
-<tr><td data-label="언제">‘만 14세 이상이에요’ 체크 뒤 계정 연결 (아이폰 게임센터, 안드로이드 구글 플레이 게임즈)</td><td data-label="항목">게임센터·구글 플레이 게임즈가 주는 플레이어 식별값과 게임 닉네임(구글 플레이 게임즈는 프로필 사진 주소도), 이 값으로 만든 계정 식별값, 약관·개인정보처리방침 동의와 ‘만 14세 이상이에요’를 체크한 시각. 이메일 주소는 받지 않아요. 체크하지 않았거나 연결이 안 되면 아무것도 받지 않아요.</td><td data-label="목적">본인 확인, 계정 저장·구매한 것·커스텀 강아지를 계정에 연결하고 다시 받기, 동의 기록 보관</td></tr>
+<tr><td data-label="언제">‘만 14세 이상이에요’ 체크 뒤 계정 연결 (아이폰 게임센터, 안드로이드 구글 플레이 게임즈)</td><td data-label="항목">게임센터·구글 플레이 게임즈가 주는 플레이어 식별값과 게임 닉네임(구글 플레이 게임즈는 프로필 사진 주소도), 이 값으로 만든 계정 식별값, 약관·개인정보처리방침 동의와 ‘만 14세 이상이에요’를 체크한 시각. 이메일 주소는 받지 않아요. 체크하지 않았거나 연결이 안 되면 아무것도 받지 않아요.</td><td data-label="목적">본인 확인, 계정 저장·구매한 것·우리 개 커스텀을 계정에 연결하고 다시 받기, 동의 기록 보관</td></tr>
 <tr><td data-label="언제">계정 저장 (계정이 연결된 경우)</td><td data-label="항목">발바닥 잔액(무료·유료 따로), 산 것(정식판·꾸미기·강아지 칸), 강아지 목록(견종·체형·이름·꾸민 것), 게임 진행(미션·수첩 등), 저장한 시각. 사진은 저장하지 않아요.</td><td data-label="목적">새 폰에서 이어 하기, 유료 발바닥 환불 확인</td></tr>
-<tr><td data-label="언제">커스텀 강아지 주문</td><td data-label="항목">강아지 사진 2장(얼굴 정면, 서 있는 몸), 견종(믹스는 2개, ‘잘 모름’ 가능), 체형, 지금 털 상태, 특징, 자유롭게 쓴 한 줄(60자 이내), 강아지 이름, 주문번호, 상품과 거래 번호, 기기 종류·앱 버전·앱 언어, 만 14세 이상 확인, 결제 전 동의 항목마다 체크한 시각(분쟁이 생겼을 때 확인용), (선택) 사진 1년 보관 동의 여부와 철회 시각. 사진을 다시 보낼 때는 새 사진 2장</td><td data-label="목적">커스텀 강아지 제작·전달, 문의 응대</td></tr>
-<tr><td data-label="언제">커스텀 강아지 주문 — ‘이 아이는 어떤 아이인가요?’ (필수 1문항)</td><td data-label="항목">보기 4개 중 고른 답, ‘기타’를 고르면 직접 쓴 답</td><td data-label="목적">서비스 개선을 위한 통계, 완성 강아지를 보낼 때 함께 가는 메시지 맞춤</td></tr>
-<tr><td data-label="언제">커스텀 강아지 주문 — 짖는 소리 파일 (선택)</td><td data-label="항목">강아지가 짖는 소리를 녹음한 파일(소리 또는 영상, 30초 이하). 사람 목소리가 섞일 수 있어요</td><td data-label="목적">게임 속 그 강아지의 짖는 소리 만들기(짖는 부분만 잘라 짧은 소리로 다듬어요)</td></tr>
+<tr><td data-label="언제">우리 개 커스텀 주문</td><td data-label="항목">강아지 사진 2장(얼굴 정면, 몸 전체), 견종(믹스는 2개, ‘잘 모름 · 기타’ 가능), 체형, 지금 털 상태, 특징, 자유롭게 쓴 한 줄(60자 이내), 강아지 이름, 주문번호, 상품과 거래 번호, 기기 종류·앱 버전·앱 언어, 만 14세 이상 확인, 결제 전 동의 항목마다 체크한 시각(분쟁이 생겼을 때 확인용), (선택) 사진 1년 보관 동의 여부와 철회 시각. 사진을 다시 보낼 때는 새 사진 2장</td><td data-label="목적">우리 개 커스텀 제작·전달, 문의 응대</td></tr>
+<tr><td data-label="언제">우리 개 커스텀 주문 — ‘이 아이는 어떤 아이인가요?’ (필수 1문항)</td><td data-label="항목">보기 4개 중 고른 답, ‘기타’를 고르면 직접 쓴 답</td><td data-label="목적">서비스 개선을 위한 통계, 완성 강아지를 보낼 때 함께 가는 메시지 맞춤</td></tr>
+<tr><td data-label="언제">우리 개 커스텀 주문 — 짖는 소리 파일 (선택)</td><td data-label="항목">강아지가 짖는 소리를 녹음한 파일(소리 또는 영상, 30초 이하). 사람 목소리가 섞일 수 있어요</td><td data-label="목적">게임 속 그 강아지의 짖는 소리 만들기(짖는 부분만 잘라 짧은 소리로 다듬어요)</td></tr>
 <tr><td data-label="언제">결제</td><td data-label="항목">앱 사용자 ID, 상품, 거래 번호, 결제 일시. 카드번호 등 결제 수단 정보는 애플·구글이 처리하며 우리는 받지 않아요.</td><td data-label="목적">결제 확인, 환불 처리, 법에 따른 보관</td></tr>
 <tr><td data-label="언제">앱 알림 (계정이 연결되고, 첫 커스텀 주문 뒤 알림을 허락한 경우)</td><td data-label="항목">알림용 기기 토큰, 앱 언어, 폰 시간대</td><td data-label="목적">주문 알림(완성 · 사진 다시 요청 · 환불) 보내기. 폰 시간대는 알림 시각을 맞추는 데에만 써요. 저녁 놀이 알림은 폰 안에서 정해 울리고 서버로 보내지 않아요.</td></tr>
 <tr><td data-label="언제">앱을 쓰는 동안 자동으로</td><td data-label="항목">기기 모델, 운영체제·앱 버전, 앱 이용 기록, 오류 기록, 광고 식별자(안드로이드 광고 ID, 아이폰은 ‘앱이 추적하도록 허용’을 고른 분만 아이폰 광고 식별자)</td><td data-label="목적">광고 보여 주기, 이용 통계, 오류 고치기</td></tr>
@@ -83,8 +86,8 @@
 <tr><td data-label="정보">계정 저장 기록</td><td data-label="보유 기간">계정을 삭제하거나 데이터 삭제를 요청할 때까지. 삭제한 뒤에도 아래 사고 대비 백업에 최대 30일 남았다가 자동으로 지워져요.</td></tr>
 <tr><td data-label="정보">커스텀 주문 원본 사진</td><td data-label="보유 기간">마지막 전달 후 14일이 지나면 자동 삭제. 아래 ‘선택 보관’에 동의한 경우만 마지막 전달일부터 1년. 만들기 전에 주문이 취소되거나 환불되면 그때 바로 지워요. 결제가 되지 않았거나 주문서가 깨져 만들지 못한 주문의 사진은 7일이 지나면 지워요.</td></tr>
 <tr><td data-label="정보">커스텀 주문 짖는 소리 파일 (선택)과 다듬은 소리</td><td data-label="보유 기간">Google(Firebase)에 올라온 파일은 주문을 마치면 지워요. 원본은 운영자의 작업용 컴퓨터(한국)에 그대로 보관하고, 주문을 마쳐도 지우지 않다가 계정을 삭제하거나 삭제를 요청하면 지워요.</td></tr>
-<tr><td data-label="정보">완성된 커스텀 강아지 파일, 주문 기록, 제작 기록(만든 기준 이미지·게임 화면·검수 기록. 원본 사진·강아지 이름·자유 한 줄 원문은 빼요)</td><td data-label="보유 기간">계정을 삭제할 때까지 (다시 받기와 품질 관리를 위해). 다만 아래 ‘거래 기록’은 법에 따라 따로 보관해요.</td></tr>
-<tr><td data-label="정보">거래 기록: 계약·청약철회 기록(주문 번호, 상품, 결제 전 동의 항목과 체크 시각), 대금 결제·공급 기록(거래 번호, 결제·전달·환불 일시). 사진, 완성된 강아지 파일, 강아지 이름, 자유 한 줄은 빼요</td><td data-label="보유 기간">5년 (「전자상거래 등에서의 소비자보호에 관한 법률」 제6조, 같은 법 시행령 제6조). 계정을 삭제해도 계정과의 연결을 끊고 이 기간 동안 따로 보관한 뒤 지워요.</td></tr>
+<tr><td data-label="정보">완성된 우리 개 커스텀 파일, 주문 기록, 제작 기록(만든 기준 이미지·게임 화면·검수 기록. 원본 사진·강아지 이름·자유 한 줄 원문은 빼요)</td><td data-label="보유 기간">계정을 삭제할 때까지 (다시 받기와 품질 관리를 위해). 다만 아래 ‘거래 기록’은 법에 따라 따로 보관해요.</td></tr>
+<tr><td data-label="정보">거래 기록: 계약·청약철회 기록(주문 번호, 상품, 결제 전 동의 항목과 체크 시각), 대금 결제·공급 기록(거래 번호, 결제·전달·환불 일시)<!--EX-->, 제작 예시 공개에 동의한 시각 · 공개를 끈 시각<!--/EX-->. 사진, 완성된 강아지 파일, 강아지 이름, 자유 한 줄은 빼요</td><td data-label="보유 기간">5년 (「전자상거래 등에서의 소비자보호에 관한 법률」 제6조, 같은 법 시행령 제6조). 계정을 삭제해도 계정과의 연결을 끊고 이 기간 동안 따로 보관한 뒤 지워요.</td></tr>
 <tr><td data-label="정보">소비자 불만·분쟁 처리 기록, 메일 문의</td><td data-label="보유 기간">3년 (같은 법 시행령 제6조). 계정을 삭제해도 따로 보관한 뒤 지워요.</td></tr>
 <tr><td data-label="정보">사고 대비 백업 (주문·계정 정보·계정 저장 기록. 사진은 빼요)</td><td data-label="보유 기간">운영자 작업용 컴퓨터(한국) 안 백업은 30일, Google Firestore 예약 백업(서울)은 7일이 지나면 자동 삭제. 계정을 삭제해도 백업에는 최대 30일 남았다가 지워져요.</td></tr>
 <tr><td data-label="정보">오류 기록</td><td data-label="보유 기간">90일</td></tr>
@@ -92,8 +95,14 @@
 </tbody></table></div>
 <div class="box">
 <p><strong>(선택) 사진 1년 보관</strong></p>
-<p>주문할 때 따로 동의한 분만, 원본 사진을 마지막 전달일부터 1년 동안 보관해 커스텀 강아지를 더 닮게 만드는 연구와 시험에만 써요. 공개하거나 광고에 쓰지 않아요. 동의하지 않아도 주문할 수 있고, 앱 <span class="menu-path">설정</span>에서 언제든 철회할 수 있어요. 철회하면 보관 중인 사진은 바로 지우고, 아직 진행 중인 주문의 사진은 마지막 전달 후 14일이 지나면 지워요.</p>
+<p>주문할 때 따로 동의한 분만, 원본 사진을 마지막 전달일부터 1년 동안 보관해 우리 개 커스텀을 더 닮게 만드는 연구와 시험에만 써요. 공개하거나 광고에 쓰지 않아요. 동의하지 않아도 주문할 수 있고, 앱 <span class="menu-path">설정</span>에서 언제든 철회할 수 있어요. 철회하면 보관 중인 사진은 바로 지우고, 아직 진행 중인 주문의 사진은 마지막 전달 후 14일이 지나면 지워요.</p>
 </div>
+<!--EX-->
+<div class="box">
+<p><strong>(선택) 제작 예시로 보여 주기</strong></p>
+<p>주문서에서 ‘완성된 게임 속 강아지를 제작 예시로 보여 줘도 돼요’를 체크한 분만, 완성된 게임 속 강아지 모습과 견종을 사이트 · 앱 · 스토어의 제작 예시로 보여 줘요. 실물 사진, 강아지 이름, 주문하신 분의 정보는 쓰지 않아요. 미리 체크되어 있지 않고, 체크하지 않아도 주문할 수 있어요. <a href="mailto:hello@shallwedog.com">hello@shallwedog.com</a>으로 요청하시면 언제든 내려요.</p>
+</div>
+<!--/EX-->
 <p>우리가 먼저 데이터를 지우지 않아요. 결제가 끊기거나 오래 들어오지 않거나 서비스를 끝내도 기기 안 데이터는 그대로 남고, 서버 쪽 데이터는 요청하실 때 지워요.</p>
 
 <h2 id="a3">제3조 만 14세 미만 아동</h2>
@@ -119,8 +128,8 @@
 </tbody></table></div>
 <p>커스텀 사진은 주문을 처리하는 운영자의 작업용 컴퓨터(한국)에도 받아 두었다가 제2조 기간이 지나면 함께 지워요. 사진 검사와 검수 보조 결과는 참고만 하고, 판정은 늘 운영자가 직접 해요. 개 사진이 아니거나 부적절한 사진이면 만들지 않고 사진을 다시 보내 달라고 요청해요.</p>
 <p id="bark">커스텀 주문의 짖는 소리 파일(선택)은 앱에서 Google(Firebase)로 올라오고, 주문을 마치면 거기서 지워요. 원본 보관과 다듬는 일(짖는 부분만 자르기, 다른 소리가 섞였는지 확인)은 운영자의 작업용 컴퓨터(한국)에서만 해요. 위 표의 다른 회사로는 보내지 않아요. 사람 목소리 · TV · 음악 같은 소리가 섞이면 그 파일은 쓰지 않고 기본 소리로 만들어요. 지우고 싶으면 앱 <span class="menu-path">설정</span>의 <span class="menu-path">데이터 삭제 요청</span>을 누르거나 <a href="mailto:hello@shallwedog.com">hello@shallwedog.com</a>으로 알려 주세요. 소리 파일만 지워 달라고 요청할 수도 있어요.</p>
-<p>커스텀 주문 화면의 ‘외부 처리 회사로 사진 전송’ 동의에서 [자세히]를 누르면 이 조항으로 와요.</p>
-<p>국외 이전을 원하지 않으면 ‘만 14세 이상이에요’를 체크하지 않고, 커스텀 주문을 하지 않으면 돼요. 게임은 그대로 할 수 있고, 계정 저장과 커스텀 강아지만 쓸 수 없어요. 광고는 제8조대로 Google로 보내지고, 이용 통계 · 오류 보고는 보내지 않아요. 커스텀 주문은 결제 전에 해외 회사로 보내는 것에 동의를 받아요.</p>
+<p>커스텀 주문 화면의 ‘사진이 외부 처리 회사로 보내져요’ 동의에서 [자세히]를 누르면 이 조항으로 와요.</p>
+<p>국외 이전을 원하지 않으면 ‘만 14세 이상이에요’를 체크하지 않고, 커스텀 주문을 하지 않으면 돼요. 게임은 그대로 할 수 있고, 계정 저장과 우리 개 커스텀만 쓸 수 없어요. 광고는 제8조대로 Google로 보내지고, 이용 통계 · 오류 보고는 보내지 않아요. 커스텀 주문은 결제 전에 해외 회사로 보내는 것에 동의를 받아요.</p>
 
 <h2 id="a6">제6조 파기 방법</h2>
 <p>보유 기간이 끝나거나 삭제를 요청받으면 5일 안에 지워요. 전자 파일은 복구할 수 없게 지우고, 종이로 된 개인정보는 만들지 않아요. 법에 따라 더 보관해야 하는 정보는 따로 나눠 보관하고 그 목적으로만 써요. 사고 대비 백업에 들어 있는 사본은 제2조에 적은 대로 최대 30일 뒤 자동으로 지워져요.</p>
@@ -146,7 +155,7 @@
 
 <h2 id="a9">제9조 앱 알림</h2>
 <ul>
-  <li>주문 알림(커스텀 강아지 완성 · 사진 다시 요청 · 환불)은 주문하신 분께 보내요. 알림을 받을지는 첫 커스텀 주문을 보낸 뒤 한 번 물어요. 커스텀 완성 알림은 완성되는 대로 보내요(밤일 수 있어요). 사진 다시 요청 · 환불 알림도 생기는 대로 바로 보내요.</li>
+  <li>주문 알림(우리 개 커스텀 완성 · 사진 다시 요청 · 환불)은 주문하신 분께 보내요. 알림을 받을지는 첫 커스텀 주문을 보낸 뒤 한 번 물어요. 커스텀 완성 알림은 완성되는 대로 보내요(밤일 수 있어요). 사진 다시 요청 · 환불 알림도 생기는 대로 바로 보내요.</li>
   <li>놀이 알림은 저녁 8시에 하루 한 번 보내고, 그날 밥이나 물을 주지 않았으면 저녁 6시에 한 번 더 보내요. 처음 시작 화면에서 저녁 알림을 고르고 폰 알림을 허락한 분만 받으며, 앱 <span class="menu-path">설정</span>에서 켜고 끌 수 있어요. 폰 안에서 정해 울리고 서버로 보내지 않아요. 밤 9시부터 아침 8시 사이에는 보내지 않아요.</li>
   <li>알림에는 할인·가격·판매 같은 광고 내용을 넣지 않아요. 그래서 광고성 정보 수신 동의는 따로 받지 않아요.</li>
   <li>알림은 폰 설정의 알림 메뉴에서 언제든 끌 수 있어요.</li>
